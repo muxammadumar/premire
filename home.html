@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <!-- bootstrap css -->
+
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+
+    <!-- ------------ -->
+
+    <!-- my css file -->
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- ------------ -->
+
+    <!-- font awesome all components -->
+
+    <link
+      rel="stylesheet"
+      href="./libs/fontawesome-free-5.15.1-web/css/all.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./libs/fontawesome-free-5.15.1-web/css/fontawesome.css"
+    />
+
+    <!-- ------------ -->
+
+    <!-- owl carousel components -->
+
+    <link rel="stylesheet" href="./css/owl.carousel.css" />
+
+    <link rel="stylesheet" href="./css/owl.theme.default.css" />
+
+    <!-- ------------ -->
+
+    <!-- cdn animate.css -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- ------------ -->
+  </head>
+  <body>
+    <!-- vue #app div begin -->
+
+    <div id="app">
+      <!-- header begin -->
+
+      <header class="washing-machines-header">
+        <div class="my-first-container">
+          <transition
+            enter-active-class="animate__animated animate__fadeIn"
+            leave-active-class="animate__animated animate__fadeOut"
+          >
+            <div v-if="!searchBoxIsOpen" class="call-wrapper">
+              <div class="call">
+                <svg class="fas fa-phone-alt" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                  <path d="M21.0834 16.215V19.09C21.0845 19.3569 21.0298 19.6211 20.9229 19.8656C20.8159 20.1102 20.6591 20.3297 20.4624 20.5101C20.2658 20.6906 20.0336 20.8279 19.7808 20.9134C19.5279 20.9989 19.26 21.0307 18.9942 21.0067C16.0453 20.6862 13.2126 19.6786 10.7238 18.0646C8.40829 16.5932 6.44515 14.6301 4.97379 12.3146C3.35418 9.81449 2.34627 6.96804 2.0317 4.00583C2.00776 3.74082 2.03925 3.47373 2.12418 3.22156C2.20912 2.96938 2.34563 2.73766 2.52502 2.54114C2.70442 2.34461 2.92277 2.1876 3.16617 2.08008C3.40957 1.97257 3.6727 1.91692 3.93879 1.91667H6.81379C7.27887 1.91209 7.72976 2.07678 8.08239 2.38005C8.43503 2.68332 8.66536 3.10447 8.73046 3.565C8.8518 4.48506 9.07685 5.38845 9.40129 6.25792C9.53023 6.60093 9.55813 6.97371 9.4817 7.33209C9.40527 7.69048 9.2277 8.01944 8.97004 8.28L7.75296 9.49708C9.1172 11.8963 11.1037 13.8828 13.503 15.2471L14.72 14.03C14.9806 13.7723 15.3096 13.5948 15.6679 13.5183C16.0263 13.4419 16.3991 13.4698 16.7421 13.5987C17.6116 13.9232 18.515 14.1482 19.435 14.2696C19.9006 14.3353 20.3257 14.5697 20.6296 14.9284C20.9336 15.2871 21.095 15.745 21.0834 16.215Z" stroke="#5A5A5B" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                <div class="text">
+                  <p>Call-center</p>
+                  <h3 class="number">998 71 200 4100</h3>
+                </div>
+              </div>
+            </div>
+          </transition>
+          <div class="center-item">
+            <transition
+              enter-active-class="animate__animated animate__fadeIn"
+              leave-active-class="animate__animated animate__fadeOut"
+            >
+              <a href="#" v-if="!searchBoxIsOpen" class="logo-wrapper">
+                <img src="./img/premier-logo.png" class="logo" />
+              </a>
+
+              <form v-if="searchBoxIsOpen" class="hidden-search-form">
+                <input type="text" placeholder="Поиск по каталогу" />
+                <i class="fas fa-search"></i>
+              </form>
+            </transition>
+          </div>
+          <div class="menu">
+            <transition
+              enter-active-class="animate__animated animate__fadeIn"
+              leave-active-class="animate__animated animate__fadeOut"
+            >
+              <svg v-if="!searchBoxIsOpen"
+              class="fa-search search"
+              v-on:click="openSearchBox" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M12.8333 22.1667C17.988 22.1667 22.1667 17.988 22.1667 12.8333C22.1667 7.67868 17.988 3.5 12.8333 3.5C7.67868 3.5 3.5 7.67868 3.5 12.8333C3.5 17.988 7.67868 22.1667 12.8333 22.1667Z" stroke="#5A5A5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M24.5 24.5L19.425 19.425" stroke="#5A5A5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </transition>
+            <div v-if="!searchBoxIsOpen" class="dropdown-lang">
+              <button class="first-dropdown-toggle" id="dropdownMenuButton">
+                <p class="active">Рус</p>
+                <i class="fas fa-caret-down"></i>
+              </button>
+              <ul
+                class="first-dropdown-menu"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <li class="first-dropdown-item"><a href="#">Eng</a></li>
+                <li class="first-dropdown-item"><a href="#">Uzb</a></li>
+              </ul>
+            </div>
+            <div class="my-wrapper">
+              <div v-on:click="openMenuBox" class="burger">
+                <div class="container">
+                  <div class="bar bar-left">&nbsp;</div>
+                  <div class="bar bar-center">&nbsp;</div>
+                  <div class="bar bar-right">&nbsp;</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <transition
+        enter-active-class="animate__animated animate__slideInLeft"
+          
+        leave-active-class="animate__animated animate__slideOutLeft"
+        >
+          <div v-if="menuBoxIsOpen" class="hidden-menu">
+            <div class="my-container">
+              <div class="main-wrapper">
+                <ul class="menu">
+                  <li>
+                    <a href="#">
+                      <hr />
+                      Главная
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <hr />
+                      О компании
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <hr />
+                      Новости
+                    </a>
+                  </li>
+                  <li id="my-list-item">
+                    <a href="#">
+                      <hr />
+                      Сервисные центры
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <hr />
+                      Вакансии
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <hr />
+                      Контакты
+                    </a>
+                  </li>
+                </ul>
+                <div class="products">
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Tv.svg" />
+                      </div>
+                      <p class="name">Телевизоры</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Слой x0020 1.svg" />
+                      </div>
+                      <p class="name">Холодильники</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Stir.svg" />
+                      </div>
+                      <p class="name">Стиральные машины</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Oven.svg" />
+                      </div>
+                      <p class="name">Газовые плиты</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Vitejka.svg" />
+                      </div>
+                      <p class="name">Кухонные вытяжки</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Kond.svg" />
+                      </div>
+                      <p class="name">Кондиционеры</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Moroz.svg" />
+                      </div>
+                      <p class="name">Морозильники</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Micro.svg" />
+                      </div>
+                      <p class="name">Микроволновые печи</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/heater 1.svg" />
+                      </div>
+                      <p class="name">Обогреватели</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="details">
+                <div class="item">
+                  <div class="img">
+                    <img src="./img/home 1.svg" />
+                  </div>
+                  <div class="text">
+                    <h3 class="title">Адрес:</h3>
+                    <p class="answer">
+                      Ташкент , Яшнабадский район, 100147, ул.Мумтоз, 5
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="img">
+                    <img src="./img/phone-call.svg" />
+                  </div>
+                  <div class="text">
+                    <h3 class="title">Единый инфо центр</h3>
+                    <p class="answer">+99871 200-41-00</p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="img">
+                    <img src="./img/mail (1).svg" />
+                  </div>
+                  <div class="text">
+                    <h3 class="title">E-mail</h3>
+                    <p class="answer">info@premier.uz</p>
+                  </div>
+                </div>
+                <div class="my-item">
+                  <div class="img">
+                    <img src="./img/send (1) 2.svg" />
+                  </div>
+                  <a href="#">
+                    <p>Напишите нам</p>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <footer>
+              <div class="my-own-container">
+                <p class="faq">
+                  © 2020 Premier Electrotech. Все права защищены.
+                </p>
+                <div class="links">
+                  <ul class="lang">
+                    <li><a href="#">O‘zbekcha</a></li>
+                    <li><a href="#">Русcкий</a></li>
+                    <li><a href="#">English</a></li>
+                  </ul>
+                  <ul class="social__links">
+                    <li>
+                      <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-youtube"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </transition>
+      </header>
+
+      <!-- heaeder end -->
+
+      <!-- search-space begin -->
+
+      <transition
+        enter-active-class="animate__animated animate__fadeInDown"
+        leave-active-class="animate__animated animate__fadeOutUp"
+      >
+        <div
+          class="search-space"
+          v-if="searchBoxIsOpen"
+          style="width: 100%; height: 100vh"
+        >
+          <div class="my-container">
+            <div class="status">
+              <div class="title">
+                <p class="secondary on-request">По запросу:&nbsp;</p>
+                <p class="main search-name">Стиральная машина</p>
+              </div>
+              <div class="quantity">
+                <p class="secondary found">Найдено:&nbsp;</p>
+                <p class="main quantity-of-found">17 моделей</p>
+              </div>
+            </div>
+            <div class="main-wrapper">
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="btn btn-back">
+              <div class="back-link">
+                <i class="fas fa-arrow-left"></i>
+              </div>
+              <h2 class="txt">НАЗАД</h2>
+            </a>
+          </div>
+        </div>
+      </transition>
+
+      <!-- search-space end -->
+
+      <!-- home-carousel begin -->
+
+      <section class="home-carousel carousel">
+        <div class="owl-carousel owl-theme owl-first">
+          <div class="dark-item item"> 
+            <img src="./img/Rectangle 5.jpg" />
+            <div class="content">
+              <h1 class="title">Smart TV VA55U7A 55”</h1>
+              <p class="subtitle">
+                Выйдите за рамки возможного и наполните каждый момент жизни
+                непередаваемыми впечатлениями. Получите максимум от просмотра ТВ
+              </p>
+              <div class="wrapper">
+                <a href="#" class="details-btn">
+                  <p class="details__text"> ПОДРОБНЕЕ <i class="fas fa-arrow-right"></i></p>
+                </a>
+
+              </div>
+            </div>
+          </div>
+          <div class="white-item item">
+            <img src="./img/Rectangle-5.jpg" />
+            <div class="content">
+              <h1 class="title">
+                Стиральная машина <br />
+                PRM-80MD-1412 PR/W
+              </h1>
+              <p class="subtitle">
+                Инверторный двигатель построенный по особой технологии -
+                значительно снижает уровен шума, износа и энергопотребления
+              </p>
+              <div class="wrapper">
+                <a href="#" class="details-btn">
+                  <p class="details__text"> ПОДРОБНЕЕ <i class="fas fa-arrow-right"></i></p>
+                </a>
+
+              </div>
+            </div>
+          </div>
+          <div class="dark-item item">
+            <img src="./img/Rectangle 5.jpg" />
+            <div class="content">
+              <h1 class="title">Smart TV VA55U7A 55”</h1>
+              <p class="subtitle">
+                Выйдите за рамки возможного и наполните каждый момент жизни
+                непередаваемыми впечатлениями. Получите максимум от просмотра ТВ
+              </p>
+              <div class="wrapper">
+                <a href="#" class="details-btn">
+                  <p class="details__text"> ПОДРОБНЕЕ <i class="fas fa-arrow-right"></i></p>
+                </a>
+
+              </div>
+            </div>
+          </div>
+          <div class="white-item item">
+            <img src="./img/Rectangle-5.jpg" />
+            <div class="content">
+              <h1 class="title">
+                Стиральная машина <br />
+                PRM-80MD-1412 PR/W
+              </h1>
+              <p class="subtitle">
+                Инверторный двигатель построенный по особой технологии -
+                значительно снижает уровен шума, износа и энергопотребления
+              </p>
+              <div class="wrapper">
+                <a href="#" class="details-btn">
+                  <p class="details__text"> ПОДРОБНЕЕ <i class="fas fa-arrow-right"></i></p>
+                </a>
+
+              </div>
+            </div>
+          </div>
+          <div class="dark-item item">
+            <img src="./img/Rectangle 5.jpg" />
+            <div class="content">
+              <h1 class="title">Smart TV VA55U7A 55”</h1>
+              <p class="subtitle">
+                Выйдите за рамки возможного и наполните каждый момент жизни
+                непередаваемыми впечатлениями. Получите максимум от просмотра ТВ
+              </p>
+              <div class="wrapper">
+                <a href="#" class="details-btn">
+                  <p class="details__text"> ПОДРОБНЕЕ <i class="fas fa-arrow-right"></i></p>
+                </a>
+
+              </div>
+            </div>
+          </div>
+          <div class="white-item item">
+            <img src="./img/Rectangle-5.jpg" />
+            <div class="content">
+              <h1 class="title">
+                Стиральная машина <br />
+                PRM-80MD-1412 PR/W
+              </h1>
+              <p class="subtitle">
+                Инверторный двигатель построенный по особой технологии -
+                значительно снижает уровен шума, износа и энергопотребления
+              </p>
+              <div class="wrapper">
+                <a href="#" class="details-btn">
+                  <p class="details__text"> ПОДРОБНЕЕ <i class="fas fa-arrow-right"></i></p>
+                </a>
+
+              </div>
+            </div>
+          </div>
+          <div class="dark-item item">
+            <img src="./img/Rectangle 5.jpg" />
+            <div class="content">
+              <h1 class="title">Smart TV VA55U7A 55”</h1>
+              <p class="subtitle">
+                Выйдите за рамки возможного и наполните каждый момент жизни
+                непередаваемыми впечатлениями. Получите максимум от просмотра ТВ
+              </p>
+              <div class="wrapper">
+                <a href="#" class="details-btn">
+                  <p class="details__text"> ПОДРОБНЕЕ <i class="fas fa-arrow-right"></i></p>
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="status">
+          <span class="current">01</span>
+          <span class="slash">/</span>
+          <span class="all"></span>
+          <div class="buttons">
+            <div class="trigger-btn" id="owlFirstPrev">
+              <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="trigger-btn" id="owlFirstNext">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- home-carousel end -->
+
+      <!-- second-carousel begin -->
+
+      <section class="second-carousel">
+        <div class="my-container">
+          <div class="owl-carousel owl-theme owl-second">
+            <div class="item">
+              <a href="#">
+                <div class="image-wrapper">
+                  <img src="./img/Tv (1).svg" />
+                </div>
+                <div class="title">Телевизоры</div>
+              </a>
+            </div>
+            <div class="item">
+              <a href="#">
+                <div class="image-wrapper">
+                  <img src="./img/Xol.svg" />
+                </div>
+                <div class="title">Холодильники</div>
+              </a>
+            </div>
+            <div class="item">
+              <a href="#">
+                <div class="image-wrapper">
+                  <img src="./img/Stir (1).svg" />
+                </div>
+                <div class="title">Стиральные машины</div>
+              </a>
+            </div>
+            <div class="item">
+              <a href="#">
+                <div class="image-wrapper">
+                  <img src="./img/Oven (1).svg" />
+                </div>
+                <div class="title">Газовые плиты</div>
+              </a>
+            </div>
+            <div class="item">
+              <a href="#">
+                <div class="image-wrapper">
+                  <img src="./img/Vitejka (1).svg" />
+                </div>
+                <div class="title">Кухонные вытяжки</div>
+              </a>
+            </div>
+            <div class="item">
+              <a href="#">
+                <div class="image-wrapper">
+                  <img src="./img/Kond (1).svg" />
+                </div>
+                <div class="title">Кондиционеры</div>
+              </a>
+            </div>
+          </div>
+          <div class="buttons">
+            <div class="trigger-btn" id="owlSecondPrev">
+              <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="trigger-btn" id="owlSecondNext">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- second-carousel end -->
+
+      <!-- new products begin -->
+
+      <section class="new-products">
+        <div class="my-container">
+          <div class="heading">
+            <hr class="left" />
+            <div class="text">
+              <h2 class="title">Новые продукты рынка</h2>
+              <p class="subtitle">Новый взгляд на жизнь</p>
+            </div>
+            <hr class="right" />
+          </div>
+          <div class="main-content">
+            <div class="new-products__card small-card">
+              <a href="#" class="image"
+                ><img src="./img/Screenshot_1 1.png"
+              /></a>
+              <h3 class="model-name">Смарт телевизор 32PRM700-Smart</h3>
+              <a href="#" class="details animate__animated animate__fadeInUp">
+                <p class="text">ПОДРОБНЕЕ</p>
+                <div class="details-btn">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </a>
+            </div>
+            <div class="new-products__card small-card">
+              <a href="#" class="image"
+                ><img src="./img/Refrigerator-Transparent-PNG.png"
+              /></a>
+              <h3 class="model-name">Холодилник PRMNE-09SNR1-SL</h3>
+              <a href="#" class="details animate__animated animate__fadeInUp">
+                <p class="text">ПОДРОБНЕЕ</p>
+                <div class="details-btn">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </a>
+            </div>
+            <div class="new-products__card big-card">
+              <a href="#" class="image"><img src="./img/Layer 1 1.png" /></a>
+              <div class="content">
+                <div class="text">
+                  <h2 class="title">Вытяжка для кухни T SHAPE W</h2>
+                  <p class="description">
+                    Изображения продуктов показаны только в ознакомительных
+                    целях, фактический продукт может отличаться
+                  </p>
+                </div>
+                <a href="#" class="details">
+                  <p class="text">ПОДРОБНЕЕ</p>
+                  <div class="details-btn">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="new-products__card big-card">
+              <a href="#" class="image"><img src="./img/Layer 1 1.png" /></a>
+              <div class="content">
+                <div class="text">
+                  <h2 class="title">Вытяжка для кухни T SHAPE W</h2>
+                  <p class="description">
+                    Изображения продуктов показаны только в ознакомительных
+                    целях, фактический продукт может отличаться
+                  </p>
+                </div>
+                <a href="#" class="details">
+                  <p class="text">ПОДРОБНЕЕ</p>
+                  <div class="details-btn">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="new-products__card small-card">
+              <a href="#" class="image">
+                <img src="./img/Screenshot_1 1.png" />
+              </a>
+              <h3 class="model-name">Смарт телевизор 32PRM700-Smart</h3>
+              <a href="#" class="details animate__animated animate__fadeInUp">
+                <p class="text">ПОДРОБНЕЕ</p>
+                <div class="details-btn">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </a>
+            </div>
+            <div class="new-products__card small-card">
+              <a href="#" class="image">
+                <img src="./img/Refrigerator-Transparent-PNG.png" />
+              </a>
+              <h3 class="model-name">Холодилник PRMNE-09SNR1-SL</h3>
+              <a href="#" class="details animate__animated animate__fadeInUp">
+                <p class="text">ПОДРОБНЕЕ</p>
+                <div class="details-btn">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- new products end -->
+
+      <!-- about-brand begin -->
+
+      <section class="about-brand">
+        <div class="my-container">
+          <img src="./img/Rectangle 70.png" />
+          <div class="content">
+            <h3 class="title">
+              <span class="logo"> Premier </span> <br />
+              это лидер в производстве бытовой техники и электротехники в
+              Центральной Азии
+            </h3>
+            <p class="subtitle">
+              Компания начала свою деятельность в 2017 году с производства
+              телевизоров. На данный момент в ассортименте производимой
+              продукции <span>Premier</span> имеется все, что нужно для дома.
+              Premier выпускает
+              <span>более двадцати видов бытовой и электротехники</span>, среди
+              которых есть кондиционеры, микроволновые печи, газовые плиты,
+              телевизоры, холодильники, вытяжки, автоматические и
+              полуавтоматические стиральные машины, масляные обогреватели и
+              другие.
+            </p>
+            <p class="bgtext">PREMIER</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- about-brand end -->
+
+      <!-- advantages begin -->
+
+      <section class="advantages">
+        <div class="my-container">
+          <div class="heading">
+            <hr class="left" />
+            <h1 class="title">Наши преимущества</h1>
+            <hr class="right" />
+          </div>
+          <div class="main-wrapper">
+            <div class="item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="70"
+                height="70"
+                viewBox="0 0 70 70"
+                fill="none"
+              >
+                <g clip-path="url(#clip0)">
+                  <path
+                    d="M10.2594 0H2.05864C0.926475 0 0.00854492 0.91793 0.00854492 2.05023V10.3878C0.00854492 11.5201 0.926338 12.438 2.05878 12.438C3.19108 12.438 4.10901 11.5201 4.10901 10.3878V4.10047H10.2596C11.3919 4.10047 12.3098 3.18254 12.3098 2.05023C12.3097 0.91793 11.3917 0 10.2594 0Z"
+                    fill="black"
+                  />
+                  <path
+                    d="M67.9398 0H59.739C58.6067 0 57.6887 0.91793 57.6887 2.05023C57.6887 3.18254 58.6065 4.10047 59.739 4.10047H65.8895V10.3878C65.8895 11.5201 66.8074 12.438 67.9398 12.438C69.0721 12.438 69.99 11.5201 69.99 10.3878V2.05023C69.99 0.91793 69.0721 0 67.9398 0Z"
+                    fill="black"
+                  />
+                  <path
+                    d="M10.2608 65.8797H4.11023V59.5925C4.11023 58.4602 3.1923 57.5422 2.06 57.5422C0.927695 57.5422 0.00976562 58.4602 0.00976562 59.5925V67.93C0.00976562 69.0623 0.927559 69.9802 2.06 69.9802H10.2608C11.3931 69.9802 12.311 69.0623 12.311 67.93C12.311 66.7977 11.3931 65.8797 10.2608 65.8797Z"
+                    fill="black"
+                  />
+                  <path
+                    d="M67.9398 57.5422C66.8074 57.5422 65.8895 58.4602 65.8895 59.5925V65.8797H59.739C58.6067 65.8797 57.6887 66.7977 57.6887 67.93C57.6887 69.0623 58.6067 69.9802 59.739 69.9802H67.9398C69.0721 69.9802 69.99 69.0623 69.99 67.93V59.5925C69.99 58.4602 69.0721 57.5422 67.9398 57.5422Z"
+                    fill="black"
+                  />
+                  <path
+                    d="M64.5818 16.8195L36.0276 0.27624C35.392 -0.0920801 34.6077 -0.0920801 33.9721 0.27624L5.40634 16.8193C4.77661 17.1842 4.38354 17.8636 4.38354 18.592C4.38354 18.5961 4.38396 18.6002 4.38396 18.6042V51.4063C4.38396 52.1417 4.78358 52.83 5.42712 53.1923L33.9722 69.7238C34.2797 69.9019 34.6456 69.9999 35.0001 69.9999C35.3702 69.9999 35.7318 69.8952 36.0279 69.7238L64.5614 53.1921C64.5662 53.1894 64.5708 53.1867 64.5756 53.1839C65.2369 52.7068 65.5933 52.3058 65.6033 51.4311C65.6035 51.4229 65.6041 51.4148 65.6041 51.4066V18.6045C65.6041 18.6004 65.6046 18.5963 65.6046 18.5923C65.6046 17.8632 65.2112 17.1837 64.5818 16.8195ZM32.9497 64.3926L10.5516 51.4156L27.8191 41.5132C28.8014 40.9499 29.141 39.697 28.5776 38.7149C28.0144 37.7325 26.7615 37.3931 25.7792 37.9563L8.48401 47.8674V22.1359L32.9497 36.1865V64.3926V64.3926ZM34.9999 32.6355L10.5486 18.5862L34.9999 4.41964L59.4513 18.5862L34.9999 32.6355ZM61.5171 47.8674L44.2207 37.9562C43.2385 37.3931 41.9856 37.7324 41.4223 38.7147C40.8589 39.697 41.1985 40.9498 42.1808 41.5131L59.4482 51.4153L37.05 64.3923V36.1865L61.5169 22.1359V47.8674H61.5171Z"
+                    fill="black"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <rect width="70" height="70" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <h3 class="title">Современный дизайн</h3>
+              <p class="subtitle">
+                Наши дизайнеры придумывают современный и уникальный дизайн
+                который подходит к любому интерьеру вашего дома
+              </p>
+              <p class="number">01</p>
+            </div>
+            <div class="item">
+              <svg
+                width="72"
+                height="70"
+                viewBox="0 0 72 70"
+                fill="white"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0)">
+                  <path
+                    d="M64.1547 11.3348L36.7996 0.209026C36.1143 -0.0696069 35.344 -0.0697436 34.6589 0.209026L7.30376 11.3348C6.2619 11.7586 5.58276 12.755 5.58276 13.8601V27.385C5.58276 46.0079 17.0732 62.7596 34.6744 69.7972C35.3505 70.0675 36.1079 70.0675 36.7841 69.7972C54.385 62.7598 65.8757 46.008 65.8757 27.385V13.8601C65.8757 12.755 65.1967 11.7586 64.1547 11.3348ZM60.293 27.385C60.293 43.2164 50.8025 57.7902 35.7292 64.2955C21.0588 57.9639 11.1654 43.6454 11.1654 27.385V15.6856L35.7292 5.695L60.293 15.6856V27.385ZM32.644 36.6018L44.6417 24.849C45.7317 23.7813 47.4991 23.7811 48.5892 24.849C49.6794 25.9169 49.6792 27.6482 48.5891 28.716L34.6177 42.4022C33.5274 43.4703 31.7601 43.4698 30.6702 42.4022L22.8693 34.7605C21.7791 33.6925 21.7791 31.9613 22.8693 30.8935C23.9594 29.8257 25.7267 29.8256 26.8168 30.8935L32.644 36.6018Z"
+                    fill="black"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <rect width="71.4583" height="70" fill="black" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <h3 class="title">Гарантия от производителя</h3>
+              <p class="subtitle">
+                У нас 3 года гарантии на все линейки товаров. А сервисные центры
+                обеспечит Вам быстрое и надежное обслуживание
+              </p>
+              <p class="number">02</p>
+            </div>
+            <div class="item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="70"
+                height="70"
+                viewBox="0 0 70 70"
+                fill="none"
+              >
+                <path
+                  d="M69.9643 67.5763C69.9556 67.4975 69.9818 67.4144 69.9643 67.3356L61.2143 27.965C61.1531 27.6938 61.0393 27.4531 60.895 27.2344C60.8862 27.2212 60.8862 27.2081 60.8775 27.195C60.8425 27.1469 60.79 27.1206 60.7506 27.0725C60.6237 26.9194 60.4881 26.7794 60.3262 26.6656C60.2431 26.6087 60.1556 26.565 60.0681 26.5212C59.9237 26.4469 59.7793 26.3856 59.6175 26.3462C59.5081 26.32 59.4031 26.3025 59.2937 26.2894C59.2193 26.2806 59.1537 26.25 59.0793 26.25H32.8293C31.6218 26.25 30.6418 27.23 30.6418 28.4375C30.6418 29.645 31.6218 30.625 32.8293 30.625H52.075L5.55121 62.8338L10.6612 39.8475C10.9237 38.6662 10.18 37.4981 8.99871 37.2356C7.83058 36.9994 6.64933 37.7169 6.38683 38.8981L0.0693306 67.3356C0.0649556 67.3487 0.0737056 67.3619 0.0693306 67.375C0.00808055 67.6725 0.00808055 67.9788 0.0737056 68.2806C0.0868305 68.3506 0.134956 68.4031 0.156831 68.4688C0.222456 68.67 0.283706 68.8669 0.406206 69.0506C0.419331 69.0725 0.445581 69.0769 0.463081 69.0987C0.480581 69.1206 0.480581 69.1512 0.498081 69.1731C0.638081 69.3481 0.830581 69.4619 1.01433 69.5844C1.09308 69.6369 1.14996 69.7156 1.23308 69.7594C1.53496 69.9125 1.86308 70 2.20433 70H67.8293C68.1968 70 68.5425 69.8906 68.8575 69.72C68.9537 69.6675 69.0193 69.5887 69.1068 69.5231C69.2512 69.4137 69.4175 69.3306 69.5356 69.1819C69.5881 69.1162 69.5968 69.0331 69.645 68.9588C69.6756 68.9062 69.7368 68.8887 69.7631 68.8319C69.8156 68.7313 69.82 68.6262 69.855 68.5212C69.8987 68.3988 69.9425 68.2894 69.96 68.1625C69.995 67.9613 69.9862 67.7731 69.9643 67.5763ZM9.2087 65.625L30.795 50.68L59.0225 65.625H9.2087ZM34.8462 47.8756L57.6531 32.0863L64.6662 63.6606L34.8462 47.8756Z"
+                  fill="black"
+                />
+                <path
+                  d="M15.3291 8.75C11.711 8.75 8.7666 11.6944 8.7666 15.3125C8.7666 18.9306 11.711 21.875 15.3291 21.875C18.9472 21.875 21.8916 18.9306 21.8916 15.3125C21.8916 11.6944 18.9472 8.75 15.3291 8.75ZM15.3291 17.5C14.1216 17.5 13.1416 16.52 13.1416 15.3125C13.1416 14.105 14.1216 13.125 15.3291 13.125C16.5366 13.125 17.5166 14.105 17.5166 15.3125C17.5166 16.52 16.5366 17.5 15.3291 17.5Z"
+                  fill="black"
+                />
+                <path
+                  d="M15.3293 0C6.8856 0 0.0168457 6.86875 0.0168457 15.3125C0.0168457 23.17 12.3018 37.0869 13.7018 38.6488C14.1175 39.1081 14.7081 39.375 15.3293 39.375C15.9506 39.375 16.5412 39.1081 16.9568 38.6488C18.3568 37.0869 30.6418 23.17 30.6418 15.3125C30.6418 6.86875 23.7731 0 15.3293 0ZM15.3293 33.8494C10.5518 28.1838 4.39185 19.4862 4.39185 15.3125C4.39185 9.28375 9.3006 4.375 15.3293 4.375C21.3581 4.375 26.2668 9.28375 26.2668 15.3125C26.2668 19.4819 20.1068 28.1838 15.3293 33.8494Z"
+                  fill="black"
+                />
+              </svg>
+              <h3 class="title">Диллеры по всему узбекистану</h3>
+              <p class="subtitle">
+                Наши диллеры и сервисные центры расположены во свех города
+                Узбекистана и в некоторых стран Центральной Азии
+              </p>
+              <p class="number">03</p>
+            </div>
+            <div class="item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="72"
+                height="70"
+                viewBox="0 0 72 70"
+                fill="none"
+              >
+                <path
+                  d="M37.8225 6.15234V2.05078C37.8225 0.918203 36.8852 0 35.729 0C34.5728 0 33.6355 0.918203 33.6355 2.05078V6.15234C33.6355 7.28492 34.5728 8.20312 35.729 8.20312C36.8852 8.20312 37.8225 7.28492 37.8225 6.15234Z"
+                  fill="black"
+                />
+                <path
+                  d="M20.6881 11.4696C21.7361 10.991 22.1895 9.77074 21.7008 8.74426L19.9314 5.02687C19.4428 4.00039 18.1967 3.55619 17.1493 4.03498C16.1013 4.51363 15.648 5.73384 16.1366 6.76033L17.9062 10.4776C18.3971 11.5091 19.6454 11.9459 20.6881 11.4696Z"
+                  fill="black"
+                />
+                <path
+                  d="M8.20787 17.9042L5.00048 15.2677C4.1145 14.5396 2.79406 14.6529 2.05115 15.5205C1.30795 16.3881 1.42337 17.6816 2.3092 18.4097L5.51659 21.0461C6.3988 21.7713 7.71994 21.6645 8.46592 20.7933C9.20898 19.9257 9.09356 18.6322 8.20787 17.9042Z"
+                  fill="black"
+                />
+                <path
+                  d="M53.552 10.4775L55.3216 6.76021C55.8102 5.73373 55.3569 4.51351 54.3089 4.03486C53.2616 3.55634 52.0154 4.00027 51.5268 5.02675L49.7572 8.744C49.2686 9.77048 49.7219 10.9907 50.7699 11.4693C51.8111 11.9451 53.0603 11.5104 53.552 10.4775Z"
+                  fill="black"
+                />
+                <path
+                  d="M69.4073 15.5207C68.6643 14.6531 67.3435 14.5399 66.458 15.2679L63.2506 17.9044C62.3648 18.6324 62.2494 19.9261 62.9926 20.7935C63.7335 21.6586 65.0537 21.7765 65.9419 21.0463L69.1493 18.4098C70.0351 17.6818 70.1505 16.3883 69.4073 15.5207Z"
+                  fill="black"
+                />
+                <path
+                  d="M14.8025 20.6445C14.7882 20.6482 13.6868 20.6049 13.0405 21.5749C11.8979 23.2539 5.85615 32.1315 4.67807 33.8625C4.1519 34.6355 4.23145 35.6634 4.84164 36.3474L34.1507 69.2966C34.5483 69.7435 35.1239 70 35.7291 70C36.3342 70 36.9098 69.7435 37.3074 69.2964L66.6165 36.3472C67.2157 35.6773 67.3155 34.6486 66.7801 33.8624L58.4176 21.5748C58.0249 20.9874 57.3582 20.6445 56.6641 20.6445C56.6641 20.6445 14.8039 20.6445 14.8025 20.6445ZM61.1264 32.9492H52.2017L56.6641 26.3923L61.1264 32.9492ZM28.2222 32.9492L35.7291 25.5955L43.236 32.9492H28.2222ZM45.2692 37.0508L35.7291 61.9719L26.189 37.0508H45.2692ZM29.798 58.1599L11.0211 37.0508H21.7172L29.798 58.1599ZM49.7409 37.0508H60.437L41.6601 58.1599L49.7409 37.0508ZM47.9648 31.7811L40.7832 24.7461H52.7525L47.9648 31.7811ZM23.4934 31.7811L18.7057 24.7461H30.6749L23.4934 31.7811ZM19.2564 32.9492H10.3318L14.794 26.3923L19.2564 32.9492Z"
+                  fill="black"
+                />
+              </svg>
+              <h3 class="title">Европейский стандарт качества</h3>
+              <p class="subtitle">
+                Детали нашых продуктов сделаны из качественных материалов и
+                собраны профессионалами своего дела
+              </p>
+              <p class="number">04</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- advantages end -->
+
+      <!-- news begin -->
+
+      <section class="news">
+        <div class="my-container">
+          <div class="heading">
+            <div class="title">Новости</div>
+            <hr />
+            <a href="#">
+              <div class="all-news">
+                <p class="text">ВСЕ НОВОСТИ</p>
+                <div class="all-btn">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="main-wrapper">
+            <div class="news__card">
+              <a href="#">
+                <img src="./img/Rectangle 100.png" />
+              </a>
+              <div class="date">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M12.6667 2.6665H3.33333C2.59695 2.6665 2 3.26346 2 3.99984V13.3332C2 14.0696 2.59695 14.6665 3.33333 14.6665H12.6667C13.403 14.6665 14 14.0696 14 13.3332V3.99984C14 3.26346 13.403 2.6665 12.6667 2.6665Z"
+                    stroke="#5A5A5B"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.6667 1.3335V4.00016"
+                    stroke="#5A5A5B"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5.33325 1.3335V4.00016"
+                    stroke="#5A5A5B"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M2 6.6665H14"
+                    stroke="#5A5A5B"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p class="number">12 ноя. 2020</p>
+              </div>
+              <a href="#" class="title">
+                умные часы от Apple стали хитом продаж этого лета
+              </a>
+              <p class="subtitle">
+                В этом блоке мы рекомендуем разместить полный каталог с
+                описанием Ваших товаров
+              </p>
+            </div>
+            <div class="news__card">
+              <a href="#">
+                <img src="./img/Rectangle 101.png" />
+              </a>
+              <div class="date">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M12.6667 2.6665H3.33333C2.59695 2.6665 2 3.26346 2 3.99984V13.3332C2 14.0696 2.59695 14.6665 3.33333 14.6665H12.6667C13.403 14.6665 14 14.0696 14 13.3332V3.99984C14 3.26346 13.403 2.6665 12.6667 2.6665Z"
+                    stroke="#5A5A5B"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.6667 1.3335V4.00016"
+                    stroke="#5A5A5B"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5.33325 1.3335V4.00016"
+                    stroke="#5A5A5B"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M2 6.6665H14"
+                    stroke="#5A5A5B"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p class="number">10 ноя. 2020</p>
+              </div>
+              <a href="#" class="title">
+                умные часы от Apple стали хитом продаж этого лета
+              </a>
+              <p class="subtitle">Мы стараемся не индексировать высоко сайты</p>
+            </div>
+            <div class="news__card">
+              <a href="#">
+                <img src="./img/Rectangle 102.png" />
+              </a>
+              <div class="date">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M12.6667 2.6665H3.33333C2.59695 2.6665 2 3.26346 2 3.99984V13.3332C2 14.0696 2.59695 14.6665 3.33333 14.6665H12.6667C13.403 14.6665 14 14.0696 14 13.3332V3.99984C14 3.26346 13.403 2.6665 12.6667 2.6665Z"
+                    stroke="#5A5A5B"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.6667 1.3335V4.00016"
+                    stroke="#5A5A5B"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5.33325 1.3335V4.00016"
+                    stroke="#5A5A5B"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M2 6.6665H14"
+                    stroke="#5A5A5B"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p class="number">24 окт. 2020</p>
+              </div>
+              <a href="#" class="title">
+                умные часы от Apple стали хитом продаж этого лета
+              </a>
+              <p class="subtitle">
+                В этом блоке мы рекомендуем разместить полный каталог с
+                описанием Ваших товаров
+              </p>
+            </div>
+            <div class="news__card">
+              <a href="#">
+                <img src="./img/Rectangle 103.png" />
+              </a>
+              <div class="date">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M12.6667 2.6665H3.33333C2.59695 2.6665 2 3.26346 2 3.99984V13.3332C2 14.0696 2.59695 14.6665 3.33333 14.6665H12.6667C13.403 14.6665 14 14.0696 14 13.3332V3.99984C14 3.26346 13.403 2.6665 12.6667 2.6665Z"
+                    stroke="#5A5A5B"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.6667 1.3335V4.00016"
+                    stroke="#5A5A5B"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5.33325 1.3335V4.00016"
+                    stroke="#5A5A5B"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M2 6.6665H14"
+                    stroke="#5A5A5B"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p class="number">10 окт. 2020</p>
+              </div>
+              <a href="#" class="title">
+                умные часы от Apple стали хитом продаж этого лета
+              </a>
+              <p class="subtitle">
+                В этом блоке мы рекомендуем рассказать о характеристиках
+                предлагаемых товаров
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- news end -->
+
+      <!-- footer begin -->
+
+      <footer class="home-footer">
+        <div class="my-container">
+          <div class="info">
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/home 1.svg" />
+              </div>
+              <div class="text">
+                <p class="title">Адрес:</p>
+                <p class="answer">
+                  Ташкент , Яшнабадский район, 100147, ул.Мумтоз, 5
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/phone-call.svg" />
+              </div>
+              <div class="text">
+                <p class="title">Единый инфо центр</p>
+                <p class="answer">+99871 200 4100</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/mail (1).svg" />
+              </div>
+              <div class="text">
+                <p class="title">E-MAIL</p>
+                <p class="answer">info@premier.uz</p>
+              </div>
+            </div>
+          </div>
+          <div class="menu">
+            <p class="title">О нас</p>
+            <hr />
+            <ul>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Наши партнеры</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Вакансии</a></li>
+            </ul>
+          </div>
+          <div class="menu my-menu">
+            <p class="title">Наши продукты</p>
+            <hr />
+            <ul>
+              <li><a href="#">Телевизоры</a></li>
+              <li><a href="#">Холодильники</a></li>
+              <li><a href="#">Стиральные машины</a></li>
+              <li><a href="#">Газовые плиты</a></li>
+              <li><a href="#">Кухонные вытяжки </a></li>
+              <li><a href="#">Кондиционеры </a></li>
+              <li><a href="#">Морозильники</a></li>
+              <li><a href="#">Микроволновые печи</a></li>
+              <li><a href="#">Обогреватели</a></li>
+            </ul>
+          </div>
+          <div class="find-us">
+            <p class="title">Как нас найти</p>
+            <hr />
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/phone 2.svg" />
+              </div>
+              <a href="#">
+                Контакты
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/service 1.svg" />
+              </div>
+              <a href="#">
+                Сервисные центры
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/pin 1 (1).svg" />
+              </div>
+              <a href="#">
+                Наши диллеры
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="my-own-container">
+            <p class="faq">© 2020 Premier Electrotech. Все права защищены.</p>
+            <div class="links">
+              <ul class="lang">
+                <li><a href="#">O‘zbekcha</a></li>
+                <li><a href="#">Русcкий</a></li>
+                <li><a href="#">English</a></li>
+              </ul>
+              <ul class="social__links">
+                <li>
+                  <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- footer end -->
+    </div>
+
+    <!-- vue #app div end -->
+  </body>
+
+  <!-- jquery.js -->
+
+  <script src="./js/jquery.min.js"></script>
+
+  <!-- ------------ -->
+
+  <!-- owl carousel js -->
+
+  <script src="./js/owl.carousel.js"></script>
+
+  <!-- ------------ -->
+
+  <!-- all js scripts -->
+
+  <script src="./js/main.js"></script>
+
+  <!-- ------------ -->
+
+  <!-- cdn vue library -->
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+  <!-- ------------ -->
+
+  <!-- vue scripts -->
+
+  <script src="./js/script.js"></script>
+
+  <!-- ------------ -->
+</html>

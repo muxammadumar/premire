@@ -1,0 +1,1 @@
+[1206/231607.740:ERROR:persistent_histogram_storage.cc(97)] Could not write "SetupMetrics" persistent histograms to file as the storage base directory is not properly set.

@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product page</title>
+
+    <!-- bootstrap css -->
+
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+
+    <!-- ------------ -->
+
+    <!-- font awesome all components -->
+
+    <link
+      rel="stylesheet"
+      href="./libs/fontawesome-free-5.15.1-web/css/all.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./libs/fontawesome-free-5.15.1-web/css/fontawesome.css"
+    />
+
+    <!-- ------------ -->
+
+    <!-- owl carousel components -->
+
+    <link rel="stylesheet" href="./css/owl.carousel.css" />
+
+    <link rel="stylesheet" href="./css/owl.theme.default.css" />
+
+    <!-- ------------ -->
+
+    <!-- cdn animate.css -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- ------------ -->
+
+    <!-- my css file -->
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- ------------ -->
+  </head>
+  <body>
+    <!-- div #app begin -->
+
+    <div id="app">
+      <!-- header begin -->
+
+      <header class="washing-machines-header">
+        <div class="my-first-container">
+          <transition
+            enter-active-class="animate__animated animate__fadeIn"
+            leave-active-class="animate__animated animate__fadeOut"
+          >
+            <div v-if="!searchBoxIsOpen" class="call-wrapper">
+              <div class="call">
+                <i class="fas fa-phone-alt"></i>
+                <div class="text">
+                  <p>Call-center</p>
+                  <h3 class="number">998 71 200 4100</h3>
+                </div>
+              </div>
+            </div>
+          </transition>
+          <div class="center-item">
+            <transition
+              enter-active-class="animate__animated animate__fadeIn"
+              leave-active-class="animate__animated animate__fadeOut"
+            >
+              <a href="#" v-if="!searchBoxIsOpen" class="logo-wrapper">
+                <img src="./img/premier-logo.png" class="logo" />
+              </a>
+
+              <form v-if="searchBoxIsOpen" class="hidden-search-form">
+                <input type="text" placeholder="Поиск по каталогу" />
+                <i class="fas fa-search"></i>
+              </form>
+            </transition>
+          </div>
+          <div class="menu">
+            <transition
+              enter-active-class="animate__animated animate__fadeIn"
+              leave-active-class="animate__animated animate__fadeOut"
+            >
+              <i
+                v-if="!searchBoxIsOpen"
+                class="fas fa-search search"
+                v-on:click="openSearchBox"
+              ></i>
+            </transition>
+            <div v-if="!searchBoxIsOpen" class="dropdown-lang">
+              <button class="first-dropdown-toggle" id="dropdownMenuButton">
+                <p class="active">Рус</p>
+                <i class="fas fa-caret-down"></i>
+              </button>
+              <ul
+                class="first-dropdown-menu"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <li class="first-dropdown-item"><a href="#">Eng</a></li>
+                <li class="first-dropdown-item"><a href="#">Uzb</a></li>
+              </ul>
+            </div>
+            <div class="my-wrapper">
+              <div v-on:click="openMenuBox" class="burger">
+                <div class="container">
+                  <div class="bar bar-left">&nbsp;</div>
+                  <div class="bar bar-center">&nbsp;</div>
+                  <div class="bar bar-right">&nbsp;</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <transition
+          enter-active-class="animate__animated animate__fadeInDown"
+          leave-active-class="animate__animated animate__fadeOutUp"
+        >
+          <div v-if="menuBoxIsOpen" class="hidden-menu">
+            <div class="my-container">
+              <div class="main-wrapper">
+                <ul class="menu">
+                  <li>
+                    <a href="#">
+                      <hr />
+                      Главная
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <hr />
+                      О компании
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <hr />
+                      Новости
+                    </a>
+                  </li>
+                  <li id="my-list-item">
+                    <a href="#">
+                      <hr />
+                      Сервисные центры
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <hr />
+                      Вакансии
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <hr />
+                      Контакты
+                    </a>
+                  </li>
+                </ul>
+                <div class="products">
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Tv.svg" />
+                      </div>
+                      <p class="name">Телевизоры</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Слой x0020 1.svg" />
+                      </div>
+                      <p class="name">Холодильники</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Stir.svg" />
+                      </div>
+                      <p class="name">Стиральные машины</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Oven.svg" />
+                      </div>
+                      <p class="name">Газовые плиты</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Vitejka.svg" />
+                      </div>
+                      <p class="name">Кухонные вытяжки</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Kond.svg" />
+                      </div>
+                      <p class="name">Кондиционеры</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Moroz.svg" />
+                      </div>
+                      <p class="name">Морозильники</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Micro.svg" />
+                      </div>
+                      <p class="name">Микроволновые печи</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/heater 1.svg" />
+                      </div>
+                      <p class="name">Обогреватели</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="details">
+                <div class="item">
+                  <div class="img">
+                    <img src="./img/home 1.svg" />
+                  </div>
+                  <div class="text">
+                    <h3 class="title">Адрес:</h3>
+                    <p class="answer">
+                      Ташкент , Яшнабадский район, 100147, ул.Мумтоз, 5
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="img">
+                    <img src="./img/phone-call.svg" />
+                  </div>
+                  <div class="text">
+                    <h3 class="title">Единый инфо центр</h3>
+                    <p class="answer">+99871 200-41-00</p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="img">
+                    <img src="./img/mail (1).svg" />
+                  </div>
+                  <div class="text">
+                    <h3 class="title">E-mail</h3>
+                    <p class="answer">info@premier.uz</p>
+                  </div>
+                </div>
+                <div class="my-item">
+                  <div class="img">
+                    <img src="./img/send (1) 2.svg" />
+                  </div>
+                  <a href="#">
+                    <p>Напишите нам</p>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <footer>
+              <div class="my-own-container">
+                <p class="faq">
+                  © 2020 Premier Electrotech. Все права защищены.
+                </p>
+                <div class="links">
+                  <ul class="lang">
+                    <li><a href="#">O‘zbekcha</a></li>
+                    <li><a href="#">Русcкий</a></li>
+                    <li><a href="#">English</a></li>
+                  </ul>
+                  <ul class="social__links">
+                    <li>
+                      <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-youtube"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </transition>
+      </header>
+
+      <!-- heaeder end -->
+
+      <!-- search-space begin -->
+
+      <transition
+        enter-active-class="animate__animated animate__fadeInDown"
+        leave-active-class="animate__animated animate__fadeOutUp"
+      >
+        <div
+          class="search-space"
+          v-if="searchBoxIsOpen"
+          style="width: 100%; height: 100vh"
+        >
+          <div class="my-container">
+            <div class="status">
+              <div class="title">
+                <p class="secondary on-request">По запросу:&nbsp;</p>
+                <p class="main search-name">Стиральная машина</p>
+              </div>
+              <div class="quantity">
+                <p class="secondary found">Найдено:&nbsp;</p>
+                <p class="main quantity-of-found">17 моделей</p>
+              </div>
+            </div>
+            <div class="main-wrapper">
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="btn btn-back">
+              <div class="back-link">
+                <i class="fas fa-arrow-left"></i>
+              </div>
+              <h2 class="txt">НАЗАД</h2>
+            </a>
+          </div>
+        </div>
+      </transition>
+
+      <!-- search-space end -->
+
+      <!-- header__content begin -->
+
+      <section
+        class="header__content"
+        style="background: url(./img/Rectangle-5.jpg)"
+      >
+        <div class="my-container">
+          <div class="header__top__content">
+            <a href="#" class="back">
+              <div class="button">
+                <i class="fas fa-arrow-left"></i>
+              </div>
+              <p class="text">НАЗАД</p>
+            </a>
+            <div class="wrapper">
+              <div class="buy">
+                <p class="text">Где купить</p>
+                <button class="location__button">
+                  <i class="fas fa-map-marker-alt"></i>
+                </button>
+              </div>
+              <div class="share__dropdown">
+                <button class="share__drop__toggler" id="shareDropToggler">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+                <ul
+                  class="share__dropdown__list animate__animated animate__fadeInDown"
+                >
+                  <li class="share__list__item">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  </li>
+                  <li class="share__list__item">
+                    <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                  </li>
+                  <li class="share__list__item">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                  </li>
+                  <li class="share__list__item">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li class="share__list__item">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="main__content">
+            <div class="wrapper">
+              <h2 class="main__content__title">
+                Стиральная машина PRM-80MD-1412 PR/W
+              </h2>
+              <p class="subtitle">
+                Инверторный двигатель построенный по особой технологии -
+                значительно снижает уровен шума, износа и энергопотребления
+              </p>
+            </div>
+          </div>
+          <div class="info__box">
+            <div class="colors">
+              <div class="wrapper">
+                <p class="title">Цвета:</p>
+                <div
+                  class="color color__custom"
+                  style="background-color: #ffffff"
+                ></div>
+                <div
+                  class="color color__custom"
+                  style="background-color: #4b2c25"
+                ></div>
+                <div class="color color__image">
+                  <img src="./img/Ellipse 67.png" />
+                </div>
+                <div class="color color__image">
+                  <img src="./img/Ellipse 68.png" />
+                </div>
+              </div>
+            </div>
+            <div class="details">
+              <div class="details__card">
+                <img src="./img/image 11.png" />
+                <p class="details__card__title">Одежда малыша</p>
+              </div>
+              <div class="details__card">
+                <img src="./img/image 1.png" />
+                <p class="details__card__title">Цифровой инверторный мотор</p>
+              </div>
+              <div class="details__card">
+                <img src="./img/image 2.png" />
+                <p class="details__card__title">Очистка барабана</p>
+              </div>
+              <div class="details__card">
+                <img src="./img/image 3.png" />
+                <p class="details__card__title">Защита от детей</p>
+              </div>
+              <div class="details__card">
+                <img src="./img/image 4.png" />
+                <p class="details__card__title">16 программ</p>
+              </div>
+              <div class="details__card">
+                <img src="./img/image 9.png" />
+                <p class="details__card__title">Графический Led-дисплей</p>
+              </div>
+              <div class="details__card">
+                <img src="./img/image 12.png" />
+                <p class="details__card__title">Шерсть</p>
+              </div>
+              <div class="details__card">
+                <img src="./img/image 5.png" />
+                <p class="details__card__title">Отсрочка времени</p>
+              </div>
+              <div class="details__card">
+                <img src="./img/image 7.png" />
+                <p class="details__card__title">Моя программа</p>
+              </div>
+              <div class="details__card">
+                <img src="./img/image 8.png" />
+                <p class="details__card__title">Быстрая стирка</p>
+              </div>
+              <div class="details__card"></div>
+              <div class="details__card"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- header__content end -->
+
+      <!-- product__img begin -->
+
+      <section class="product__img">
+        <img src="./img/Rectangle 180.png" />
+      </section>
+
+      <!-- product__img end -->
+
+      <!-- product__info__boxes begin -->
+
+      <section class="product__info__boxes">
+        <div class="my-container">
+          <div class="product__info__box img__left">
+            <div class="image">
+              <img src="./img/Rectangle 181.png" />
+            </div>
+            <div class="text">
+              <p class="title">Глубина Slim 47 см</p>
+              <p class="subtitle">
+                Мы в <span>Premier</span> знаем, как важна в стиральной машине
+                не только функциональность, но и компактность. Глубина 47 см
+                позволит удобно разместить эту модель даже в самой небольшой
+                квартире!
+              </p>
+            </div>
+          </div>
+          <div class="product__info__box img__right">
+            <div class="text">
+              <p class="title">Функция дозагрузки белья</p>
+              <p class="subtitle">
+                Даст возможность отправить в стирку те вещи, которые вы забыли
+                или не успели заложить внутрь, даже после запуска программы.
+              </p>
+            </div>
+            <div class="image">
+              <img src="./img/Rectangle 182.png" />
+            </div>
+          </div>
+          <div class="product__info__box img__left">
+            <div class="image">
+              <img src="./img/Rectangle 183.png" />
+            </div>
+            <div class="text">
+              <p class="title">Блокировка от детей</p>
+              <p class="subtitle">
+                Защитит вашу стиральную машину от нарушения работы программ
+                вследствие непреднамеренных нажатий кнопок или поворота
+                переключателя.
+              </p>
+            </div>
+          </div>
+          <div class="product__info__box img__right">
+            <div class="text">
+              <p class="title">Универсиальный двигатель</p>
+              <p class="subtitle">
+                Обеспечивает эффективную и стабильную работу стиральной машины
+                как постоянного, так и от переменного тока.
+              </p>
+            </div>
+            <div class="image">
+              <img src="./img/Rectangle 184.png" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- product__info__boxes begin -->
+
+      <!-- characteristics end -->
+
+      <div class="container-fluid characteristics">
+        <div class="row">
+          <div class="col-md-12 col-lg-5 images">
+            <div class="owl__wrapper">
+              <button
+                class="product__carousel__trigger"
+                id="productCarouselTriggerPrev"
+              >
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button
+                class="product__carousel__trigger"
+                id="productCarouselTriggerNext"
+              >
+                <i class="fas fa-chevron-right"></i>
+              </button>
+              <!-- <div class="colors">
+                <div class="wrapper">
+                  <p class="title">Доступные цвета:</p>
+                  <div
+                    class="color color__custom"
+                    style="background-color: #ffffff"
+                  ></div>
+                  <div
+                    class="color color__custom"
+                    style="background-color: #4b2c25"
+                  ></div>
+                  <div class="color color__image">
+                    <img src="./img/Ellipse 67.png" />
+                  </div>
+                  <div class="color color__image">
+                    <img src="./img/Ellipse 68.png" />
+                  </div>
+                </div>
+              </div> -->
+              <div class="owl-carousel owl-theme product__carousel">
+                <div class="item">
+                  <img src="./img/Rectangle 70 (1).png" />
+                </div>
+                <div class="item">
+                  <img src="./img/Rectangle 70 (1).png" />
+                </div>
+                <div class="item">
+                  <img src="./img/Rectangle 70 (1).png" />
+                </div>
+                <div class="item">
+                  <img src="./img/Rectangle 70 (1).png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-7 general__characteristics">
+            <h3 class="general__characteristics__title">
+              Общие характеристики
+            </h3>
+            <hr class="title__bottom__hr" />
+            <ul>
+              <li>
+                <p class="parametr__name">Тип загрузки:</p>
+                <p class="parametr__value">Фронтальная</p>
+              </li>
+              <li>
+                <p class="parametr__name">Максимальная загрузка белья:</p>
+                <p class="parametr__value">8 кг</p>
+              </li>
+              <li>
+                <p class="parametr__name">Сушка:</p>
+                <p class="parametr__value">Есть (до 6 кг)</p>
+              </li>
+              <li>
+                <p class="parametr__name">Количество программ сушки:</p>
+                <p class="parametr__value">3</p>
+              </li>
+              <li>
+                <p class="parametr__name">Дисплей:</p>
+                <p class="parametr__value">Цифровой (символьный)</p>
+              </li>
+              <li>
+                <p class="parametr__name">Габариты (ШxГxВ):</p>
+                <p class="parametr__value">59.5x47x85 см</p>
+              </li>
+              <li>
+                <p class="parametr__name">Вес:</p>
+                <p class="parametr__value">64 кг</p>
+              </li>
+              <li>
+                <p class="parametr__name">Цвет:</p>
+                <p class="parametr__value">Белый, металлик</p>
+              </li>
+              <li>
+                <p class="parametr__name">Тип двигателя:</p>
+                <p class="parametr__value">Инверторный</p>
+              </li>
+              <li>
+                <p class="parametr__name">Класс энергоэффективности:</p>
+                <p class="parametr__value">А+++</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- characteristics end -->
+
+      <!-- product__description begin -->
+
+      <section class="product__description">
+        <div class="my-container">
+          <h2 class="title">Характеристики и описание</h2>
+          <p class="secondary__text">
+            Компактная стиральная машина Premier, оснащённая универсальным
+            двигателем, вмещает до 8 кг белья и обеспечивает скорость отжима до
+            1400 оборотов в минуту. Благодаря глубине всего 47 см устройство
+            можно установить даже в самой небольшой квартире. Оптимальная
+            вместимость позволяет машине справиться со всем объёмом одежды за
+            один цикл. Скорость отжима до 1400 оборотов в минуту существенно
+            сокращает время дальнейшей сушки белья. Режим «Быстрая стирка» на 15
+            минут отлично подходит для тех, у кого на счету каждая минута. Режим
+            для детских вещей добавляет дополнительное полоскание, эффективно
+            удаляя остатки моющего средства. Тихий режим станет идеальным
+            решением для стирки в ночное время. После его активации все
+            электронные звуковые сигналы будут отключены, поэтому программа
+            будет выполняться без сигналов и дополнительных уведомлений. Режим
+            «Стирка + сушка за 1 час» позволит быстро получить полностью сухие и
+            чистые вещи.
+          </p>
+          <p class="secondary__text">
+            Опция Power Memory запомнит выбранные настройки стиральной машины,
+            даже в случае отключения электричества, и позволит продолжить работу
+            с заданными параметрами после возобновления электропитания. Функция
+            «Моя программа» позволит сохранить в памяти машины новый режим
+            работы с бельём, созданный на основе индивидуально выбранных
+            параметров. Таймер отложенного старта позволяет отстрочить стирку до
+            24 часов. Функция дозагрузки белья после запуска программы
+            обеспечивает дополнительное удобство.
+          </p>
+          <p class="secondary__text">
+            Универсальный двигатель обеспечивает эффективную и стабильную работу
+            стиральной машины как от постоянного, так и от переменного тока.
+            Блокировка от детей защитит стиральную машину от нарушения работы
+            программы из-за непреднамеренных нажатий кнопок или поворотов
+            переключателя.
+          </p>
+          <div class="where__buy">
+            <div class="location">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="location__text">Где купить</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- product__description end -->
+
+      <section class="another__category__item">
+        <div class="my-container">
+          <div class="head">
+            <hr class="left" />
+            <h1 class="title">Другие продукты из этой категории</h1>
+            <hr class="right" />
+          </div>
+          <div class="owl-carousel owl-theme category__carousel">
+            <div class="my-item item">
+              <a href="#" class="wrapper-link">
+                <div class="image-wrapper">
+                  <img src="./img/Stiralka 2.png" />
+                </div>
+                <h3 class="heading">
+                  Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                </h3>
+              </a>
+              <div class="links">
+                <a href="#" class="map">
+                  <img src="./img/pin 1.svg" />
+                  <p class="where">Где купить</p>
+                </a>
+                <a href="#" class="details-link">
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="my-item item">
+              <a href="#" class="wrapper-link">
+                <div class="image-wrapper">
+                  <img src="./img/Stiralka 2.png" />
+                </div>
+                <h3 class="heading">
+                  Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                </h3>
+              </a>
+              <div class="links">
+                <a href="#" class="map">
+                  <img src="./img/pin 1.svg" />
+                  <p class="where">Где купить</p>
+                </a>
+                <a href="#" class="details-link">
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="my-item item">
+              <a href="#" class="wrapper-link">
+                <div class="image-wrapper">
+                  <img src="./img/Stiralka 2.png" />
+                </div>
+                <h3 class="heading">
+                  Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                </h3>
+              </a>
+              <div class="links">
+                <a href="#" class="map">
+                  <img src="./img/pin 1.svg" />
+                  <p class="where">Где купить</p>
+                </a>
+                <a href="#" class="details-link">
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="my-item item">
+              <a href="#" class="wrapper-link">
+                <div class="image-wrapper">
+                  <img src="./img/Stiralka 2.png" />
+                </div>
+                <h3 class="heading">
+                  Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                </h3>
+              </a>
+              <div class="links">
+                <a href="#" class="map">
+                  <img src="./img/pin 1.svg" />
+                  <p class="where">Где купить</p>
+                </a>
+                <a href="#" class="details-link">
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="my-item item">
+              <a href="#" class="wrapper-link">
+                <div class="image-wrapper">
+                  <img src="./img/Stiralka 2.png" />
+                </div>
+                <h3 class="heading">
+                  Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                </h3>
+              </a>
+              <div class="links">
+                <a href="#" class="map">
+                  <img src="./img/pin 1.svg" />
+                  <p class="where">Где купить</p>
+                </a>
+                <a href="#" class="details-link">
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="buttons">
+            <button
+              class="category__carousel__toggler"
+              id="categoryCarouselPrev"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button
+              class="category__carousel__toggler"
+              id="categoryCarouselNext"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer begin -->
+
+      <footer class="home-footer">
+        <div class="my-container">
+          <div class="info">
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/home 1.svg" />
+              </div>
+              <div class="text">
+                <p class="title">Адрес:</p>
+                <p class="answer">
+                  Ташкент , Яшнабадский район, 100147, ул.Мумтоз, 5
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/phone-call.svg" />
+              </div>
+              <div class="text">
+                <p class="title">Единый инфо центр</p>
+                <p class="answer">+99871 200 4100</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/mail (1).svg" />
+              </div>
+              <div class="text">
+                <p class="title">E-MAIL</p>
+                <p class="answer">info@premier.uz</p>
+              </div>
+            </div>
+          </div>
+          <div class="menu">
+            <p class="title">О нас</p>
+            <hr />
+            <ul>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Наши партнеры</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Вакансии</a></li>
+            </ul>
+          </div>
+          <div class="menu my-menu">
+            <p class="title">Наши продукты</p>
+            <hr />
+            <ul>
+              <li><a href="#">Телевизоры</a></li>
+              <li><a href="#">Холодильники</a></li>
+              <li><a href="#">Стиральные машины</a></li>
+              <li><a href="#">Газовые плиты</a></li>
+              <li><a href="#">Кухонные вытяжки </a></li>
+              <li><a href="#">Кондиционеры </a></li>
+              <li><a href="#">Морозильники</a></li>
+              <li><a href="#">Микроволновые печи</a></li>
+              <li><a href="#">Обогреватели</a></li>
+            </ul>
+          </div>
+          <div class="find-us">
+            <p class="title">Как нас найти</p>
+            <hr />
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/phone 2.svg" />
+              </div>
+              <a href="#">
+                Контакты
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/service 1.svg" />
+              </div>
+              <a href="#">
+                Сервисные центры
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/pin 1 (1).svg" />
+              </div>
+              <a href="#">
+                Наши диллеры
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="my-own-container">
+            <p class="faq">© 2020 Premier Electrotech. Все права защищены.</p>
+            <div class="links">
+              <ul class="lang">
+                <li><a href="#">O‘zbekcha</a></li>
+                <li><a href="#">Русcкий</a></li>
+                <li><a href="#">English</a></li>
+              </ul>
+              <ul class="social__links">
+                <li>
+                  <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- footer end -->
+    </div>
+
+    <!-- div #app end -->
+  </body>
+
+  <!-- jquery js -->
+
+  <script src="./js/jquery.min.js"></script>
+
+  <!-- ------------ -->
+
+  <!-- bootstrap js -->
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+
+  <!-- ------------ -->
+
+  <!-- owl carousel js -->
+
+  <script src="./js/owl.carousel.js"></script>
+
+  <!-- ------------ -->
+
+  <!-- all js scripts -->
+
+  <script src="./js/main.js"></script>
+
+  <!-- ------------ -->
+
+  <!-- cdn vue library -->
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+  <!-- ------------ -->
+
+  <!-- vue scripts -->
+
+  <script src="./js/script.js"></script>
+
+  <!-- ------------ -->
+</html>

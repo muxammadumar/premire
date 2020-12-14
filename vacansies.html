@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vacansies</title>
+
+    <!-- bootstrap css -->
+
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+
+    <!-- ------------ -->
+
+    <!-- font awesome all components -->
+
+    <link
+      rel="stylesheet"
+      href="./libs/fontawesome-free-5.15.1-web/css/all.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./libs/fontawesome-free-5.15.1-web/css/fontawesome.css"
+    />
+
+    <!-- ------------ -->
+
+    <!-- owl carousel components -->
+
+    <link rel="stylesheet" href="./css/owl.carousel.css" />
+
+    <link rel="stylesheet" href="./css/owl.theme.default.css" />
+
+    <!-- ------------ -->
+
+    <!-- cdn animate.css -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- ------------ -->
+
+    <!-- my css file -->
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- ------------ -->
+  </head>
+  <body>
+    <!-- div #app begin -->
+
+    <div id="app">
+      <!-- header begin -->
+
+      <header class="washing-machines-header">
+        <div class="my-first-container">
+          <transition
+            enter-active-class="animate__animated animate__fadeIn"
+            leave-active-class="animate__animated animate__fadeOut"
+          >
+            <div v-if="!searchBoxIsOpen" class="call-wrapper">
+              <div class="call">
+                <i class="fas fa-phone-alt"></i>
+                <div class="text">
+                  <p>Call-center</p>
+                  <h3 class="number">998 71 200 4100</h3>
+                </div>
+              </div>
+            </div>
+          </transition>
+          <div class="center-item">
+            <transition
+              enter-active-class="animate__animated animate__fadeIn"
+              leave-active-class="animate__animated animate__fadeOut"
+            >
+              <a href="#" v-if="!searchBoxIsOpen" class="logo-wrapper">
+                <img src="./img/premier-logo.png" class="logo" />
+              </a>
+
+              <form v-if="searchBoxIsOpen" class="hidden-search-form">
+                <input type="text" placeholder="Поиск по каталогу" />
+                <i class="fas fa-search"></i>
+              </form>
+            </transition>
+          </div>
+          <div class="menu">
+            <transition
+              enter-active-class="animate__animated animate__fadeIn"
+              leave-active-class="animate__animated animate__fadeOut"
+            >
+              <i
+                v-if="!searchBoxIsOpen"
+                class="fas fa-search search"
+                v-on:click="openSearchBox"
+              ></i>
+            </transition>
+            <div v-if="!searchBoxIsOpen" class="dropdown-lang">
+              <button class="first-dropdown-toggle" id="dropdownMenuButton">
+                <p class="active">Рус</p>
+                <i class="fas fa-caret-down"></i>
+              </button>
+              <ul
+                class="first-dropdown-menu"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <li class="first-dropdown-item"><a href="#">Eng</a></li>
+                <li class="first-dropdown-item"><a href="#">Uzb</a></li>
+              </ul>
+            </div>
+            <div class="my-wrapper">
+              <div v-on:click="openMenuBox" class="burger">
+                <div class="container">
+                  <div class="bar bar-left">&nbsp;</div>
+                  <div class="bar bar-center">&nbsp;</div>
+                  <div class="bar bar-right">&nbsp;</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <transition
+          enter-active-class="animate__animated animate__fadeInDown"
+          leave-active-class="animate__animated animate__fadeOutUp"
+        >
+          <div v-if="menuBoxIsOpen" class="hidden-menu">
+            <div class="my-container">
+              <div class="main-wrapper">
+                <ul class="menu">
+                  <li>
+                    <a href="#">
+                      <hr />
+                      Главная
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <hr />
+                      О компании
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <hr />
+                      Новости
+                    </a>
+                  </li>
+                  <li id="my-list-item">
+                    <a href="#">
+                      <hr />
+                      Сервисные центры
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <hr />
+                      Вакансии
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <hr />
+                      Контакты
+                    </a>
+                  </li>
+                </ul>
+                <div class="products">
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Tv.svg" />
+                      </div>
+                      <p class="name">Телевизоры</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Слой x0020 1.svg" />
+                      </div>
+                      <p class="name">Холодильники</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Stir.svg" />
+                      </div>
+                      <p class="name">Стиральные машины</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Oven.svg" />
+                      </div>
+                      <p class="name">Газовые плиты</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Vitejka.svg" />
+                      </div>
+                      <p class="name">Кухонные вытяжки</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Kond.svg" />
+                      </div>
+                      <p class="name">Кондиционеры</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Moroz.svg" />
+                      </div>
+                      <p class="name">Морозильники</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Micro.svg" />
+                      </div>
+                      <p class="name">Микроволновые печи</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/heater 1.svg" />
+                      </div>
+                      <p class="name">Обогреватели</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="details">
+                <div class="item">
+                  <div class="img">
+                    <img src="./img/home 1.svg" />
+                  </div>
+                  <div class="text">
+                    <h3 class="title">Адрес:</h3>
+                    <p class="answer">
+                      Ташкент , Яшнабадский район, 100147, ул.Мумтоз, 5
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="img">
+                    <img src="./img/phone-call.svg" />
+                  </div>
+                  <div class="text">
+                    <h3 class="title">Единый инфо центр</h3>
+                    <p class="answer">+99871 200-41-00</p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="img">
+                    <img src="./img/mail (1).svg" />
+                  </div>
+                  <div class="text">
+                    <h3 class="title">E-mail</h3>
+                    <p class="answer">info@premier.uz</p>
+                  </div>
+                </div>
+                <div class="my-item">
+                  <div class="img">
+                    <img src="./img/send (1) 2.svg" />
+                  </div>
+                  <a href="#">
+                    <p>Напишите нам</p>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <footer>
+              <div class="my-own-container">
+                <p class="faq">
+                  © 2020 Premier Electrotech. Все права защищены.
+                </p>
+                <div class="links">
+                  <ul class="lang">
+                    <li><a href="#">O‘zbekcha</a></li>
+                    <li><a href="#">Русcкий</a></li>
+                    <li><a href="#">English</a></li>
+                  </ul>
+                  <ul class="social__links">
+                    <li>
+                      <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-youtube"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </transition>
+      </header>
+
+      <!-- heaeder end -->
+
+      <!-- search-space begin -->
+
+      <transition
+        enter-active-class="animate__animated animate__fadeInDown"
+        leave-active-class="animate__animated animate__fadeOutUp"
+      >
+        <div
+          class="search-space"
+          v-if="searchBoxIsOpen"
+          style="width: 100%; height: 100vh"
+        >
+          <div class="my-container">
+            <div class="status">
+              <div class="title">
+                <p class="secondary on-request">По запросу:&nbsp;</p>
+                <p class="main search-name">Стиральная машина</p>
+              </div>
+              <div class="quantity">
+                <p class="secondary found">Найдено:&nbsp;</p>
+                <p class="main quantity-of-found">17 моделей</p>
+              </div>
+            </div>
+            <div class="main-wrapper">
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="btn btn-back">
+              <div class="back-link">
+                <i class="fas fa-arrow-left"></i>
+              </div>
+              <h2 class="txt">НАЗАД</h2>
+            </a>
+          </div>
+        </div>
+      </transition>
+
+      <!-- search-space end -->
+
+      <!-- work-in-our-company begin -->
+
+      <section class="work-in-our-company">
+        <div class="my-container">
+          <h3 class="work-in-our-company__title">Работа в нашей команде</h3>
+          <p class="work-in-our-company__subtitle">
+            Мы ценим в своих сотрудниках постоянство и ответственность. Поэтому
+            ожидаем, что кандидаты, решившие нам написать, тщательно и
+            добросовестно завершат все дела у предыдущего работодателя. Такой же
+            обдуманный подход к смене места работы впоследствии ожидается и от
+            сотрудников студии.
+          </p>
+        </div>
+      </section>
+
+      <!-- work-in-our-company end -->
+
+      <!-- vacansies__blog__wrapper begin -->
+
+      <section class="vacansies__blog__wrapper">
+        <section class="vacansies__blog vacansies__blog__img__left">
+          <div class="my-container">
+            <div class="main__img">
+              <img src="./img/Rectangle 121.jpg" />
+            </div>
+            <div class="content">
+              <h3 class="vacansies__blog__title">С кем мы хотим работать?</h3>
+              <hr class="black-hr" />
+              <p class="vacansies__blog__subtitle">
+                Мы принимаем на работу личность, а не профессию. Стандартное
+                резюме — признак профессионала по устройству на работу — будет
+                проигнорировано. Мы привыкли получать письма, написанные
+                специально для нас, а не отправленные на сорок адресов разом.
+                Нам интересно работать с теми, кто в состоянии осознать свой
+                выбор. Нет смысла приходить в студию на месяц или на год.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="vacansies__blog vacansies__blog__img__right">
+          <div class="my-container">
+            <div class="content">
+              <h3 class="vacansies__blog__title">Корпоративная культура</h3>
+              <hr class="black-hr" />
+              <p class="vacansies__blog__subtitle">
+                В этом блоке мы рекомендуем разместить информацию о Вашей
+                организации, подчеркнуть ее значимость и надежность на рынке
+                оказываемых услуг или предлагаемых товаров.
+              </p>
+              <br />
+              <p class="vacansies__blog__subtitle">
+                Примечание. Обращаем Ваше внимание, что текстовая информация на
+                сайте должна быть индивидуальной, не скопированной с других
+                интернет-ресурсов, о чем указано в рекомендациях Яндекса: «Мы
+                стараемся не индексировать или не ранжировать высоко сайты,
+                копирующие информацию с других ресурсов и не создающие
+                оригинального контента или сервиса»
+              </p>
+            </div>
+            <div class="main__img">
+              <img src="./img/Rectangle 170.png" />
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- vacansies__blog__wrapper end -->
+
+      <!-- open__vacansies begin -->
+
+      <section class="open__vacansies">
+        <div class="my-container">
+          <div class="cities">
+            <h3 class="cities__title">Открытые вакансии</h3>
+            <div class="region-dropdown">
+              <button class="region-dropdown-button" id="region-toggler">
+                <p class="label" id="region-label">Все города</p>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <ul class="hidden-list" id="region-list">
+                <li class="region-item">Все города</li>
+                <li class="region-item">г. Ташкент</li>
+                <li class="region-item">Андижан</li>
+                <li class="region-item">Бухара</li>
+                <li class="region-item">Джиззак</li>
+                <li class="region-item">Кашкадарья</li>
+                <li class="region-item">Каракалпакстан</li>
+                <li class="region-item">Навои</li>
+                <li class="region-item">Наманган</li>
+                <li class="region-item">Самарканд</li>
+                <li class="region-item">Сырдарья</li>
+                <li class="region-item">Сурхандарья</li>
+                <li class="region-item">Ташкент</li>
+                <li class="region-item">Фергана</li>
+                <li class="region-item">Хорезм</li>
+              </ul>
+            </div>
+            <div class="job__list">
+              <a href="#" class="job">
+                <h4 class="job__title">
+                  Оператор склада (водитель высотного штабелера)
+                </h4>
+                <div class="location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <p class="city-name">г. Ташкент</p>
+                </div>
+              </a>
+              <a href="#" class="job">
+                <h4 class="job__title">
+                  Оператор склада (водитель высотного штабелера)
+                </h4>
+                <div class="location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <p class="city-name">г. Ташкент</p>
+                </div>
+              </a>
+              <a href="#" class="job">
+                <h4 class="job__title">
+                  Оператор склада (водитель высотного штабелера)
+                </h4>
+                <div class="location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <p class="city-name">г. Ташкент</p>
+                </div>
+              </a>
+              <a href="#" class="job">
+                <h4 class="job__title">
+                  Оператор склада (водитель высотного штабелера)
+                </h4>
+                <div class="location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <p class="city-name">г. Ташкент</p>
+                </div>
+              </a>
+              <a href="#" class="job">
+                <h4 class="job__title">
+                  Оператор склада (водитель высотного штабелера)
+                </h4>
+                <div class="location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <p class="city-name">г. Ташкент</p>
+                </div>
+              </a>
+              <a href="#" class="job">
+                <h4 class="job__title">
+                  Оператор склада (водитель высотного штабелера)
+                </h4>
+                <div class="location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <p class="city-name">г. Ташкент</p>
+                </div>
+              </a>
+              <a href="#" class="job">
+                <h4 class="job__title">
+                  Оператор склада (водитель высотного штабелера)
+                </h4>
+                <div class="location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <p class="city-name">г. Ташкент</p>
+                </div>
+              </a>
+              <a href="#" class="job">
+                <h4 class="job__title">
+                  Оператор склада (водитель высотного штабелера)
+                </h4>
+                <div class="location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <p class="city-name">г. Ташкент</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <section class="right__section">
+            <div class="job__details">
+              <div class="heading">
+                <p class="job__type">Менеджер по работе с клиентами</p>
+                <div class="job__location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <p class="job__city">г. Ташкент</p>
+                </div>
+              </div>
+              <div class="content">
+                <div class="head">
+                  <p class="text">Ключевые профессиональные навыки</p>
+                  <div class="hr-line">
+                    <hr />
+                  </div>
+                </div>
+                <ul>
+                  <li>Прием входящих и исходящих звонков</li>
+                  <li>
+                    Решение проблем покупателей при эксплуатации техники BORK,
+                    консультирование и обучение
+                  </li>
+                  <li>
+                    Консультирование клиентов по сервисному обслуживанию техники
+                  </li>
+                  <li>Оформление заявок на ремонт</li>
+                  <li>Коммуникации с сервисным центром</li>
+                  <li>Контроль выполнения заказов</li>
+                  <li>Четкая дикция, грамотная устная и письменная речь</li>
+                  <li>
+                    Желание и умение заботиться и предоставлять превосходный
+                    сервис
+                  </li>
+                  <li>Навык общения по телефону</li>
+                  <li>Опыт работы с техникой</li>
+                  <li>Свободное владение ПК</li>
+                </ul>
+                <div class="head">
+                  <p class="text">Условия</p>
+                  <div class="hr-line">
+                    <hr />
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    Перспективы профессионального развития и карьерного роста
+                    Эксклюзивные предложения на приобретение продукции компании
+                  </li>
+                  <li>
+                    Эксклюзивные предложения на приобретение продукции компании
+                  </li>
+                  <li>
+                    Система лояльности с другими компаниями, льготная
+                    корпоративная мобильная связь, DMS.
+                  </li>
+                  <li>Оформление заявок на ремонт</li>
+                  <li>
+                    Полезные, вкусные завтраки, обеды и ужины за счет компании
+                  </li>
+                  <li>Офис в Центре</li>
+                </ul>
+              </div>
+            </div>
+            <div class="download">
+              <div class="main__content">
+                <section>
+                  <img src="./img/word 1.png" />
+                  <p class="download__title">
+                    Резюме для кондидата Premier.docx
+                  </p>
+                </section>
+                <a href="#">
+                  <img src="./img/download 1.png" />
+                  <p class="text">Скачать | 59.5 KB</p>
+                </a>
+              </div>
+              <p class="description">
+                Скачайте данный шаблон резюме, заполните и отправьте обратно
+              </p>
+            </div>
+            <form class="vacansies__form">
+              <h3 class="title">Отправить резюме</h3>
+              <div class="form__group field">
+                <input
+                  type="input"
+                  class="form__field"
+                  placeholder="Ваше имя *"
+                  name="name"
+                  id="name"
+                  required
+                />
+                <label for="name" class="form__label">Ваше имя *</label>
+              </div>
+              <div class="form__group field">
+                <input
+                  type="input"
+                  class="form__field"
+                  placeholder="Email"
+                  name="name"
+                  id="name"
+                  required
+                />
+                <label for="name" class="form__label">Email</label>
+              </div>
+              <div class="form__group field">
+                <input
+                  type="input"
+                  class="form__field"
+                  placeholder="Номер телефона*"
+                  name="name"
+                  id="name"
+                  required
+                />
+                <label for="name" class="form__label">Номер телефона*</label>
+              </div>
+              <textarea placeholder="Сопроводительное письмо"> </textarea>
+              <div class="footer">
+                <a href="#" class="pin__file">
+                  <img src="./img/paperclip 1.png" />
+                  <p class="pin__file__text">ЗАКРЕПИТЬ ФАЙЛ</p>
+                </a>
+                <button type="submit" class="send">
+                  <p class="send__text">ОТПРАВИТЬ</p>
+                  <img src="./img/send (1) 2 (1).svg" />
+                </button>
+              </div>
+              <p class="footer__text">
+                Нажимая на кнопку Отправить вы даете согласие на
+                <a href="#">обработку персональных данных</a>
+              </p>
+            </form>
+          </section>
+        </div>
+      </section>
+
+      <!-- open__vacansies end -->
+
+      <!-- footer begin -->
+
+      <footer class="home-footer">
+        <div class="my-container">
+          <div class="info">
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/home 1.svg" />
+              </div>
+              <div class="text">
+                <p class="title">Адрес:</p>
+                <p class="answer">
+                  Ташкент , Яшнабадский район, 100147, ул.Мумтоз, 5
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/phone-call.svg" />
+              </div>
+              <div class="text">
+                <p class="title">Единый инфо центр</p>
+                <p class="answer">+99871 200 4100</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/mail (1).svg" />
+              </div>
+              <div class="text">
+                <p class="title">E-MAIL</p>
+                <p class="answer">info@premier.uz</p>
+              </div>
+            </div>
+          </div>
+          <div class="menu">
+            <p class="title">О нас</p>
+            <hr />
+            <ul>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Наши партнеры</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Вакансии</a></li>
+            </ul>
+          </div>
+          <div class="menu my-menu">
+            <p class="title">Наши продукты</p>
+            <hr />
+            <ul>
+              <li><a href="#">Телевизоры</a></li>
+              <li><a href="#">Холодильники</a></li>
+              <li><a href="#">Стиральные машины</a></li>
+              <li><a href="#">Газовые плиты</a></li>
+              <li><a href="#">Кухонные вытяжки </a></li>
+              <li><a href="#">Кондиционеры </a></li>
+              <li><a href="#">Морозильники</a></li>
+              <li><a href="#">Микроволновые печи</a></li>
+              <li><a href="#">Обогреватели</a></li>
+            </ul>
+          </div>
+          <div class="find-us">
+            <p class="title">Как нас найти</p>
+            <hr />
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/phone 2.svg" />
+              </div>
+              <a href="#">
+                Контакты
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/service 1.svg" />
+              </div>
+              <a href="#">
+                Сервисные центры
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/pin 1 (1).svg" />
+              </div>
+              <a href="#">
+                Наши диллеры
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="my-own-container">
+            <p class="faq">© 2020 Premier Electrotech. Все права защищены.</p>
+            <div class="links">
+              <ul class="lang">
+                <li><a href="#">O‘zbekcha</a></li>
+                <li><a href="#">Русcкий</a></li>
+                <li><a href="#">English</a></li>
+              </ul>
+              <ul class="social__links">
+                <li>
+                  <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- footer end -->
+    </div>
+
+    <!-- div #app end -->
+  </body>
+
+  <!-- jquery js -->
+
+  <script src="./js/jquery.min.js"></script>
+
+  <!-- ------------ -->
+
+  <!-- bootstrap js -->
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+
+  <!-- ------------ -->
+
+  <!-- owl carousel js -->
+
+  <script src="./js/owl.carousel.js"></script>
+
+  <!-- ------------ -->
+
+  <!-- all js scripts -->
+
+  <script src="./js/main.js"></script>
+
+  <!-- ------------ -->
+
+  <!-- cdn vue library -->
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+  <!-- ------------ -->
+
+  <!-- vue scripts -->
+
+  <script src="./js/script.js"></script>
+
+  <!-- ------------ -->
+</html>

@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+
+    <!-- bootstrap css -->
+
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+
+    <!-- ------------ -->
+
+    <!-- font awesome all components -->
+
+    <link
+      rel="stylesheet"
+      href="./libs/fontawesome-free-5.15.1-web/css/all.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./libs/fontawesome-free-5.15.1-web/css/fontawesome.css"
+    />
+
+    <!-- ------------ -->
+
+    <!-- owl carousel components -->
+
+    <link rel="stylesheet" href="./css/owl.carousel.css" />
+
+    <link rel="stylesheet" href="./css/owl.theme.default.css" />
+
+    <!-- ------------ -->
+
+    <!-- cdn animate.css -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- ------------ -->
+
+    <!-- my css file -->
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- ------------ -->
+  </head>
+  <body>
+    <!-- div #app begin -->
+
+    <div id="app">
+      <!-- header begin -->
+
+      <header class="washing-machines-header">
+        <div class="my-first-container">
+          <transition
+            enter-active-class="animate__animated animate__fadeIn"
+            leave-active-class="animate__animated animate__fadeOut"
+          >
+            <div v-if="!searchBoxIsOpen" class="call-wrapper">
+              <div class="call">
+                <i class="fas fa-phone-alt"></i>
+                <div class="text">
+                  <p>Call-center</p>
+                  <h3 class="number">998 71 200 4100</h3>
+                </div>
+              </div>
+            </div>
+          </transition>
+          <div class="center-item">
+            <transition
+              enter-active-class="animate__animated animate__fadeIn"
+              leave-active-class="animate__animated animate__fadeOut"
+            >
+              <a href="#" v-if="!searchBoxIsOpen" class="logo-wrapper">
+                <img src="./img/premier-logo.png" class="logo" />
+              </a>
+
+              <form v-if="searchBoxIsOpen" class="hidden-search-form">
+                <input type="text" placeholder="Поиск по каталогу" />
+                <i class="fas fa-search"></i>
+              </form>
+            </transition>
+          </div>
+          <div class="menu">
+            <transition
+              enter-active-class="animate__animated animate__fadeIn"
+              leave-active-class="animate__animated animate__fadeOut"
+            >
+              <i
+                v-if="!searchBoxIsOpen"
+                class="fas fa-search search"
+                v-on:click="openSearchBox"
+              ></i>
+            </transition>
+            <div v-if="!searchBoxIsOpen" class="dropdown-lang">
+              <button class="first-dropdown-toggle" id="dropdownMenuButton">
+                <p class="active">Рус</p>
+                <i class="fas fa-caret-down"></i>
+              </button>
+              <ul
+                class="first-dropdown-menu"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <li class="first-dropdown-item"><a href="#">Eng</a></li>
+                <li class="first-dropdown-item"><a href="#">Uzb</a></li>
+              </ul>
+            </div>
+            <div class="my-wrapper">
+              <div v-on:click="openMenuBox" class="burger">
+                <div class="container">
+                  <div class="bar bar-left">&nbsp;</div>
+                  <div class="bar bar-center">&nbsp;</div>
+                  <div class="bar bar-right">&nbsp;</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <transition
+          enter-active-class="animate__animated animate__fadeInDown"
+          leave-active-class="animate__animated animate__fadeOutUp"
+        >
+          <div v-if="menuBoxIsOpen" class="hidden-menu">
+            <div class="my-container">
+              <div class="main-wrapper">
+                <ul class="menu">
+                  <li>
+                    <a href="#">
+                      <hr />
+                      Главная
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <hr />
+                      О компании
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <hr />
+                      Новости
+                    </a>
+                  </li>
+                  <li id="my-list-item">
+                    <a href="#">
+                      <hr />
+                      Сервисные центры
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <hr />
+                      Вакансии
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <hr />
+                      Контакты
+                    </a>
+                  </li>
+                </ul>
+                <div class="products">
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Tv.svg" />
+                      </div>
+                      <p class="name">Телевизоры</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Слой x0020 1.svg" />
+                      </div>
+                      <p class="name">Холодильники</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Stir.svg" />
+                      </div>
+                      <p class="name">Стиральные машины</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Oven.svg" />
+                      </div>
+                      <p class="name">Газовые плиты</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Vitejka.svg" />
+                      </div>
+                      <p class="name">Кухонные вытяжки</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Kond.svg" />
+                      </div>
+                      <p class="name">Кондиционеры</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Moroz.svg" />
+                      </div>
+                      <p class="name">Морозильники</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/Micro.svg" />
+                      </div>
+                      <p class="name">Микроволновые печи</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-wrapper">
+                        <img src="./img/heater 1.svg" />
+                      </div>
+                      <p class="name">Обогреватели</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="details">
+                <div class="item">
+                  <div class="img">
+                    <img src="./img/home 1.svg" />
+                  </div>
+                  <div class="text">
+                    <h3 class="title">Адрес:</h3>
+                    <p class="answer">
+                      Ташкент , Яшнабадский район, 100147, ул.Мумтоз, 5
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="img">
+                    <img src="./img/phone-call.svg" />
+                  </div>
+                  <div class="text">
+                    <h3 class="title">Единый инфо центр</h3>
+                    <p class="answer">+99871 200-41-00</p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="img">
+                    <img src="./img/mail (1).svg" />
+                  </div>
+                  <div class="text">
+                    <h3 class="title">E-mail</h3>
+                    <p class="answer">info@premier.uz</p>
+                  </div>
+                </div>
+                <div class="my-item">
+                  <div class="img">
+                    <img src="./img/send (1) 2.svg" />
+                  </div>
+                  <a href="#">
+                    <p>Напишите нам</p>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <footer>
+              <div class="my-own-container">
+                <p class="faq">
+                  © 2020 Premier Electrotech. Все права защищены.
+                </p>
+                <div class="links">
+                  <ul class="lang">
+                    <li><a href="#">O‘zbekcha</a></li>
+                    <li><a href="#">Русcкий</a></li>
+                    <li><a href="#">English</a></li>
+                  </ul>
+                  <ul class="social__links">
+                    <li>
+                      <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-youtube"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </transition>
+      </header>
+
+      <!-- heaeder end -->
+
+      <!-- search-space begin -->
+
+      <transition
+        enter-active-class="animate__animated animate__fadeInDown"
+        leave-active-class="animate__animated animate__fadeOutUp"
+      >
+        <div
+          class="search-space"
+          v-if="searchBoxIsOpen"
+          style="width: 100%; height: 100vh"
+        >
+          <div class="my-container">
+            <div class="status">
+              <div class="title">
+                <p class="secondary on-request">По запросу:&nbsp;</p>
+                <p class="main search-name">Стиральная машина</p>
+              </div>
+              <div class="quantity">
+                <p class="secondary found">Найдено:&nbsp;</p>
+                <p class="main quantity-of-found">17 моделей</p>
+              </div>
+            </div>
+            <div class="main-wrapper">
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="search-product__card">
+                <a href="#" class="wrapper-link">
+                  <div class="image-wrapper">
+                    <img src="./img/Stiralka 2.png" />
+                  </div>
+                  <h3 class="heading">
+                    Стиральная машина с сушкой PRM-80MD-1412 PR/W
+                  </h3>
+                </a>
+                <div class="links">
+                  <a href="#" class="map">
+                    <img src="./img/pin 1.svg" />
+                    <p class="where">Где купить</p>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="btn btn-back">
+              <div class="back-link">
+                <i class="fas fa-arrow-left"></i>
+              </div>
+              <h2 class="txt">НАЗАД</h2>
+            </a>
+          </div>
+        </div>
+      </transition>
+
+      <!-- search-space end -->
+
+      <!-- services-header-top begin -->
+
+      <section class="services-header-top">
+        <div class="my-container">
+          <div class="breadcrump">
+            <a href="#">Главная</a> <span class="active">/ Новости</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- services-header-top end -->
+
+      <!-- contact-wrapper begin -->
+
+      <section class="contact-wrapper">
+        <div class="my-container">
+          <div class="info-box">
+            <div class="main-title">Контакты</div>
+            <div class="info">
+              <div class="item">
+                <div class="image-wrapper">
+                  <img src="./img/home 1.svg" />
+                </div>
+                <div class="text">
+                  <p class="title">Адрес:</p>
+                  <p class="answer">
+                    Ташкент , Яшнабадский район, 100147, ул.Мумтоз, 5
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="image-wrapper">
+                  <img src="./img/phone-call.svg" />
+                </div>
+                <div class="text">
+                  <p class="title">Единый инфо центр</p>
+                  <p class="answer">+99871 200 4100</p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="image-wrapper">
+                  <img src="./img/mail (1).svg" />
+                </div>
+                <div class="text">
+                  <p class="title">E-MAIL</p>
+                  <p class="answer">info@premier.uz</p>
+                </div>
+              </div>
+            </div>
+            <div class="our-social-links">
+              <div class="social-title">Мы в социальных сетях:</div>
+              <ul>
+                <li>
+                  <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="my-contact-map">
+            <div id="map"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact-wrapper end -->
+
+      <!-- requisites begin -->
+
+      <section class="requisites">
+        <div class="my-container">
+          <div class="right-section">
+            <h3 class="requisites-title">Реквизиты компании</h3>
+            <p class="requisites-description">
+              Здесь приведены реквизиты компании, в случае необходимости
+              получения дополнительных документов: свидетельства о
+              государственной регистрации, идентификационного номера
+              налогоплательщика вы можете обратиться в бухгалтерию предприятия.
+            </p>
+          </div>
+          <div class="full-info">
+            <ul>
+              <li>
+                <p class="title">Полное наименование</p>
+                <p class="value">OOO “PREMIER ELECTROTECH”</p>
+              </li>
+              <li>
+                <p class="title">Юридический адрес:</p>
+                <p class="value">Ташкент, Яшнабадский район, ул.Мумтоз, 5</p>
+              </li>
+              <li>
+                <p class="title">Фактический адрес:</p>
+                <p class="value">Ташкент, Яшнабадский район, ул.Мумтоз, 5</p>
+              </li>
+              <li>
+                <p class="title">Телефон, факс:</p>
+                <p class="value">+998916616004</p>
+              </li>
+              <li>
+                <p class="title">Электронная почта:</p>
+                <p class="value">info@premier.uz</p>
+              </li>
+              <li>
+                <p class="title">Банковские реквизиты:</p>
+                <p class="value">
+                  Р/с: 20208000704828443001 ИНН: 301469672 БК: 8030
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- requisites end -->
+
+      <!-- contact-form begin -->
+
+      <section class="contact-form">
+        <div class="my-container">
+          <div class="head">
+            <p class="title">Чем мы можем вам помочь?</p>
+            <p class="description">
+              Наш специалист перезвонит в течении 5 минут и ответит на все
+              интересующие Вас вопросы
+            </p>
+          </div>
+          <form>
+            <div class="wrapper">
+              <div class="form__group field">
+                <input
+                  type="input"
+                  class="form__field"
+                  placeholder="Ваше имя *"
+                  name="name"
+                  id="name"
+                  required
+                />
+                <label for="name" class="form__label">Ваше имя *</label>
+              </div>
+              <div class="form__group field">
+                <input
+                  type="email"
+                  class="form__field"
+                  placeholder="Email*"
+                  name="name"
+                  id="name"
+                  required
+                />
+                <label for="name" class="form__label">Email*</label>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="questions-dropdown">
+                <div class="default">
+                  <p class="text">Тема вопроса</p>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <ul class="list" id="questionsList">
+                  <li class="list-item questionListItem">Вопрос по технике</li>
+                  <li class="list-item questionListItem">
+                    Технические неполадки
+                  </li>
+                  <li class="list-item questionListItem">Оформление заказа</li>
+                  <li class="list-item questionListItem">
+                    Качество товаров и услуг
+                  </li>
+                  <li class="list-item questionListItem">Доставка товара</li>
+                  <li class="list-item questionListItem">
+                    Мобильное приложение
+                  </li>
+                  <li class="list-item questionListItem">
+                    Предложение о сотрудничестве
+                  </li>
+                  <li class="list-item questionListItem">
+                    Предложение по улучшению качества
+                  </li>
+                </ul>
+              </div>
+              <div class="form__group field">
+                <input
+                  type="email"
+                  class="form__field"
+                  placeholder="Номер телефона"
+                  name="name"
+                  id="name"
+                  required
+                />
+                <label for="name" class="form__label">Номер телефона</label>
+              </div>
+            </div>
+            <textarea placeholder="Комментарий"> </textarea>
+            <div class="footer">
+              <p class="text">
+                Нажимая на кнопку Отправить вы даете согласие на
+                <a href="#">обработку персональных данных</a>
+              </p>
+              <button type="submit">
+                <p>ОТПРАВИТЬ</p>
+                <img src="./img/send (1) 2 (1).svg" />
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- contact-form end -->
+
+      <!-- footer begin -->
+
+      <footer class="home-footer">
+        <div class="my-container">
+          <div class="info">
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/home 1.svg" />
+              </div>
+              <div class="text">
+                <p class="title">Адрес:</p>
+                <p class="answer">
+                  Ташкент , Яшнабадский район, 100147, ул.Мумтоз, 5
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/phone-call.svg" />
+              </div>
+              <div class="text">
+                <p class="title">Единый инфо центр</p>
+                <p class="answer">+99871 200 4100</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/mail (1).svg" />
+              </div>
+              <div class="text">
+                <p class="title">E-MAIL</p>
+                <p class="answer">info@premier.uz</p>
+              </div>
+            </div>
+          </div>
+          <div class="menu">
+            <p class="title">О нас</p>
+            <hr />
+            <ul>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Наши партнеры</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Вакансии</a></li>
+            </ul>
+          </div>
+          <div class="menu my-menu">
+            <p class="title">Наши продукты</p>
+            <hr />
+            <ul>
+              <li><a href="#">Телевизоры</a></li>
+              <li><a href="#">Холодильники</a></li>
+              <li><a href="#">Стиральные машины</a></li>
+              <li><a href="#">Газовые плиты</a></li>
+              <li><a href="#">Кухонные вытяжки </a></li>
+              <li><a href="#">Кондиционеры </a></li>
+              <li><a href="#">Морозильники</a></li>
+              <li><a href="#">Микроволновые печи</a></li>
+              <li><a href="#">Обогреватели</a></li>
+            </ul>
+          </div>
+          <div class="find-us">
+            <p class="title">Как нас найти</p>
+            <hr />
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/phone 2.svg" />
+              </div>
+              <a href="#">
+                Контакты
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/service 1.svg" />
+              </div>
+              <a href="#">
+                Сервисные центры
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="item">
+              <div class="image-wrapper">
+                <img src="./img/pin 1 (1).svg" />
+              </div>
+              <a href="#">
+                Наши диллеры
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="my-own-container">
+            <p class="faq">© 2020 Premier Electrotech. Все права защищены.</p>
+            <div class="links">
+              <ul class="lang">
+                <li><a href="#">O‘zbekcha</a></li>
+                <li><a href="#">Русcкий</a></li>
+                <li><a href="#">English</a></li>
+              </ul>
+              <ul class="social__links">
+                <li>
+                  <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- footer end -->
+    </div>
+
+    <!-- div #app end -->
+  </body>
+
+  <!-- jquery js -->
+
+  <script src="./js/jquery.min.js"></script>
+
+  <!-- ------------ -->
+
+  <!-- bootstrap js -->
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+
+  <!-- ------------ -->
+
+  <!-- owl carousel js -->
+
+  <script src="./js/owl.carousel.js"></script>
+
+  <!-- ------------ -->
+
+  <!-- all js scripts -->
+
+  <script src="./js/main.js"></script>
+
+  <!-- ------------ -->
+
+  <!-- cdn vue library -->
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+  <!-- ------------ -->
+
+  <!-- vue scripts -->
+
+  <script src="./js/script.js"></script>
+
+  <!-- ------------ -->
+
+  <script
+    async
+    defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6EnAx1vp_Rx8enBi-SFVpG8NDsEyqXe4&callback=initMap"
+    type="text/javascript"
+  ></script>
+  <script src="./js/map.js"></script>
+</html>
