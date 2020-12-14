@@ -1,6 +1,18 @@
-// home page 
+// home page
 
-// @media (max-width: )
+@media (max-width: 320px) {
+  header.washing-machines-header {
+    .my-first-container {
+      .call-wrapper {
+        display: none;
+      }
+      .menu {
+          .search {
+              order: -1;
+          }
+      }
+    }
+  }
+}
 
 // --------------
-

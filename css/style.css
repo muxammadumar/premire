@@ -28,6 +28,17 @@
   font-family: gilroy-extra-bold;
 }
 
+@media (max-width: 320px) {
+  header.washing-machines-header .my-first-container .call-wrapper {
+    display: none;
+  }
+  header.washing-machines-header .my-first-container .menu .search {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+
 *,
 *::after,
 *::before {
