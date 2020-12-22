@@ -4560,7 +4560,7 @@ section.product__info__boxes {
       justify-content: space-between;
       margin-bottom: 80px;
       .text {
-        .title {
+        p:first-child {
           margin-bottom: 14px;
           font-family: gilroy-bold;
           font-style: normal;
@@ -4569,7 +4569,7 @@ section.product__info__boxes {
           line-height: 140%;
           color: $black;
         }
-        .subtitle {
+        p:last-child {
           font-family: gilroy-regular;
           font-style: normal;
           font-weight: 500;

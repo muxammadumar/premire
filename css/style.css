@@ -6353,7 +6353,7 @@ section.product__info__boxes .my-container .product__info__box {
   margin-bottom: 80px;
 }
 
-section.product__info__boxes .my-container .product__info__box .text .title {
+section.product__info__boxes .my-container .product__info__box .text p:first-child {
   margin-bottom: 14px;
   font-family: gilroy-bold;
   font-style: normal;
@@ -6363,7 +6363,7 @@ section.product__info__boxes .my-container .product__info__box .text .title {
   color: #000000;
 }
 
-section.product__info__boxes .my-container .product__info__box .text .subtitle {
+section.product__info__boxes .my-container .product__info__box .text p:last-child {
   font-family: gilroy-regular;
   font-style: normal;
   font-weight: 500;
@@ -6372,7 +6372,7 @@ section.product__info__boxes .my-container .product__info__box .text .subtitle {
   color: #5a5a5b;
 }
 
-section.product__info__boxes .my-container .product__info__box .text .subtitle span {
+section.product__info__boxes .my-container .product__info__box .text p:last-child span {
   font-family: gilroy-bold;
   color: #000000;
 }
