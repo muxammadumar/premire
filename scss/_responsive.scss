@@ -20,25 +20,25 @@
 
 // our-dealers begin
 
-    @media(max-width: 320px) {
-        .washing-machines-header {
-            display: none;
+@media (max-width: 320px) {
+  .washing-machines-header {
+    display: none;
+  }
+  .services-header-top {
+    .my-container {
+      .breadcrump {
+        display: none;
+      }
+      .heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .contact {
+          display: none;
         }
-        .services-header-top {
-            .my-container {
-                .breadcrump {
-                    display: none;
-                }
-                .heading {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    .contact {
-                        display: none;
-                    }
-                }
-            }
-        }
+      }
     }
+  }
+}
 
 // --------------
