@@ -2872,6 +2872,9 @@ section.news-header-top {
     flex-direction: column;
     max-width: 1290px;
     margin: 0 auto;
+    .breadcrump {
+      padding-top: 0 !important;
+    }
     .heading {
       margin-bottom: 66px;
       height: 202px;
@@ -3050,6 +3053,9 @@ section.news-product-cards {
   .my-container {
     max-width: 1290px;
     margin: 0 auto;
+    .breadcrump {
+      padding-top: 0 !important;
+    }
   }
 }
 .main-content {

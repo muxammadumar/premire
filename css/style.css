@@ -4071,6 +4071,10 @@ section.news-header-top .my-container {
   margin: 0 auto;
 }
 
+section.news-header-top .my-container .breadcrump {
+  padding-top: 0 !important;
+}
+
 section.news-header-top .my-container .heading {
   margin-bottom: 66px;
   height: 202px;
@@ -4302,6 +4306,10 @@ section.news-product-cards .my-container .footer ul .numbers a {
 .new-product-header-top .my-container {
   max-width: 1290px;
   margin: 0 auto;
+}
+
+.new-product-header-top .my-container .breadcrump {
+  padding-top: 0 !important;
 }
 
 .main-content .my-container {
