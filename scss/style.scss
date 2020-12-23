@@ -110,11 +110,19 @@ header {
           flex-direction: column;
           justify-content: center;
           p {
+            display: flex;
+            align-items: center;
             margin-bottom: 0;
             transition: all 0.5s ease;
             font-family: gilroy-medium;
-            color: $second-black;
+            color: $text-on-black;
             font-size: 13px;
+            span {
+              font-size: 10px;
+              margin-left: 5px;
+              line-height: 2;
+              margin-bottom: 5px;
+            }
           }
           .number {
             font-size: 18px;
