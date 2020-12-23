@@ -9,6 +9,11 @@
 }
 
 @font-face {
+  src: url(../fonts/gilroy/Gilroy-Light.ttf);
+  font-family: gilroy-light;
+}
+
+@font-face {
   src: url(../fonts/gilroy/Gilroy-Bold.ttf);
   font-family: gilroy-bold;
 }
@@ -90,6 +95,10 @@ body *::before {
   padding: 0;
   line-height: 1;
   margin-bottom: 0;
+}
+
+.burger-active .container:hover .bar-left, .burger-active .container:hover .bar-right, .burger-active .container:hover .bar-center {
+  width: 30px !important;
 }
 
 .burger-active .container .bar-left {
@@ -200,6 +209,11 @@ header .my-first-container .call-wrapper .call .text .number {
   font-size: 18px;
   color: #c8c8c8;
   font-family: gilroy-semi-bold;
+}
+
+header .my-first-container .call-wrapper .call .text .number span {
+  font-size: 16px;
+  font-family: gilroy-light;
 }
 
 header .my-first-container .center-item {
@@ -433,7 +447,7 @@ header .my-first-container .menu .my-wrapper .burger .container .bar {
 }
 
 header .my-first-container .menu .my-wrapper .burger .container .bar.bar-left {
-  margin-left: auto;
+  margin-left: auto !important;
 }
 
 header .my-first-container .menu .my-wrapper .burger .container .bar.bar-center {
@@ -442,7 +456,7 @@ header .my-first-container .menu .my-wrapper .burger .container .bar.bar-center 
 }
 
 header .my-first-container .menu .my-wrapper .burger .container .bar.bar-right {
-  margin-right: auto;
+  margin-right: auto !important;
 }
 
 header .my-first-container .menu .my-wrapper .burger .container .bar:last-child {
@@ -1251,6 +1265,7 @@ header .hidden-menu footer .my-own-container .links .social__links li:last-child
 }
 
 .carousel {
+  height: 850px;
   padding-top: 61px;
   position: relative;
   max-width: 1920px;
@@ -1321,7 +1336,7 @@ header .hidden-menu footer .my-own-container .links .social__links li:last-child
 
 .carousel .owl-first .item {
   width: 100%;
-  height: 563px;
+  height: 830px;
   position: relative;
 }
 
@@ -1333,7 +1348,7 @@ header .hidden-menu footer .my-own-container .links .social__links li:last-child
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
-  width: 100%;
+  object-fit: cover;
   z-index: -1;
 }
 
@@ -2097,6 +2112,8 @@ header .hidden-menu footer .my-own-container .links .social__links li:last-child
 
 .advantages .my-container .main-wrapper {
   background: url(../img/123.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
