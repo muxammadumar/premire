@@ -33,29 +33,6 @@
   font-family: gilroy-extra-bold;
 }
 
-@media (max-width: 320px) {
-  .washing-machines-header {
-    display: none;
-  }
-  .services-header-top .my-container .breadcrump {
-    display: none;
-  }
-  .services-header-top .my-container .heading {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .services-header-top .my-container .heading .contact {
-    display: none;
-  }
-}
-
 *,
 *::after,
 *::before {
@@ -2688,6 +2665,10 @@ header .hidden-menu footer .my-own-container .links .social__links li:last-child
   font-family: gilroy-bold;
   font-size: 45px;
   color: #000000;
+}
+
+.machines-heading .my-container .finded {
+  display: none;
 }
 
 .sort-by-time {

@@ -20,25 +20,83 @@
 
 // our-dealers begin
 
-@media (max-width: 320px) {
-  .washing-machines-header {
-    display: none;
-  }
-  .services-header-top {
-    .my-container {
-      .breadcrump {
-        display: none;
-      }
-      .heading {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .contact {
-          display: none;
-        }
-      }
-    }
-  }
-}
+// @media (max-width: 320px) {
+//   .washing-machines-header {
+//     display: none;
+//   }
+//   .services-header-top {
+//     .my-container {
+//       .breadcrump {
+//         display: none;
+//       }
+//       .heading {
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         .contact {
+//           display: none;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// --------------
+
+// washing machines begin
+
+// @media (max-width: 320px) {
+//   .washing-machines-header {
+//     .my-first-container {
+//       .call-wrapper {
+//         width: 28px;
+//         height: 28px;
+//         .call {
+//           display: none;
+//         }
+//       }
+//       .menu {
+//         .search {
+//           position: absolute;
+//           left: 20px;
+//         }
+//         .dropdown-lang {
+//           display: none;
+//         }
+//       }
+//     }
+//   }
+//   .machines-heading {
+//     padding-top: 0px !important;
+//     .my-container {
+//       background: white !important;
+//       .title {
+//         text-align: center !important;
+//         line-height: 31px !important;
+//         font-size: 26px !important;
+//       }
+//     }
+//   }
+//   .sort-by-time {
+//     .my-container {
+//       max-width: 280px !important;
+//       margin: 0 auto !important;
+//       .finded {
+//         display: none;
+//       }
+//       .sorting {
+//         .sort {
+//           display: none;
+//         }
+//         .second-dropdown {
+//           width: 266px !important;
+//           button#second-dropdown-toggle {
+//             width: 266px !important;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 // --------------
