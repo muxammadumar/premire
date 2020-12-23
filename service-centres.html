@@ -62,7 +62,9 @@
           >
             <div v-if="!searchBoxIsOpen" class="call-wrapper">
               <div class="call">
-                <i class="fas fa-phone-alt"></i>
+                <svg class="fas fa-phone-alt" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                  <path d="M21.0834 16.215V19.09C21.0845 19.3569 21.0298 19.6211 20.9229 19.8656C20.8159 20.1102 20.6591 20.3297 20.4624 20.5101C20.2658 20.6906 20.0336 20.8279 19.7808 20.9134C19.5279 20.9989 19.26 21.0307 18.9942 21.0067C16.0453 20.6862 13.2126 19.6786 10.7238 18.0646C8.40829 16.5932 6.44515 14.6301 4.97379 12.3146C3.35418 9.81449 2.34627 6.96804 2.0317 4.00583C2.00776 3.74082 2.03925 3.47373 2.12418 3.22156C2.20912 2.96938 2.34563 2.73766 2.52502 2.54114C2.70442 2.34461 2.92277 2.1876 3.16617 2.08008C3.40957 1.97257 3.6727 1.91692 3.93879 1.91667H6.81379C7.27887 1.91209 7.72976 2.07678 8.08239 2.38005C8.43503 2.68332 8.66536 3.10447 8.73046 3.565C8.8518 4.48506 9.07685 5.38845 9.40129 6.25792C9.53023 6.60093 9.55813 6.97371 9.4817 7.33209C9.40527 7.69048 9.2277 8.01944 8.97004 8.28L7.75296 9.49708C9.1172 11.8963 11.1037 13.8828 13.503 15.2471L14.72 14.03C14.9806 13.7723 15.3096 13.5948 15.6679 13.5183C16.0263 13.4419 16.3991 13.4698 16.7421 13.5987C17.6116 13.9232 18.515 14.1482 19.435 14.2696C19.9006 14.3353 20.3257 14.5697 20.6296 14.9284C20.9336 15.2871 21.095 15.745 21.0834 16.215Z" stroke="#5A5A5B" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
                 <div class="text">
                   <p>Call-center</p>
                   <h3 class="number">998 71 200 4100</h3>
@@ -75,7 +77,7 @@
               enter-active-class="animate__animated animate__fadeIn"
               leave-active-class="animate__animated animate__fadeOut"
             >
-              <a href="#" v-if="!searchBoxIsOpen" class="logo-wrapper">
+              <a href="./home.html" v-if="!searchBoxIsOpen" class="logo-wrapper">
                 <img src="./img/premier-logo.png" class="logo" />
               </a>
 
@@ -90,11 +92,12 @@
               enter-active-class="animate__animated animate__fadeIn"
               leave-active-class="animate__animated animate__fadeOut"
             >
-              <i
-                v-if="!searchBoxIsOpen"
-                class="fas fa-search search"
-                v-on:click="openSearchBox"
-              ></i>
+              <svg v-if="!searchBoxIsOpen"
+              class="fa-search search"
+              v-on:click="openSearchBox" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M12.8333 22.1667C17.988 22.1667 22.1667 17.988 22.1667 12.8333C22.1667 7.67868 17.988 3.5 12.8333 3.5C7.67868 3.5 3.5 7.67868 3.5 12.8333C3.5 17.988 7.67868 22.1667 12.8333 22.1667Z" stroke="#5A5A5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M24.5 24.5L19.425 19.425" stroke="#5A5A5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
             </transition>
             <div v-if="!searchBoxIsOpen" class="dropdown-lang">
               <button class="first-dropdown-toggle" id="dropdownMenuButton">
@@ -121,52 +124,53 @@
           </div>
         </div>
         <transition
-          enter-active-class="animate__animated animate__fadeInDown"
-          leave-active-class="animate__animated animate__fadeOutUp"
+        enter-active-class="animate__animated animate__slideInLeft"
+          
+        leave-active-class="animate__animated animate__slideOutLeft"
         >
           <div v-if="menuBoxIsOpen" class="hidden-menu">
             <div class="my-container">
               <div class="main-wrapper">
                 <ul class="menu">
                   <li>
-                    <a href="#">
+                    <a href="./home.html">
                       <hr />
                       Главная
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="./about.html">
                       <hr />
                       О компании
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="./news.html">
                       <hr />
                       Новости
                     </a>
                   </li>
                   <li id="my-list-item">
-                    <a href="#">
+                    <a href="./service-centres.html">
                       <hr />
                       Сервисные центры
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="./vacansies.html">
                       <hr />
                       Вакансии
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="./contact.html">
                       <hr />
                       Контакты
                     </a>
                   </li>
                 </ul>
                 <div class="products">
-                  <a href="#">
+                  <a href="./washing-machines.html">
                     <div class="item">
                       <div class="img-wrapper">
                         <img src="./img/Tv.svg" />
@@ -174,7 +178,7 @@
                       <p class="name">Телевизоры</p>
                     </div>
                   </a>
-                  <a href="#">
+                  <a href="./washing-machines.html">
                     <div class="item">
                       <div class="img-wrapper">
                         <img src="./img/Слой x0020 1.svg" />
@@ -182,7 +186,7 @@
                       <p class="name">Холодильники</p>
                     </div>
                   </a>
-                  <a href="#">
+                  <a href="./washing-machines.html">
                     <div class="item">
                       <div class="img-wrapper">
                         <img src="./img/Stir.svg" />
@@ -190,7 +194,7 @@
                       <p class="name">Стиральные машины</p>
                     </div>
                   </a>
-                  <a href="#">
+                  <a href="./washing-machines.html">
                     <div class="item">
                       <div class="img-wrapper">
                         <img src="./img/Oven.svg" />
@@ -198,7 +202,7 @@
                       <p class="name">Газовые плиты</p>
                     </div>
                   </a>
-                  <a href="#">
+                  <a href="./washing-machines.html">
                     <div class="item">
                       <div class="img-wrapper">
                         <img src="./img/Vitejka.svg" />
@@ -206,7 +210,7 @@
                       <p class="name">Кухонные вытяжки</p>
                     </div>
                   </a>
-                  <a href="#">
+                  <a href="./washing-machines.html">
                     <div class="item">
                       <div class="img-wrapper">
                         <img src="./img/Kond.svg" />
@@ -214,7 +218,7 @@
                       <p class="name">Кондиционеры</p>
                     </div>
                   </a>
-                  <a href="#">
+                  <a href="./washing-machines.html">
                     <div class="item">
                       <div class="img-wrapper">
                         <img src="./img/Moroz.svg" />
@@ -222,7 +226,7 @@
                       <p class="name">Морозильники</p>
                     </div>
                   </a>
-                  <a href="#">
+                  <a href="./washing-machines.html">
                     <div class="item">
                       <div class="img-wrapper">
                         <img src="./img/Micro.svg" />
@@ -230,7 +234,7 @@
                       <p class="name">Микроволновые печи</p>
                     </div>
                   </a>
-                  <a href="#">
+                  <a href="./washing-machines.html">
                     <div class="item">
                       <div class="img-wrapper">
                         <img src="./img/heater 1.svg" />
@@ -274,7 +278,7 @@
                   <div class="img">
                     <img src="./img/send (1) 2.svg" />
                   </div>
-                  <a href="#">
+                  <a href="./contact.html">
                     <p>Напишите нам</p>
                     <i class="fas fa-arrow-right"></i>
                   </a>
@@ -339,7 +343,7 @@
             </div>
             <div class="main-wrapper">
               <div class="search-product__card">
-                <a href="#" class="wrapper-link">
+                <a href="./product.html" class="wrapper-link">
                   <div class="image-wrapper">
                     <img src="./img/Stiralka 2.png" />
                   </div>
@@ -348,17 +352,17 @@
                   </h3>
                 </a>
                 <div class="links">
-                  <a href="#" class="map">
+                  <a href="./our-dealers.html" class="map">
                     <img src="./img/pin 1.svg" />
                     <p class="where">Где купить</p>
                   </a>
-                  <a href="#" class="details-link">
+                  <a href="./product.html" class="details-link">
                     <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
               </div>
               <div class="search-product__card">
-                <a href="#" class="wrapper-link">
+                <a href="./product.html" class="wrapper-link">
                   <div class="image-wrapper">
                     <img src="./img/Stiralka 2.png" />
                   </div>
@@ -367,17 +371,17 @@
                   </h3>
                 </a>
                 <div class="links">
-                  <a href="#" class="map">
+                  <a href="./service-centres.html" class="map">
                     <img src="./img/pin 1.svg" />
                     <p class="where">Где купить</p>
                   </a>
-                  <a href="#" class="details-link">
+                  <a href="./product.html" class="details-link">
                     <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
               </div>
               <div class="search-product__card">
-                <a href="#" class="wrapper-link">
+                <a href="./product.html" class="wrapper-link">
                   <div class="image-wrapper">
                     <img src="./img/Stiralka 2.png" />
                   </div>
@@ -386,17 +390,17 @@
                   </h3>
                 </a>
                 <div class="links">
-                  <a href="#" class="map">
+                  <a href="./service-centres.html" class="map">
                     <img src="./img/pin 1.svg" />
                     <p class="where">Где купить</p>
                   </a>
-                  <a href="#" class="details-link">
+                  <a href="./product.html" class="details-link">
                     <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
               </div>
               <div class="search-product__card">
-                <a href="#" class="wrapper-link">
+                <a href="product.html" class="wrapper-link">
                   <div class="image-wrapper">
                     <img src="./img/Stiralka 2.png" />
                   </div>
@@ -405,17 +409,17 @@
                   </h3>
                 </a>
                 <div class="links">
-                  <a href="#" class="map">
+                  <a href="./service-centres.html" class="map">
                     <img src="./img/pin 1.svg" />
                     <p class="where">Где купить</p>
                   </a>
-                  <a href="#" class="details-link">
+                  <a href="./product.html" class="details-link">
                     <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
               </div>
               <div class="search-product__card">
-                <a href="#" class="wrapper-link">
+                <a href="./product.html" class="wrapper-link">
                   <div class="image-wrapper">
                     <img src="./img/Stiralka 2.png" />
                   </div>
@@ -424,17 +428,17 @@
                   </h3>
                 </a>
                 <div class="links">
-                  <a href="#" class="map">
+                  <a href="./service-centres.html" class="map">
                     <img src="./img/pin 1.svg" />
                     <p class="where">Где купить</p>
                   </a>
-                  <a href="#" class="details-link">
+                  <a href="./product.html" class="details-link">
                     <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
               </div>
               <div class="search-product__card">
-                <a href="#" class="wrapper-link">
+                <a href="./product.html" class="wrapper-link">
                   <div class="image-wrapper">
                     <img src="./img/Stiralka 2.png" />
                   </div>
@@ -443,17 +447,17 @@
                   </h3>
                 </a>
                 <div class="links">
-                  <a href="#" class="map">
+                  <a href="./service-centres.html" class="map">
                     <img src="./img/pin 1.svg" />
                     <p class="where">Где купить</p>
                   </a>
-                  <a href="#" class="details-link">
+                  <a href="./product.html" class="details-link">
                     <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
               </div>
             </div>
-            <a href="#" class="btn btn-back">
+            <a href="./home.html" class="btn btn-back">
               <div class="back-link">
                 <i class="fas fa-arrow-left"></i>
               </div>
@@ -465,8 +469,8 @@
 
       <!-- search-space end -->
 
-      <div class="breadcrump">
-        <a href="#">Главная</a> <span class="active">/ Новости</span>
+      <div class="breadcrump my-container">
+        <a href="./home.html">Главная</a> <span class="active">/ Новости</span>
       </div>
       <!-- services-header-top begin -->
 
@@ -483,7 +487,7 @@
                 <div class="image-wrapper">
                   <img src="./img/pin 1 (1).svg" />
                 </div>
-                <a href="#">
+                <a href="./our-dealers.html">
                   <p class="title">Наши диллеры</p>
                   <i class="fas fa-arrow-right"></i>
                 </a>
@@ -596,25 +600,25 @@
             <p class="title">О нас</p>
             <hr />
             <ul>
-              <li><a href="#">О компании</a></li>
-              <li><a href="#">Наши партнеры</a></li>
-              <li><a href="#">Новости</a></li>
-              <li><a href="#">Вакансии</a></li>
+              <li><a href="./about.html">О компании</a></li>
+              <li><a href="./about.html">Наши партнеры</a></li>
+              <li><a href="./news.html">Новости</a></li>
+              <li><a href="./vacansies.html">Вакансии</a></li>
             </ul>
           </div>
           <div class="menu my-menu">
             <p class="title">Наши продукты</p>
             <hr />
             <ul>
-              <li><a href="#">Телевизоры</a></li>
-              <li><a href="#">Холодильники</a></li>
-              <li><a href="#">Стиральные машины</a></li>
-              <li><a href="#">Газовые плиты</a></li>
-              <li><a href="#">Кухонные вытяжки </a></li>
-              <li><a href="#">Кондиционеры </a></li>
-              <li><a href="#">Морозильники</a></li>
-              <li><a href="#">Микроволновые печи</a></li>
-              <li><a href="#">Обогреватели</a></li>
+              <li><a href="./washing-machines.html">Телевизоры</a></li>
+              <li><a href="./washing-machines.html">Холодильники</a></li>
+              <li><a href="./washing-machines.html">Стиральные машины</a></li>
+              <li><a href="./washing-machines.html">Газовые плиты</a></li>
+              <li><a href="./washing-machines.html">Кухонные вытяжки </a></li>
+              <li><a href="./washing-machines.html">Кондиционеры </a></li>
+              <li><a href="./washing-machines.html">Морозильники</a></li>
+              <li><a href="./washing-machines.html">Микроволновые печи</a></li>
+              <li><a href="./washing-machines.html">Обогреватели</a></li>
             </ul>
           </div>
           <div class="find-us">
@@ -624,7 +628,7 @@
               <div class="image-wrapper">
                 <img src="./img/phone 2.svg" />
               </div>
-              <a href="#">
+              <a href="./contact.html">
                 Контакты
                 <i class="fas fa-arrow-right"></i>
               </a>
@@ -633,7 +637,7 @@
               <div class="image-wrapper">
                 <img src="./img/service 1.svg" />
               </div>
-              <a href="#">
+              <a href="./service-centres.html">
                 Сервисные центры
                 <i class="fas fa-arrow-right"></i>
               </a>
@@ -642,7 +646,7 @@
               <div class="image-wrapper">
                 <img src="./img/pin 1 (1).svg" />
               </div>
-              <a href="#">
+              <a href="./our-dealers.html">
                 Наши диллеры
                 <i class="fas fa-arrow-right"></i>
               </a>
