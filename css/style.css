@@ -246,6 +246,54 @@
   body #app .washing-machines-header .my-first-container .menu .search {
     left: 15px;
   }
+  body #app .machines-heading .my-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 !important;
+    background: white !important;
+    height: inherit;
+  }
+  body #app .machines-heading .my-container .title {
+    font-size: 36px !important;
+    text-align: center;
+    margin: 0 auto;
+  }
+  body #app .machines-heading .my-container .finded {
+    display: block;
+    margin-top: 10px;
+  }
+  body #app .sort-by-time .my-container {
+    max-width: 400px !important;
+  }
+  body #app .sort-by-time .my-container .finded {
+    display: none;
+  }
+  body #app .sort-by-time .my-container .sorting {
+    width: 100% !important;
+  }
+  body #app .sort-by-time .my-container .sorting .sort {
+    display: none;
+  }
+  body #app .sort-by-time .my-container .sorting #second-dropdown {
+    width: 100% !important;
+  }
+  body #app .sort-by-time .my-container .sorting #second-dropdown #second-dropdown-toggle {
+    width: 100% !important;
+  }
+  body #app .sort-by-time .my-container .sorting #second-dropdown ul {
+    width: 100% !important;
+  }
+  body #app .main-wrapper .my-container .footer {
+    margin-top: 20px;
+  }
+  body #app .main-wrapper .my-container .footer ul {
+    margin: 0 auto;
+  }
 }
 
 *,
@@ -2884,6 +2932,15 @@ header .hidden-menu footer .my-own-container .links .social__links li:last-child
 
 .machines-heading .my-container .finded {
   display: none;
+  margin-left: 22px;
+  font-family: gilroy-regular;
+  color: #5a5a5b;
+  font-size: 14px;
+}
+
+.machines-heading .my-container .finded span {
+  color: #000000;
+  font-family: gilroy-bold;
 }
 
 .sort-by-time {

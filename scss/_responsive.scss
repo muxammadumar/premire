@@ -374,8 +374,6 @@
 
 // 567px begin
 
-// washing-machines begin
-
 @media (max-width: 567px) {
   body {
     #app {
@@ -384,6 +382,9 @@
         max-width: 540px !important;
         margin: 0 auto !important;
       }
+
+      // washing-machines begin
+
       .washing-machines-header {
         .my-first-container {
           .menu {
@@ -393,10 +394,60 @@
           }
         }
       }
+      .machines-heading {
+        .my-container {
+          display: flex;
+          flex-direction: column;
+          padding: 0 !important;
+          background: white !important;
+          height: inherit;
+          .title {
+            font-size: 36px !important;
+            text-align: center;
+            margin: 0 auto;
+          }
+          .finded {
+            display: block;
+            margin-top: 10px;
+          }
+        }
+      }
+      .sort-by-time {
+        .my-container {
+          max-width: 400px !important;
+          .finded {
+            display: none;
+          }
+          .sorting {
+            width: 100% !important;
+            .sort {
+              display: none;
+            }
+            #second-dropdown {
+              width: 100% !important;
+              #second-dropdown-toggle {
+                width: 100% !important;
+              }
+              ul {
+                width: 100% !important;
+              }
+            }
+          }
+        }
+      }
+      .main-wrapper {
+        .my-container {
+          .footer {
+            margin-top: 20px;
+            ul {
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+      // -----------
     }
   }
 }
-
-// -----------
 
 // -----------
