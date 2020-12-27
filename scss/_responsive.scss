@@ -100,11 +100,42 @@
 // }
 
 // --------------
+
+// 1288px begin
+
+@media (max-width: 1288px) {
+  body {
+    #app {
+      .main-wrapper {
+        .my-container {
+          .wrapper {
+            .main-content {
+              .product__card {
+                &:nth-child(3),
+                &:nth-child(6),
+                &:nth-child(9),
+                &:nth-child(12),
+                &:nth-child(15),
+                &:nth-child(18),
+                &:nth-child(21) {
+                  margin-right: 30px !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ------------
+
 // 1199 px begin
 
-// washing-machines begin
 
 @media (max-width: 1199px) {
+  // washing-machines begin
   body {
     #app {
       .my-container,
@@ -135,8 +166,17 @@
                 &:nth-child(12),
                 &:nth-child(14),
                 &:nth-child(16) {
-                  margin-right: 0 !important;
+                  margin-right: 0px !important;
                 }
+                // &:nth-child(3),
+                // &:nth-child(6),
+                // &:nth-child(9),
+                // &:nth-child(12),
+                // &:nth-child(15),
+                // &:nth-child(18),
+                // &:nth-child(21) {
+                //   margin-right: 0px !important;
+                // }
               }
             }
           }
@@ -166,9 +206,51 @@
       }
     }
   }
+  // --------------
+  body {
+    #app {
+      .news-header-top {
+        .my-container {
+          .breadcrump {
+            margin-bottom: 40px !important;
+          }
+          .heading {
+            .bg {
+              font-size: 150px;
+            }
+          }
+        }
+      }
+      .news-product-cards {
+        .my-container {
+          .wrapper {
+            .product-card {
+              display: flex;
+              align-items: center;
+              .date {
+                display: none !important;
+              }
+              .text {
+                margin-left: 60px !important;
+                max-width: 300px !important;
+                .time {
+                  margin-bottom: 5px;
+                }
+                .title {
+                  font-size: 16px;
+                }
+              }
+              .details {
+                margin-left: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  } 
 }
 
-// --------------
 
 // --------------
 
@@ -366,6 +448,52 @@
       }
     }
   }
+  body {
+    #app {
+      .news-header-top {
+        .my-container {
+          .breadcrump {
+            display: none;
+            margin-bottom: 0px !important;
+          }
+          .heading {
+            margin-bottom: 0px !important;
+            .bg {
+              font-size: 120px;
+            }
+            .title {
+              margin-top: 40px;
+            }
+          }
+        }
+      }
+      .news-product-cards {
+        .my-container {
+          max-width: 720px !important;
+          .wrapper {
+            .product-card {
+              padding: 25px !important;
+              margin: 0 auto !important;
+              width: max-content;
+              // flex-wrap: wrap;
+              .details {
+                display: none;
+              }
+              .text {
+                margin-left: 30px !important;
+              }
+            }
+          }
+          .footer {
+            margin-bottom: 70px;
+            ul {
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // ------------
@@ -419,15 +547,10 @@
             display: none;
           }
           .sorting {
-            width: 100% !important;
-            .sort {
-              display: none;
-            }
+            display: flex;
+            justify-content: space-between;
+            width: 550px !important;
             #second-dropdown {
-              width: 100% !important;
-              #second-dropdown-toggle {
-                width: 100% !important;
-              }
               ul {
                 width: 100% !important;
               }
@@ -445,7 +568,335 @@
           }
         }
       }
+      .home-footer {
+        .my-container {
+          padding-bottom: 0px;
+          flex-direction: column !important;
+          .menu {
+            margin: 0 auto !important;
+            width: 100%;
+            max-width: 500px !important;
+            order: -1 !important;
+            .title {
+              text-align: center;
+            }
+            hr {
+              width: 300px;
+              margin: 0 auto;
+              opacity: 0.2;
+            }
+            ul {
+              margin-top: 15px;
+              margin-bottom: 30px;
+              li {
+                padding: 0 auto;
+                margin-right: 0 !important;
+                a {
+                  text-align: center !important;
+                  margin: 0 auto !important;
+                  display: block;
+                }
+              }
+            }
+          }
+          .find-us {
+            justify-content: center !important;
+            max-width: 400px !important;
+            margin: 0 auto;
+            order: -1;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            .title {
+              position: relative;
+              text-align: center;
+              display: block;
+              max-width: 567px !important;
+              width: 100% !important;
+              margin-bottom: 40px;
+              &::after {
+                top: 30px;
+                content: "";
+                position: absolute;
+                width: 60px;
+                height: 1px;
+                left: 42%;
+                background-color: #fff;
+              }
+            }
+            hr {
+              display: none !important;
+            }
+            .item {
+              margin: 0 auto;
+              a {
+                display: none;
+              }
+              .image-wrapper {
+                margin: 0 !important;
+              }
+              // &:last-child {
+              //   .image-wrapper {
+              //     margin-right: 0 !important;
+              //   }
+              // }
+            }
+          }
+          .info {
+            margin: 0 auto;
+            max-width: 400px !important;
+            width: 100% !important;
+            .item {
+              padding-left: 40px;
+              .image-wrapper {
+                margin-right: 50px;
+              }
+            }
+          }
+        }
+        .footer-bottom {
+          .my-own-container {
+            .links {
+              flex-direction: column;
+              .social__links {
+                margin-bottom: 30px;
+                order: -1;
+                li {
+                  a {
+                    i {
+                      color: #fff !important;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
       // -----------
+    }
+  }
+  body {
+    #app {
+      .news-header-top {
+        padding-top: 60px !important;
+        .my-container {
+          .heading {
+            .bg {
+              font-size: 100px;
+            }
+            .title {
+              margin-top: 35px;
+            }
+          }
+        }
+      }
+      .news-product-cards {
+        .my-container {
+          .wrapper {
+            .product-card {
+              flex-direction: column;
+              margin-bottom: 10px !important;
+              border: 1px solid transparent !important;
+              box-shadow: none !important;
+              padding-top: 0px !important;
+              img {
+                margin-bottom: 10px !important;
+              }
+              .time {
+                margin-bottom: 9px !important;
+              }
+              .text {
+                margin-left: 0 !important;
+                .title {
+                  font-size: 14px !important;
+                }
+                .subtitle {
+                  font-size: 14px !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// -----------
+
+// 350px begin
+
+@media (max-width: 350px) {
+  body {
+    #app {
+      .my-container,
+      .my-first-container {
+        max-width: 330px !important;
+        margin: 0 auto !important;
+      }
+      .washing-machines-header {
+        .my-first-container {
+          .center-item {
+            a {
+              padding-left: 15px;
+              img {
+                width: 135px !important;
+                margin: auto !important;
+              }
+            }
+          }
+        }
+      }
+      .machines-heading {
+        .my-container {
+          .title {
+            font-size: 30px !important;
+          }
+        }
+      }
+      .sort-by-time {
+        .my-container {
+          max-width: 300px !important;
+          .sorting {
+            .sort {
+              display: none;
+            }
+            #second-dropdown {
+              width: 100% !important;
+              #second-dropdown-toggle {
+                width: 100% !important;
+              }
+              #second-dropdown-menu {
+                width: 100% !important;
+              }
+            }
+          }
+        }
+      }
+      .main-wrapper {
+        .my-container {
+          .wrapper {
+            .main-content {
+              .product__card {
+                width: 300px !important;
+              }
+            }
+          }
+        }
+      }
+      .home-footer {
+        .my-container {
+          .find-us {
+            max-width: 380px !important;
+          }
+        }
+        .footer-bottom {
+          .my-own-container {
+            .faq {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+  body {
+    #app {
+      .news-header-top {
+        .my-container {
+          .heading {
+            padding: 20px 0px;
+            height: max-content;
+            .bg {
+              font-size: 60px !important;
+            }
+            .title {
+              font-size: 26px;
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// -----------
+
+// 320px begin
+
+@media (max-width: 320px) {
+  body {
+    #app {
+      .my-container,
+      .my-first-container {
+        max-width: 290px !important;
+        margin: 0 auto !important;
+      }
+      .washing-machines-header {
+        .center-item {
+          a {
+            padding-left: 20px !important ;
+            img {
+              width: 106px !important ;
+              margin: auto !important ;
+            }
+          }
+        }
+      }
+      .machines-heading {
+        .my-container {
+          .title {
+            font-size: 26px;
+          }
+        }
+      }
+      .main-wrapper {
+        .my-container {
+          .wrapper {
+            .main-content {
+              .product__card {
+                width: 280px !important;
+                a {
+                  .heading {
+                    text-align: center !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .home-footer {
+        .my-container {
+          .info {
+            .item {
+              .image-wrapper {
+                margin-right: 15px !important;
+              }
+              .text {
+                .answer {
+                  font-size: 14px !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  body {
+    #app {
+      .news-product-cards {
+        .my-container {
+          .wrapper {
+            .product-card {
+              padding: 0px !important;
+              padding-bottom: 25px !important;
+            }
+          }
+        }
+      }
     }
   }
 }
