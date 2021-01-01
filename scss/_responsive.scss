@@ -133,7 +133,6 @@
 
 // 1199 px begin
 
-
 @media (max-width: 1199px) {
   // washing-machines begin
   body {
@@ -207,6 +206,7 @@
     }
   }
   // --------------
+  // news begin
   body {
     #app {
       .news-header-top {
@@ -248,17 +248,145 @@
         }
       }
     }
-  } 
+  }
+  // --------
+  // service-centres begin
+  body {
+    #app {
+      .services-header-top {
+        .my-container {
+          .heading {
+            .main-title {
+              font-size: 38px;
+            }
+          }
+        }
+      }
+      .services-content {
+        .my-container {
+          .my-contact-map {
+            max-width: 700px;
+          }
+        }
+      }
+    }
+  }
+  // --------
+  // our dealers begin
+  body {
+    #app {
+      .services-content {
+        .my-container {
+          .my-contact-map {
+            max-height: 500px !important;
+          }
+        }
+      }
+    }
+  }
+  // --------
+  // new-product begin
+  body {
+    #app {
+      .main-content {
+        .my-container {
+          .content {
+            .wrapper {
+              max-width: 780px;
+            }
+          }
+        }
+      }
+      .news {
+        .my-container {
+          .heading {
+            hr {
+              max-width: 720px;
+            }
+          }
+          .main-wrapper {
+            justify-content: space-around;
+            .news__card {
+              &:nth-last-child(1) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // --------
+  // contact begin
+  body {
+    #app {
+      .contact-wrapper {
+        .my-container {
+          .info-box {
+            .main-title {
+              font-size: 38px;
+              margin-bottom: 20px;
+            }
+          }
+          .my-contact-map {
+            width: 100% !important;
+            max-width: 700px;
+            max-height: 500px;
+          }
+        }
+      }
+      .requisites {
+        .my-container {
+          .right-section {
+            .requisites-title {
+              font-size: 34px;
+            }
+          }
+          .full-info {
+            ul {
+              li {
+                flex-wrap: wrap;
+                .title {
+                  margin-right: 0 !important;
+                  line-height: 180%;
+                }
+                .value {
+                  line-height: 170%;
+                }
+              }
+            }
+          }
+        }
+      }
+      .contact-form {
+        .my-container {
+          form {
+            .wrapper {
+              .form__group {
+                .form__field {
+                  max-width: 430px !important;
+                  // width: 400px;
+                }
+              }
+              .questions-dropdown {
+                max-width: 430px !important;
+                // width: 400px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // --------
 }
-
 
 // --------------
 
 // 991px begin
 
-// washing-machines begin
-
 @media (max-width: 991px) {
+  // washing-machines begin
   body {
     #app {
       .my-container,
@@ -345,17 +473,197 @@
       }
     }
   }
+  // --------------
+  // service-centres begin
+  body {
+    #app {
+      .breadcrump {
+        display: none;
+      }
+      .services-header-top {
+        padding-top: 90px;
+        .my-container {
+          .heading {
+            .main-title {
+              min-width: 277px;
+              margin-right: 65px;
+              font-size: 30px;
+            }
+          }
+        }
+      }
+      .services-content {
+        .my-container {
+          align-items: flex-start;
+          .my-contact-map {
+            max-width: 570px;
+            max-height: 467px;
+          }
+          .info-wrapper {
+            max-width: 320px;
+            .service-region-dropdown,
+            .dealers-region-dropdown {
+              .hidden-list {
+                max-width: 320px !important;
+                max-height: 285px !important;
+                overflow-y: scroll !important;
+                &::-webkit-scrollbar {
+                  background-color: #e9e9e9;
+                  width: 4px;
+                  border-radius: 0px !important;
+                }
+                &::-webkit-scrollbar-thumb {
+                  background: $black;
+                  border-radius: 0px !important;
+                }
+              }
+            }
+            .info {
+              .city {
+                font-size: 14px;
+              }
+              .item {
+                padding: 15px 0;
+                .title {
+                  font-size: 16px !important;
+                }
+                .subtitle {
+                  font-size: 12px !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // --------
+  // new-product begin
+  body {
+    #app {
+      .new-product-header-top {
+        margin-bottom: 0px;
+      }
+      .main-content {
+        .my-container {
+          .head {
+            margin-bottom: 30px;
+            .date {
+              display: none;
+            }
+            .contact {
+              .status {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .time {
+                  display: flex;
+                }
+                .social-icons {
+                  display: flex;
+                }
+              }
+              .title {
+                font-size: 36px;
+                line-height: 110%;
+                margin-bottom: 20px;
+                max-width: inherit;
+              }
+              .share-links {
+                display: none;
+              }
+            }
+          }
+          .content {
+            .wrapper {
+              margin: 0;
+              max-width: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+  // --------
+  // contact begin
+  body {
+    #app {
+      .contact-wrapper {
+        .my-container {
+          .my-contact-map {
+            max-width: 490px;
+            max-height: 511px;
+          }
+          .info-box {
+            .our-social-links {
+              align-items: center;
+              flex-direction: column;
+              ul {
+                margin-top: 10px;
+                li {
+                  padding: 0 15px;
+                  &:last-child {
+                    border-right: 1px solid rgba(40, 40, 40, 0.2);
+                  }
+                  a {
+                    i {
+                      font-size: 20px;
+                    }
+                  }
+                }
+              }
+            }
+            .info {
+              max-width: 400px !important;
+            }
+          }
+        }
+      }
+      .requisites {
+        .my-container {
+          .right-section {
+            .requisites-title {
+              font-size: 26px;
+            }
+          }
+        }
+      }
+      .contact-form {
+        .my-container {
+          padding: 50px 80px;
+          form {
+            .wrapper {
+              .form__group {
+                .form__field {
+                  max-width: 360px !important;
+                }
+              }
+              .questions-dropdown {
+                max-width: 360px !important;
+              }
+            }
+            .footer {
+              .text {
+                font-size: 13px;
+              }
+              button {
+                margin-left: 0 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // --------
 }
-
-// --------------
 
 // --------------
 
 // 767px begin
 
-// washing-machines begin
-
 @media (max-width: 767px) {
+  // washing-machines begin
   body {
     #app {
       .my-container,
@@ -448,6 +756,8 @@
       }
     }
   }
+  // ------------
+  // news begin
   body {
     #app {
       .news-header-top {
@@ -494,15 +804,131 @@
       }
     }
   }
+  // --------
+  // service-centre begin
+  body {
+    #app {
+      .services-header-top {
+        .my-container {
+          .heading {
+            .main-title {
+              min-width: auto;
+            }
+            .contact {
+              justify-content: flex-end;
+              .phone-number {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      .services-content {
+        .my-container {
+          .my-contact-map {
+            max-width: 360px;
+            max-height: 409px;
+          }
+        }
+      }
+      .services-content {
+        .my-container {
+          .my-contact-map {
+            max-width: 360px;
+            max-height: 420px;
+          }
+          .info-wrapper {
+            max-width: 320px;
+            .info {
+              padding: 15px 30px;
+              .city {
+                font-size: 14px;
+              }
+              .item {
+                padding: 15px 0;
+                .title {
+                  font-size: 14px !important;
+                }
+                .subtitle {
+                  font-size: 12px !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // ----------
+  // new-product begin
+  body {
+    #app {
+      .news {
+        .my-container {
+          .main-wrapper {
+            .news__card {
+              &:nth-last-child(2) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // ----------
+  // contact begin
+  body {
+    #app {
+      .contact-wrapper {
+        .my-container {
+          flex-direction: column-reverse;
+          .my-contact-map {
+            max-width: 699px;
+            max-height: 510px;
+          }
+          .info-box {
+            margin-top: 40px;
+            margin-right: 0;
+            .main-title {
+              display: none;
+            }
+          }
+          .hidden-title {
+            display: block;
+          }
+        }
+      }
+      .requisites {
+        .my-container {
+          flex-direction: column;
+          .right-section {
+            padding: 0;
+            .requisites-title {
+              text-align: center;
+            }
+            .requisites-description {
+              text-align: left;
+              margin-right: 0;
+              max-width: initial;
+            }
+          }
+        }
+      }
+      .services-header-top {
+        padding-top: 70px;
+      }
+    }
+  }
+  // ----------
 }
-
-// ------------
 
 // ------------
 
 // 567px begin
 
 @media (max-width: 567px) {
+  // washing-machines begin
   body {
     #app {
       .my-container,
@@ -675,6 +1101,8 @@
       // -----------
     }
   }
+  // -------
+  // news begin
   body {
     #app {
       .news-header-top {
@@ -720,6 +1148,130 @@
       }
     }
   }
+  // ---------
+  // service centre begin
+  body {
+    #app {
+      .services-header-top {
+        .my-container {
+          .heading {
+            display: flex;
+            justify-content: center;
+            .main-title {
+              margin: 0 auto;
+            }
+            .contact {
+              display: none;
+            }
+          }
+        }
+      }
+      .services-content {
+        margin-bottom: 80px !important;
+        .my-container {
+          align-items: center;
+          flex-direction: column;
+          .info-wrapper {
+            width: min-content;
+            margin: 0 auto;
+            .info {
+              display: none;
+            }
+            .service-region-dropdown {
+              max-width: 500px !important;
+              width: max-content !important;
+              .hidden-list {
+                z-index: 2;
+              }
+              #service-region-toggler {
+                width: 320px !important;
+              }
+            }
+          }
+          .my-contact-map {
+            max-width: 410px;
+            margin-bottom: 20px;
+          }
+          .info {
+            display: block;
+          }
+          .dealers-info {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  // ----------
+  // our dealers begin
+  body {
+    #app {
+      .services-content {
+        .my-container {
+          .info-wrapper {
+            .dealers-region-dropdown {
+              .dealers-region-dropdown-button {
+                width: 320px !important;
+              }
+            }
+          }
+          .dealers {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+  // ---------
+  // new product begin
+  body {
+    #app {
+      .main-content {
+        .my-container {
+          .head {
+            margin-bottom: 0;
+            .contact {
+              .status {
+                .social-icons {
+                  display: none;
+                }
+                .share__dropdown {
+                  display: block !important;
+                  height: max-content;
+                  width: max-content;
+                }
+              }
+            }
+          }
+          .image-wrapper {
+            margin-bottom: 30px;
+          }
+        }
+      }
+      .news {
+        .my-container {
+          .heading {
+            a {
+              display: none;
+            }
+            hr {
+              max-width: 330px;
+            }
+          }
+          .main-wrapper {
+            flex-wrap: wrap;
+            .news__card {
+              margin-bottom: 30px;
+            }
+          }
+          .all-of-them {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  // --------
 }
 
 // -----------
@@ -727,6 +1279,7 @@
 // 350px begin
 
 @media (max-width: 350px) {
+  // washing machines begin
   body {
     #app {
       .my-container,
@@ -800,6 +1353,8 @@
       }
     }
   }
+  // ---------
+  // news begin
   body {
     #app {
       .news-header-top {
@@ -819,6 +1374,72 @@
       }
     }
   }
+  // --------
+  // service centre begin
+  body {
+    #app {
+      .services-content {
+        .my-container {
+          .my-contact-map {
+            max-width: 330px !important;
+          }
+          .info {
+            .item {
+              .title {
+                font-size: 16px;
+              }
+            }
+          }
+          .dealers {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+  // ---------
+  // new product begin
+  body {
+    #app {
+      .new-product-header-top {
+        padding-top: 85px;
+      }
+      .main-content {
+        .my-container {
+          .head {
+            .contact {
+              .title {
+                font-size: 24px;
+              }
+            }
+          }
+        }
+      }
+      .news {
+        margin-bottom: 70px;
+        margin-top: 20px;
+        .my-container {
+          .heading {
+            .title {
+              font-size: 26px;
+            }
+          }
+          .main-wrapper {
+            margin-top: 20px;
+          }
+          .all-of-them {
+            margin-top: 15px;
+            .all-news {
+              .text {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // ---------
 }
 
 // -----------
@@ -826,6 +1447,7 @@
 // 320px begin
 
 @media (max-width: 320px) {
+  // washing-machines begin
   body {
     #app {
       .my-container,
@@ -885,6 +1507,8 @@
       }
     }
   }
+  // ---------
+  // news begin
   body {
     #app {
       .news-product-cards {
@@ -899,6 +1523,32 @@
       }
     }
   }
-}
+  // -------
+  // service centre begin
+  body {
+    #app {
+      .services-content {
+        .my-container {
+          .info-wrapper {
+            .service-region-dropdown,
+            .dealers-region-dropdown {
+              max-width: 280px !important;
+              width: 280px !important;
+              #service-region-toggler,
+              .dealers-region-dropdown-button {
+                max-width: 280px !important;
+              }
+            }
+          }
+          .my-contact-map {
+            width: 280px !important;
+            max-height: 300px !important;
+          }
+        }
+      }
+    }
+  }
+  // ---------
 
-// -----------
+  // -----------
+}

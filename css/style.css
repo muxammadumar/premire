@@ -120,6 +120,57 @@
   body #app .news-product-cards .my-container .wrapper .product-card .details {
     margin-left: auto;
   }
+  body #app .services-header-top .my-container .heading .main-title {
+    font-size: 38px;
+  }
+  body #app .services-content .my-container .my-contact-map {
+    max-width: 700px;
+  }
+  body #app .services-content .my-container .my-contact-map {
+    max-height: 500px !important;
+  }
+  body #app .main-content .my-container .content .wrapper {
+    max-width: 780px;
+  }
+  body #app .news .my-container .heading hr {
+    max-width: 720px;
+  }
+  body #app .news .my-container .main-wrapper {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body #app .news .my-container .main-wrapper .news__card:nth-last-child(1) {
+    display: none;
+  }
+  body #app .contact-wrapper .my-container .info-box .main-title {
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+  body #app .contact-wrapper .my-container .my-contact-map {
+    width: 100% !important;
+    max-width: 700px;
+    max-height: 500px;
+  }
+  body #app .requisites .my-container .right-section .requisites-title {
+    font-size: 34px;
+  }
+  body #app .requisites .my-container .full-info ul li {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body #app .requisites .my-container .full-info ul li .title {
+    margin-right: 0 !important;
+    line-height: 180%;
+  }
+  body #app .requisites .my-container .full-info ul li .value {
+    line-height: 170%;
+  }
+  body #app .contact-form .my-container form .wrapper .form__group .form__field {
+    max-width: 430px !important;
+  }
+  body #app .contact-form .my-container form .wrapper .questions-dropdown {
+    max-width: 430px !important;
+  }
 }
 
 @media (max-width: 991px) {
@@ -180,6 +231,147 @@
   }
   body #app .home-footer .footer-bottom .my-own-container {
     max-width: 920px;
+  }
+  body #app .breadcrump {
+    display: none;
+  }
+  body #app .services-header-top {
+    padding-top: 90px;
+  }
+  body #app .services-header-top .my-container .heading .main-title {
+    min-width: 277px;
+    margin-right: 65px;
+    font-size: 30px;
+  }
+  body #app .services-content .my-container {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body #app .services-content .my-container .my-contact-map {
+    max-width: 570px;
+    max-height: 467px;
+  }
+  body #app .services-content .my-container .info-wrapper {
+    max-width: 320px;
+  }
+  body #app .services-content .my-container .info-wrapper .service-region-dropdown .hidden-list,
+  body #app .services-content .my-container .info-wrapper .dealers-region-dropdown .hidden-list {
+    max-width: 320px !important;
+    max-height: 285px !important;
+    overflow-y: scroll !important;
+  }
+  body #app .services-content .my-container .info-wrapper .service-region-dropdown .hidden-list::-webkit-scrollbar,
+  body #app .services-content .my-container .info-wrapper .dealers-region-dropdown .hidden-list::-webkit-scrollbar {
+    background-color: #e9e9e9;
+    width: 4px;
+    border-radius: 0px !important;
+  }
+  body #app .services-content .my-container .info-wrapper .service-region-dropdown .hidden-list::-webkit-scrollbar-thumb,
+  body #app .services-content .my-container .info-wrapper .dealers-region-dropdown .hidden-list::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 0px !important;
+  }
+  body #app .services-content .my-container .info-wrapper .info .city {
+    font-size: 14px;
+  }
+  body #app .services-content .my-container .info-wrapper .info .item {
+    padding: 15px 0;
+  }
+  body #app .services-content .my-container .info-wrapper .info .item .title {
+    font-size: 16px !important;
+  }
+  body #app .services-content .my-container .info-wrapper .info .item .subtitle {
+    font-size: 12px !important;
+  }
+  body #app .new-product-header-top {
+    margin-bottom: 0px;
+  }
+  body #app .main-content .my-container .head {
+    margin-bottom: 30px;
+  }
+  body #app .main-content .my-container .head .date {
+    display: none;
+  }
+  body #app .main-content .my-container .head .contact .status {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body #app .main-content .my-container .head .contact .status .time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body #app .main-content .my-container .head .contact .status .social-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body #app .main-content .my-container .head .contact .title {
+    font-size: 36px;
+    line-height: 110%;
+    margin-bottom: 20px;
+    max-width: inherit;
+  }
+  body #app .main-content .my-container .head .contact .share-links {
+    display: none;
+  }
+  body #app .main-content .my-container .content .wrapper {
+    margin: 0;
+    max-width: inherit;
+  }
+  body #app .contact-wrapper .my-container .my-contact-map {
+    max-width: 490px;
+    max-height: 511px;
+  }
+  body #app .contact-wrapper .my-container .info-box .our-social-links {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body #app .contact-wrapper .my-container .info-box .our-social-links ul {
+    margin-top: 10px;
+  }
+  body #app .contact-wrapper .my-container .info-box .our-social-links ul li {
+    padding: 0 15px;
+  }
+  body #app .contact-wrapper .my-container .info-box .our-social-links ul li:last-child {
+    border-right: 1px solid rgba(40, 40, 40, 0.2);
+  }
+  body #app .contact-wrapper .my-container .info-box .our-social-links ul li a i {
+    font-size: 20px;
+  }
+  body #app .contact-wrapper .my-container .info-box .info {
+    max-width: 400px !important;
+  }
+  body #app .requisites .my-container .right-section .requisites-title {
+    font-size: 26px;
+  }
+  body #app .contact-form .my-container {
+    padding: 50px 80px;
+  }
+  body #app .contact-form .my-container form .wrapper .form__group .form__field {
+    max-width: 360px !important;
+  }
+  body #app .contact-form .my-container form .wrapper .questions-dropdown {
+    max-width: 360px !important;
+  }
+  body #app .contact-form .my-container form .footer .text {
+    font-size: 13px;
+  }
+  body #app .contact-form .my-container form .footer button {
+    margin-left: 0 !important;
   }
 }
 
@@ -305,6 +497,86 @@
   }
   body #app .news-product-cards .my-container .footer ul {
     margin: 0 auto;
+  }
+  body #app .services-header-top .my-container .heading .main-title {
+    min-width: auto;
+  }
+  body #app .services-header-top .my-container .heading .contact {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  body #app .services-header-top .my-container .heading .contact .phone-number {
+    display: none;
+  }
+  body #app .services-content .my-container .my-contact-map {
+    max-width: 360px;
+    max-height: 409px;
+  }
+  body #app .services-content .my-container .my-contact-map {
+    max-width: 360px;
+    max-height: 420px;
+  }
+  body #app .services-content .my-container .info-wrapper {
+    max-width: 320px;
+  }
+  body #app .services-content .my-container .info-wrapper .info {
+    padding: 15px 30px;
+  }
+  body #app .services-content .my-container .info-wrapper .info .city {
+    font-size: 14px;
+  }
+  body #app .services-content .my-container .info-wrapper .info .item {
+    padding: 15px 0;
+  }
+  body #app .services-content .my-container .info-wrapper .info .item .title {
+    font-size: 14px !important;
+  }
+  body #app .services-content .my-container .info-wrapper .info .item .subtitle {
+    font-size: 12px !important;
+  }
+  body #app .news .my-container .main-wrapper .news__card:nth-last-child(2) {
+    display: none;
+  }
+  body #app .contact-wrapper .my-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  body #app .contact-wrapper .my-container .my-contact-map {
+    max-width: 699px;
+    max-height: 510px;
+  }
+  body #app .contact-wrapper .my-container .info-box {
+    margin-top: 40px;
+    margin-right: 0;
+  }
+  body #app .contact-wrapper .my-container .info-box .main-title {
+    display: none;
+  }
+  body #app .contact-wrapper .my-container .hidden-title {
+    display: block;
+  }
+  body #app .requisites .my-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body #app .requisites .my-container .right-section {
+    padding: 0;
+  }
+  body #app .requisites .my-container .right-section .requisites-title {
+    text-align: center;
+  }
+  body #app .requisites .my-container .right-section .requisites-description {
+    text-align: left;
+    margin-right: 0;
+    max-width: initial;
+  }
+  body #app .services-header-top {
+    padding-top: 70px;
   }
 }
 
@@ -501,6 +773,105 @@
   body #app .news-product-cards .my-container .wrapper .product-card .text .subtitle {
     font-size: 14px !important;
   }
+  body #app .services-header-top .my-container .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body #app .services-header-top .my-container .heading .main-title {
+    margin: 0 auto;
+  }
+  body #app .services-header-top .my-container .heading .contact {
+    display: none;
+  }
+  body #app .services-content {
+    margin-bottom: 80px !important;
+  }
+  body #app .services-content .my-container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body #app .services-content .my-container .info-wrapper {
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    margin: 0 auto;
+  }
+  body #app .services-content .my-container .info-wrapper .info {
+    display: none;
+  }
+  body #app .services-content .my-container .info-wrapper .service-region-dropdown {
+    max-width: 500px !important;
+    width: -webkit-max-content !important;
+    width: -moz-max-content !important;
+    width: max-content !important;
+  }
+  body #app .services-content .my-container .info-wrapper .service-region-dropdown .hidden-list {
+    z-index: 2;
+  }
+  body #app .services-content .my-container .info-wrapper .service-region-dropdown #service-region-toggler {
+    width: 320px !important;
+  }
+  body #app .services-content .my-container .my-contact-map {
+    max-width: 410px;
+    margin-bottom: 20px;
+  }
+  body #app .services-content .my-container .info {
+    display: block;
+  }
+  body #app .services-content .my-container .dealers-info {
+    display: block;
+  }
+  body #app .services-content .my-container .info-wrapper .dealers-region-dropdown .dealers-region-dropdown-button {
+    width: 320px !important;
+  }
+  body #app .services-content .my-container .dealers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body #app .main-content .my-container .head {
+    margin-bottom: 0;
+  }
+  body #app .main-content .my-container .head .contact .status .social-icons {
+    display: none;
+  }
+  body #app .main-content .my-container .head .contact .status .share__dropdown {
+    display: block !important;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  body #app .main-content .my-container .image-wrapper {
+    margin-bottom: 30px;
+  }
+  body #app .news .my-container .heading a {
+    display: none;
+  }
+  body #app .news .my-container .heading hr {
+    max-width: 330px;
+  }
+  body #app .news .my-container .main-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body #app .news .my-container .main-wrapper .news__card {
+    margin-bottom: 30px;
+  }
+  body #app .news .my-container .all-of-them {
+    display: block;
+  }
 }
 
 @media (max-width: 350px) {
@@ -556,6 +927,39 @@
     font-size: 26px;
     margin-top: 20px;
   }
+  body #app .services-content .my-container .my-contact-map {
+    max-width: 330px !important;
+  }
+  body #app .services-content .my-container .info .item .title {
+    font-size: 16px;
+  }
+  body #app .services-content .my-container .dealers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body #app .new-product-header-top {
+    padding-top: 85px;
+  }
+  body #app .main-content .my-container .head .contact .title {
+    font-size: 24px;
+  }
+  body #app .news {
+    margin-bottom: 70px;
+    margin-top: 20px;
+  }
+  body #app .news .my-container .heading .title {
+    font-size: 26px;
+  }
+  body #app .news .my-container .main-wrapper {
+    margin-top: 20px;
+  }
+  body #app .news .my-container .all-of-them {
+    margin-top: 15px;
+  }
+  body #app .news .my-container .all-of-them .all-news .text {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 320px) {
@@ -589,6 +993,21 @@
   body #app .news-product-cards .my-container .wrapper .product-card {
     padding: 0px !important;
     padding-bottom: 25px !important;
+  }
+  body #app .services-content .my-container .info-wrapper .service-region-dropdown,
+  body #app .services-content .my-container .info-wrapper .dealers-region-dropdown {
+    max-width: 280px !important;
+    width: 280px !important;
+  }
+  body #app .services-content .my-container .info-wrapper .service-region-dropdown #service-region-toggler,
+  body #app .services-content .my-container .info-wrapper .service-region-dropdown .dealers-region-dropdown-button,
+  body #app .services-content .my-container .info-wrapper .dealers-region-dropdown #service-region-toggler,
+  body #app .services-content .my-container .info-wrapper .dealers-region-dropdown .dealers-region-dropdown-button {
+    max-width: 280px !important;
+  }
+  body #app .services-content .my-container .my-contact-map {
+    width: 280px !important;
+    max-height: 300px !important;
   }
 }
 
@@ -633,7 +1052,9 @@ body *::before {
   margin-bottom: 0;
 }
 
-.burger-active .container:hover .bar-left, .burger-active .container:hover .bar-right, .burger-active .container:hover .bar-center {
+.burger-active .container:hover .bar-left,
+.burger-active .container:hover .bar-right,
+.burger-active .container:hover .bar-center {
   width: 30px !important;
 }
 
@@ -4956,6 +5377,157 @@ section.news-product-cards .my-container .footer ul .numbers a {
   color: #c8c8c8;
 }
 
+.main-content .my-container .head .contact .status .time {
+  margin-top: 20px;
+  margin-bottom: 17px;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-content .my-container .head .contact .status .time svg {
+  width: 20px;
+  height: auto;
+}
+
+.main-content .my-container .head .contact .status .time .number {
+  font-family: gilroy-regular;
+  font-size: 14px;
+  color: #5a5a5b;
+  margin-left: 12px;
+}
+
+.main-content .my-container .head .contact .status .social-icons {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-content .my-container .head .contact .status .social-icons .send {
+  margin-right: 5px;
+  font-family: gilroy-regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.main-content .my-container .head .contact .status .social-icons .social-links li {
+  border-right: 1px solid rgba(40, 40, 40, 0.2);
+  padding: 0 18px;
+  display: inline-block;
+}
+
+.main-content .my-container .head .contact .status .social-icons .social-links li a i {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-size: 18px;
+  color: #5a5a5b;
+}
+
+.main-content .my-container .head .contact .status .social-icons .social-links li:hover a i {
+  color: #000000;
+}
+
+.main-content .my-container .head .contact .status .social-icons .social-links li:last-child {
+  border-right: none;
+}
+
+.main-content .my-container .head .contact .status .share__dropdown {
+  display: none;
+}
+
+.main-content .my-container .head .contact .status .share__dropdown .share__drop__toggler {
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.main-content .my-container .head .contact .status .share__dropdown .share__drop__toggler:hover {
+  border: 5px solid rgba(196, 196, 196, 0.5);
+}
+
+.main-content .my-container .head .contact .status .share__dropdown .share__drop__toggler:focus {
+  outline: none;
+}
+
+.main-content .my-container .head .contact .status .share__dropdown .share__dropdown__list {
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid #f2f2f2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+  margin-top: 7px;
+  padding: 5px 13px;
+  border-radius: 73px;
+  background-color: #fff;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style-type: none;
+}
+
+.main-content .my-container .head .contact .status .share__dropdown .share__dropdown__list li {
+  width: 24px;
+  border-bottom: 1px solid rgba(40, 40, 40, 0.1);
+  padding: 13px 0;
+}
+
+.main-content .my-container .head .contact .status .share__dropdown .share__dropdown__list li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.main-content .my-container .head .contact .status .share__dropdown .share__dropdown__list li a i {
+  color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.main-content .my-container .head .contact .status .share__dropdown .share__dropdown__list li a:hover {
+  text-decoration: none;
+}
+
+.main-content .my-container .head .contact .status .share__dropdown .share__dropdown__list li a:hover i {
+  color: #000000;
+}
+
+.main-content .my-container .head .contact .status .share__dropdown .share__dropdown__list li:last-child {
+  border-bottom: none;
+}
+
 .main-content .my-container .head .contact .title {
   max-width: 780px;
   text-align: left;
@@ -5006,8 +5578,13 @@ section.news-product-cards .my-container .footer ul .numbers a {
   border-right: none;
 }
 
-.main-content .my-container img {
+.main-content .my-container .image-wrapper {
   margin-bottom: 50px;
+}
+
+.main-content .my-container .image-wrapper img {
+  width: 100%;
+  height: auto;
 }
 
 .main-content .my-container .content {
@@ -5079,11 +5656,11 @@ section.news-product-cards .my-container .footer ul .numbers a {
           box-sizing: border-box;
 }
 
-.news .my-container .heading a {
+.news .my-container .heading .all {
   text-decoration: none;
 }
 
-.news .my-container .heading a .all-news {
+.news .my-container .heading .all .all-news {
   width: 180px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5093,7 +5670,7 @@ section.news-product-cards .my-container .footer ul .numbers a {
           align-items: center;
 }
 
-.news .my-container .heading a .all-news .text {
+.news .my-container .heading .all .all-news .text {
   margin: 0;
   margin-right: 10px;
   font-family: gilroy-regular;
@@ -5102,7 +5679,7 @@ section.news-product-cards .my-container .footer ul .numbers a {
   letter-spacing: 0.2em;
 }
 
-.news .my-container .heading a .all-news .all-btn {
+.news .my-container .heading .all .all-news .all-btn {
   border: 5px solid transparent;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5121,11 +5698,11 @@ section.news-product-cards .my-container .footer ul .numbers a {
   border-radius: 50%;
 }
 
-.news .my-container .heading a .all-news .all-btn i {
+.news .my-container .heading .all .all-news .all-btn i {
   color: #000000;
 }
 
-.news .my-container .heading a:hover .all-news .all-btn {
+.news .my-container .heading .all:hover .all-news .all-btn {
   border: 5px solid rgba(196, 196, 196, 0.5);
 }
 
@@ -5140,6 +5717,10 @@ section.news-product-cards .my-container .footer ul .numbers a {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.news .my-container .main-wrapper .news__card {
+  max-width: 300px;
 }
 
 .news .my-container .main-wrapper .news__card .date {
@@ -5177,6 +5758,59 @@ section.news-product-cards .my-container .footer ul .numbers a {
   font-family: gilroy-regular;
   font-size: 16px;
   color: #5a5a5b;
+}
+
+.news .my-container .all-of-them {
+  margin-top: 30px;
+  display: none;
+  text-decoration: none;
+}
+
+.news .my-container .all-of-them .all-news {
+  margin: 0 auto;
+  width: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.news .my-container .all-of-them .all-news .text {
+  margin: 0;
+  margin-right: 10px;
+  font-family: gilroy-regular;
+  font-size: 14px;
+  color: #000000;
+  letter-spacing: 0.2em;
+}
+
+.news .my-container .all-of-them .all-news .all-btn {
+  border: 5px solid transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px !important;
+  height: 40px !important;
+  border: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-radius: 50%;
+}
+
+.news .my-container .all-of-them .all-news .all-btn i {
+  color: #000000;
+}
+
+.news .my-container .all-of-them:hover .all-news .all-btn {
+  border: 5px solid rgba(196, 196, 196, 0.5);
 }
 
 section.services-header-top .my-container {
@@ -5435,7 +6069,81 @@ section.services-content .my-container .info-wrapper .dealers-region-dropdown {
 }
 
 section.services-content .my-container .info-wrapper .dealers-region-dropdown .dealers-region-dropdown-button {
-  min-width: 400px !important;
+  padding: 12px 14px;
+  background-color: #fff;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 5px;
+  border: 5px solid #f6f6f6;
+}
+
+section.services-content .my-container .info-wrapper .dealers-region-dropdown .dealers-region-dropdown-button .label {
+  font-family: gilroy-bold;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  color: #000000;
+}
+
+section.services-content .my-container .info-wrapper .dealers-region-dropdown .dealers-region-dropdown-button:focus {
+  outline: none;
+}
+
+section.services-content .my-container .info-wrapper .dealers-region-dropdown .hidden-list {
+  background-color: #fff;
+  position: absolute;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 392px;
+  list-style-type: none;
+  display: none;
+}
+
+section.services-content .my-container .info-wrapper .dealers-region-dropdown .hidden-list li {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  padding: 0 22px;
+  font-family: gilroy-regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 40px;
+  color: #5a5a5b;
+}
+
+section.services-content .my-container .info-wrapper .dealers-region-dropdown .hidden-list li:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+section.services-content .my-container .info-wrapper .dealers-region-dropdown .hidden-list li:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+section.services-content .my-container .info-wrapper .dealers-region-dropdown .hidden-list li:hover {
+  background-color: #f6f6f6;
+}
+
+section.services-content .my-container .info-wrapper .dealers-region-dropdown {
+  margin-bottom: 32px;
+  width: 100%;
+  max-width: 410px;
+}
+
+section.services-content .my-container .info-wrapper .dealers-region-dropdown .dealers-region-dropdown-button {
   padding: 12px 14px;
   background-color: #fff;
   width: 100%;
@@ -5570,6 +6278,168 @@ section.services-content .my-container .my-contact-map {
 section.services-content .my-container .my-contact-map #map {
   width: 100%;
   height: 100%;
+}
+
+section.services-content .my-container .dealers-info {
+  -webkit-box-shadow: 0px 10px 29px rgba(19, 14, 79, 0.05);
+          box-shadow: 0px 10px 29px rgba(19, 14, 79, 0.05);
+  display: none;
+  padding: 0;
+  max-width: 410px;
+  overflow: auto;
+}
+
+section.services-content .my-container .dealers-info::-webkit-scrollbar {
+  background-color: #fff;
+  width: 10px;
+  border-radius: 5px !important;
+}
+
+section.services-content .my-container .dealers-info::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 5px !important;
+}
+
+section.services-content .my-container .dealers-info .adress {
+  border-bottom: 1px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  padding: 25px;
+}
+
+section.services-content .my-container .dealers-info .adress .title {
+  font-family: gilroy-medium;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 154.41%;
+  color: #000000;
+}
+
+section.services-content .my-container .dealers-info .adress .subtitle {
+  font-family: gilroy-regular;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 154.41%;
+  color: #5a5a5b;
+}
+
+section.services-content .my-container .dealers-info .adress:hover {
+  background-color: #f6f6f6;
+}
+
+section.services-content .my-container #service-info {
+  display: none;
+  max-width: 410px;
+  padding: 40px 45px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 10px 29px rgba(19, 14, 79, 0.05);
+          box-shadow: 0px 10px 29px rgba(19, 14, 79, 0.05);
+  border-radius: 5px;
+}
+
+section.services-content .my-container #service-info .city {
+  font-family: gilroy-bold;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 16px;
+}
+
+section.services-content .my-container #service-info .black-hr {
+  width: 67px;
+  height: 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #000000;
+  border-color: #000000;
+  margin-bottom: 7px;
+}
+
+section.services-content .my-container #service-info .item {
+  padding: 20px 0;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+section.services-content .my-container #service-info .item .subtitle {
+  font-family: gilroy-regular;
+  font-size: 14px;
+  line-height: 158.8%;
+  color: #5a5a5b;
+  margin-bottom: 5px;
+}
+
+section.services-content .my-container #service-info .item .title {
+  font-family: gilroy-bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
+section.services-content .my-container #service-info .item:last-child {
+  border-bottom: none;
+}
+
+section.services-content .my-container #service-info .item:first-child {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section.services-content .my-container .dealers {
+  margin-top: 40px;
+  max-width: 234px;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+section.services-content .my-container .dealers .image-wrapper {
+  margin-right: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 3px;
+  background-color: #1c1c1c;
+}
+
+section.services-content .my-container .dealers a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+section.services-content .my-container .dealers a .title {
+  font-family: gilroy-regular;
+  font-style: normal;
+  font-weight: 500;
+  margin-right: 10px;
+  font-size: 16px;
+  line-height: 150%;
+  color: #5a5a5b;
+}
+
+section.services-content .my-container .dealers a i {
+  color: #5a5a5b;
+  font-size: 10px;
 }
 
 section.my-services-content .my-container {
@@ -5780,6 +6650,15 @@ section.contact-wrapper .my-container .my-contact-map #map {
   height: 100%;
 }
 
+section.contact-wrapper .my-container .hidden-title {
+  display: none;
+  margin-bottom: 20px;
+  font-family: gilroy-bold;
+  font-size: 45px;
+  line-height: 140%;
+  color: #000000;
+}
+
 .requisites {
   margin-bottom: 60px;
 }
@@ -5794,7 +6673,6 @@ section.contact-wrapper .my-container .my-contact-map #map {
 
 .requisites .my-container .right-section {
   padding-right: 42px;
-  border-right: 4px solid #ebebeb;
 }
 
 .requisites .my-container .right-section .requisites-title {
@@ -5819,6 +6697,7 @@ section.contact-wrapper .my-container .my-contact-map #map {
 }
 
 .requisites .my-container .full-info {
+  border-left: 4px solid #ebebeb;
   padding-left: 54px;
   width: auto;
 }
@@ -6368,7 +7247,8 @@ section.work-in-our-company .my-container .work-in-our-company__subtitle {
   font-size: 18px;
   line-height: 160%;
   color: #323232;
-  width: 520px;
+  width: 100%;
+  max-width: 520px;
   border: 0;
   border-bottom: 1px solid #e8e8e8;
   outline: 0;

@@ -56,7 +56,9 @@ body {
 .burger-active {
   .container {
     &:hover {
-      .bar-left, .bar-right, .bar-center {
+      .bar-left,
+      .bar-right,
+      .bar-center {
         width: 30px !important;
       }
     }
@@ -3135,6 +3137,121 @@ section.news-product-cards {
         }
       }
       .contact {
+        .status {
+          .time {
+            margin-top: 20px;
+            margin-bottom: 17px;
+            display: none;
+            align-items: center;
+            svg {
+              width: 20px;
+              height: auto;
+            }
+            .number {
+              font-family: gilroy-regular;
+              font-size: 14px;
+              color: #5a5a5b;
+              margin-left: 12px;
+            }
+          }
+          .social-icons {
+            display: none;
+            align-items: center;
+            .send {
+              margin-right: 5px;
+              font-family: gilroy-regular;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 16px;
+              line-height: 19px;
+              color: $black;
+            }
+            .social-links {
+              li {
+                border-right: 1px solid rgba($color: #282828, $alpha: 0.2);
+                padding: 0 18px;
+                display: inline-block;
+                a {
+                  i {
+                    transition: all 0.5s ease;
+                    font-size: 18px;
+                    color: $second-black;
+                  }
+                }
+                &:hover {
+                  a {
+                    i {
+                      color: $black;
+                    }
+                  }
+                }
+                &:last-child {
+                  border-right: none;
+                }
+              }
+            }
+          }
+          .share__dropdown {
+            display: none;
+            .share__drop__toggler {
+              background-color: #fff;
+              width: 50px;
+              height: 50px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 50%;
+              border: 5px solid #fff;
+              transition: all 0.5s ease;
+              &:hover {
+                border: 5px solid rgba(196, 196, 196, 0.5);
+              }
+              &:focus {
+                outline: none;
+              }
+            }
+            .share__dropdown__list {
+              position: absolute;
+              background: #ffffff;
+              border: 1px solid #f2f2f2;
+              box-sizing: border-box;
+              box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+              margin-top: 7px;
+              padding: 5px 13px;
+              border-radius: 73px;
+              background-color: #fff;
+              display: none;
+              align-items: center;
+              flex-direction: column;
+              list-style-type: none;
+              li {
+                width: 24px;
+                border-bottom: 1px solid rgba($color: #282828, $alpha: 0.1);
+                padding: 13px 0;
+                a {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 100%;
+                  height: 100%;
+                  i {
+                    color: rgba($color: #000000, $alpha: 0.4);
+                    transition: all 0.5s ease;
+                  }
+                  &:hover {
+                    text-decoration: none;
+                    i {
+                      color: $black;
+                    }
+                  }
+                }
+                &:last-child {
+                  border-bottom: none;
+                }
+              }
+            }
+          }
+        }
         .title {
           max-width: 780px;
           text-align: left;
@@ -3183,7 +3300,11 @@ section.news-product-cards {
         }
       }
     }
-    img {
+    .image-wrapper {
+      img {
+        width: 100%;
+        height: auto;
+      }
       margin-bottom: 50px;
     }
     .content {
@@ -3233,7 +3354,7 @@ section.news-product-cards {
         opacity: 1;
         box-sizing: border-box;
       }
-      a {
+      .all {
         text-decoration: none;
         .all-news {
           width: 180px;
@@ -3277,6 +3398,7 @@ section.news-product-cards {
       align-items: flex-start;
       justify-content: flex-start;
       .news__card {
+        max-width: 300px;
         .date {
           margin-top: 20px;
           margin-bottom: 17px;
@@ -3305,6 +3427,46 @@ section.news-product-cards {
           font-family: gilroy-regular;
           font-size: 16px;
           color: $second-black;
+        }
+      }
+    }
+    .all-of-them {
+      margin-top: 30px;
+      display: none;
+      text-decoration: none;
+      .all-news {
+        margin: 0 auto;
+        width: 180px;
+        display: flex;
+        align-items: center;
+        .text {
+          margin: 0;
+          margin-right: 10px;
+          font-family: gilroy-regular;
+          font-size: 14px;
+          color: $black;
+          letter-spacing: 0.2em;
+        }
+        .all-btn {
+          border: 5px solid transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px !important;
+          height: 40px !important;
+          border: none;
+          transition: all 0.5s ease;
+          border-radius: 50%;
+          i {
+            color: $black;
+          }
+        }
+      }
+      &:hover {
+        .all-news {
+          .all-btn {
+            border: 5px solid rgba(196, 196, 196, 0.5);
+          }
         }
       }
     }
@@ -3481,7 +3643,65 @@ section.services-content {
         width: 100%;
         max-width: 410px;
         .dealers-region-dropdown-button {
-          min-width: 400px !important;
+          padding: 12px 14px;
+          background-color: #fff;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-radius: 5px;
+          border: 5px solid #f6f6f6;
+          .label {
+            font-family: gilroy-bold;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 150%;
+            color: $black;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+        .hidden-list {
+          background-color: #fff;
+          position: absolute;
+          cursor: pointer;
+          border-radius: 5px;
+          box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+          width: 100%;
+          max-width: 392px;
+          list-style-type: none;
+          display: none;
+          li {
+            transition: all 0.5s ease;
+            padding: 0 22px;
+            font-family: gilroy-regular;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 40px;
+            color: $second-black;
+            &:last-child {
+              border-bottom-left-radius: 5px;
+              border-bottom-right-radius: 5px;
+            }
+            &:first-child {
+              border-top-left-radius: 5px;
+              border-top-right-radius: 5px;
+            }
+            &:hover {
+              background-color: #f6f6f6;
+            }
+          }
+        }
+      }
+      .dealers-region-dropdown {
+        margin-bottom: 32px;
+        width: 100%;
+        max-width: 410px;
+        .dealers-region-dropdown-button {
+          // min-width: 400px !important;
           padding: 12px 14px;
           background-color: #fff;
           width: 100%;
@@ -3589,6 +3809,129 @@ section.services-content {
       #map {
         width: 100%;
         height: 100%;
+      }
+    }
+    .dealers-info {
+      box-shadow: 0px 10px 29px rgba(19, 14, 79, 0.05);
+      display: none;
+      padding: 0;
+      max-width: 410px;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        background-color: #fff;
+        width: 10px;
+        border-radius: 5px !important;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $black;
+        border-radius: 5px !important;
+      }
+      .adress {
+        border-bottom: 1px solid #f6f6f6;
+        transition: all 0.5s ease;
+        cursor: pointer;
+        padding: 25px;
+        .title {
+          font-family: gilroy-medium;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 154.41%;
+          color: $black;
+        }
+        .subtitle {
+          font-family: gilroy-regular;
+          font-style: normal;
+          font-size: 16px;
+          line-height: 154.41%;
+          color: $second-black;
+        }
+        &:hover {
+          background-color: #f6f6f6;
+        }
+      }
+    }
+    #service-info {
+      display: none;
+      max-width: 410px;
+      padding: 40px 45px;
+      background: #ffffff;
+      box-shadow: 0px 10px 29px rgba(19, 14, 79, 0.05);
+      border-radius: 5px;
+      .city {
+        font-family: gilroy-bold;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: $black;
+        margin-bottom: 16px;
+      }
+      .black-hr {
+        width: 67px;
+        height: 2px;
+        box-sizing: border-box;
+        background-color: $black;
+        border-color: $black;
+        margin-bottom: 7px;
+      }
+      .item {
+        padding: 20px 0;
+        border-bottom: 1px solid #f6f6f6;
+        .subtitle {
+          font-family: gilroy-regular;
+          font-size: 14px;
+          line-height: 158.8%;
+          color: $second-black;
+          margin-bottom: 5px;
+        }
+        .title {
+          font-family: gilroy-bold;
+          font-size: 20px;
+          line-height: 24px;
+          color: $black;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+        &:first-child {
+          transition: all 0.5s ease;
+        }
+      }
+    }
+    .dealers {
+      margin-top: 40px;
+      max-width: 234px;
+      display: none;
+      align-items: center;
+      justify-content: flex-end;
+      .image-wrapper {
+        margin-right: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 46px;
+        height: 46px;
+        border-radius: 3px;
+        background-color: #1c1c1c;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        .title {
+          font-family: gilroy-regular;
+          font-style: normal;
+          font-weight: 500;
+          margin-right: 10px;
+          font-size: 16px;
+          line-height: 150%;
+          color: $second-black;
+        }
+        i {
+          color: $second-black;
+          font-size: 10px;
+        }
       }
     }
   }
@@ -3755,6 +4098,14 @@ section.contact-wrapper {
         height: 100%;
       }
     }
+    .hidden-title {
+      display: none;
+      margin-bottom: 20px;
+      font-family: gilroy-bold;
+      font-size: 45px;
+      line-height: 140%;
+      color: $black;
+    }
   }
 }
 .requisites {
@@ -3765,7 +4116,6 @@ section.contact-wrapper {
     display: flex;
     .right-section {
       padding-right: 42px;
-      border-right: 4px solid #ebebeb;
       .requisites-title {
         margin-bottom: 10px;
         font-family: gilroy-bold;
@@ -3787,6 +4137,7 @@ section.contact-wrapper {
       }
     }
     .full-info {
+      border-left: 4px solid #ebebeb;
       padding-left: 54px;
       width: auto;
       ul {
@@ -4219,7 +4570,8 @@ section.work-in-our-company {
           font-size: 18px;
           line-height: 160%;
           color: #323232;
-          width: 520px;
+          width: 100%;
+          max-width: 520px;
           border: 0;
           border-bottom: 1px solid #e8e8e8;
           outline: 0;
