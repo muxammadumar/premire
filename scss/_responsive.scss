@@ -133,7 +133,7 @@
 
 // 1199 px begin
 
-@media (max-width: 1199px) {
+@media (max-width: 1200px) {
   // washing-machines begin
   body {
     #app {
@@ -385,7 +385,7 @@
 
 // 991px begin
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   // washing-machines begin
   body {
     #app {
@@ -662,7 +662,7 @@
 
 // 767px begin
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   // washing-machines begin
   body {
     #app {
@@ -904,6 +904,7 @@
           flex-direction: column;
           .right-section {
             padding: 0;
+            padding-bottom: 20px;
             .requisites-title {
               text-align: center;
             }
@@ -911,6 +912,28 @@
               text-align: left;
               margin-right: 0;
               max-width: initial;
+            }
+          }
+          .full-info {
+            padding-top: 20px;
+            padding-left: 0;
+            border-left: 0;
+            border-top: 4px solid #ebebeb;
+          }
+        }
+      }
+      .contact-form {
+        .my-container {
+          form {
+            .wrapper {
+              .form__group {
+                .form__field {
+                  max-width: initial !important;
+                }
+              }
+              .questions-dropdown {
+                max-width: initial !important;
+              }
             }
           }
         }
@@ -927,7 +950,7 @@
 
 // 567px begin
 
-@media (max-width: 567px) {
+@media (max-width: 568px) {
   // washing-machines begin
   body {
     #app {
@@ -1272,6 +1295,55 @@
     }
   }
   // --------
+  // contact begin
+  body {
+    #app {
+      .contact-form {
+        .my-container {
+          .head {
+            .title {
+              font-size: 30px;
+              line-height: 31px;
+            }
+          }
+          form {
+            overflow: hidden;
+            .wrapper {
+              .form__group {
+                .form__field {
+                  max-width: 380px !important;
+                  width: 380px !important;
+                }
+              }
+            }
+            .footer {
+              flex-direction: column;
+              .text {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                margin-bottom: 30px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+      .requisites {
+        .my-container {
+          .full-info {
+            ul {
+              li {
+                margin-bottom: 30px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // --------
 }
 
 // -----------
@@ -1440,6 +1512,99 @@
     }
   }
   // ---------
+  // contact begin
+  body {
+    #app {
+      .contact-wrapper {
+        .my-container {
+          .hidden-title {
+            font-size: 26px;
+          }
+          .info-box {
+            .info {
+              .item {
+                align-items: center;
+                width: 280px;
+                padding: 30px 18px;
+                .image-wrapper {
+                  min-width: 46px;
+                  margin-right: 15px;
+                }
+                .answer {
+                  font-size: 14px;
+                }
+              }
+            }
+            .our-social-links {
+              ul {
+                li {
+                  a {
+                    i {
+                      font-size: 25px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .requisites {
+        margin-bottom: 0;
+        .my-container {
+          padding: 33px 22px;
+          .right-section {
+            .requisites-title {
+              text-align: left;
+            }
+          }
+          .full-info {
+            ul {
+              li {
+                .value {
+                  min-width: initial;
+                }
+              }
+            }
+          }
+        }
+      }
+      .contact-form {
+        margin-bottom: 0;
+        padding-bottom: 70px;
+        box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+        .my-container {
+          box-shadow: none;
+          padding: 42px 20px;
+          form {
+            .wrapper {
+              width: 100%;
+              .form__group {
+                width: 100%;
+                .form__field {
+                  width: 100% !important;
+                }
+              }
+              .questions-dropdown {
+                width: 100%;
+              }
+            }
+            .footer {
+              .text {
+                font-size: 12px;
+                display: block;
+                text-align: center;
+              }
+              button {
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // ----------
 }
 
 // -----------
@@ -1452,7 +1617,7 @@
     #app {
       .my-container,
       .my-first-container {
-        max-width: 290px !important;
+        max-width: 280px !important;
         margin: 0 auto !important;
       }
       .washing-machines-header {

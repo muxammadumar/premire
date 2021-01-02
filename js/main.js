@@ -119,6 +119,17 @@ $(document).ready(function () {
     let long = parseFloat($(this).attr("data-long"));
     initMap(lat, long);
   });
+  $("#vacansies-region-toggler").click(function () {
+    $("#vacansies-region-list").toggle();
+  });
+
+  $(".vacansies-region-item").click(function () {
+    $("#vacansies-region-label").text($(this).text());
+    $("#vacansies-region-list").toggle();
+    let lat = parseFloat($(this).attr("data-lat"));
+    let long = parseFloat($(this).attr("data-long"));
+    initMap(lat, long);
+  });
   $("#shareDropToggler").click(function () {
     var label = $(".share__dropdown__list");
     if (label.hasClass("animate__fadeInDown")) {
