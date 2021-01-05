@@ -37,10 +37,25 @@ $(document).ready(function () {
     $(this).parents("#second-dropdown-menu").toggle();
   });
   $(".third-owl-carousel").owlCarousel({
-    loop: true,
     navs: false,
+    loop: true,
     dots: true,
     items: 4,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      567: {
+        stagePadding: 20,
+        items: 2,
+      },
+      900: {
+        items: 3,
+      },
+      1200: {
+        items: 4,
+      },
+    },
   });
   owl1.on("changed.owl.carousel", function (event) {
     var element = event.target; // DOM element, in this example .owl-carousel
@@ -69,12 +84,35 @@ $(document).ready(function () {
     owl1.trigger("prev.owl.carousel");
   });
   $(".owl-second").owlCarousel({
-    stagePadding: 30,
+    stagePadding: 48,
     loop: true,
     items: 6,
     dots: false,
     navs: false,
     margin: 20,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      349: {
+        items: 2,
+      },
+      567: {
+        items: 3,
+      },
+      767: {
+        items: 4,
+      },
+      990: {
+        items: 5,
+      },
+      1000: {
+        items: 6,
+      },
+      1201: {
+        items: 7,
+      },
+    },
   });
   var owlTwo = $(".owl-second");
   $("#owlSecondNext").click(function () {
@@ -144,10 +182,16 @@ $(document).ready(function () {
   });
   let myProductCarousel = $(".product__carousel");
   myProductCarousel.owlCarousel({
+    dotsContainer: "#carousel-custom-dots",
     items: 1,
     dots: false,
     loop: true,
   });
+
+  $(".product-owl-dot").click(function () {
+    myProductCarousel.trigger("to.owl.carousel", [$(this).index(), 300]);
+  });
+
   $("#productCarouselTriggerPrev").click(function () {
     myProductCarousel.trigger("prev.owl.carousel");
   });
@@ -159,11 +203,11 @@ $(document).ready(function () {
     dots: false,
     items: 4,
     loop: true,
-  })
-  $("#categoryCarouselPrev").click(function(){
-    category__carousel.trigger("prev.owl.carousel")
-  })
-  $("#categoryCarouselNext").click(function(){
-    category__carousel.trigger("next.owl.carousel")
-  })
+  });
+  $("#categoryCarouselPrev").click(function () {
+    category__carousel.trigger("prev.owl.carousel");
+  });
+  $("#categoryCarouselNext").click(function () {
+    category__carousel.trigger("next.owl.carousel");
+  });
 });

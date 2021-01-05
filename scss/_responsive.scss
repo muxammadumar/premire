@@ -101,6 +101,102 @@
 
 // --------------
 
+// 1868px begin
+
+@media (max-width: 1868px) {
+  .about-brand {
+    .my-container {
+      .content {
+        width: 100%;
+        padding-right: initial !important;
+        .title,
+        .subtitle {
+          margin-right: auto;
+        }
+      }
+    }
+  }
+}
+
+// -----------
+
+// 1553px begin
+
+@media (max-width: 1553px) {
+  .about-brand {
+    .my-container {
+      .content {
+        padding-left: 60px !important;
+        .bgtext {
+          right: 0px !important;
+        }
+      }
+    }
+  }
+}
+
+// -----------
+
+// 1365px begin
+
+@media (max-width: 1365px) {
+  body {
+    #app {
+      .carousel {
+        .owl-first {
+          .item {
+            .content {
+              padding-left: 80px;
+            }
+            img {
+              object-position: right;
+            }
+          }
+          .owl-dots {
+            left: 120px;
+            bottom: 60px;
+          }
+        }
+        .status {
+          right: 120px !important;
+        }
+      }
+      .second-carousel {
+        .my-container {
+          .buttons {
+            #owlSecondNext {
+              right: 25px;
+              background-color: #fff;
+            }
+            #owlSecondPrev {
+              left: 25px;
+              background-color: #fff;
+            }
+          }
+        }
+      }
+      .about-brand {
+        .my-container {
+          img {
+            max-width: 50%;
+          }
+          .content {
+            padding: 100px 315px 100px 141px;
+            .bgtext {
+              display: none;
+            }
+            .title {
+              margin-bottom: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// -----------
+
 // 1288px begin
 
 @media (max-width: 1288px) {
@@ -121,6 +217,47 @@
                   margin-right: 30px !important;
                 }
               }
+            }
+          }
+        }
+      }
+      .partners {
+        .my-container {
+          .main-content {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ------------
+
+// 1265px begin
+@media (max-width: 1265px) {
+  body {
+    #app {
+      .working-process {
+        margin-top: 50px;
+        .my-container {
+          flex-direction: column-reverse;
+          .text {
+            margin-bottom: 50px;
+          }
+          .right {
+            margin-bottom: 30px;
+          }
+          .left,
+          .right {
+            max-width: 630px !important;
+            width: 100% !important;
+          }
+          .left {
+            flex-direction: row;
+            margin-right: 0;
+            .img-right {
+              margin-right: 30px;
             }
           }
         }
@@ -379,7 +516,160 @@
     }
   }
   // --------
+  // vacansies begin
+  body {
+    #app {
+      .open__vacansies {
+        .my-container {
+          .cities {
+            margin-right: 30px;
+          }
+        }
+      }
+    }
+  }
+  // --------
+  // home begin
+  body {
+    #app {
+      .carousel {
+        .status {
+          right: 80px !important;
+        }
+        .owl-first {
+          .owl-dots {
+            left: 80px;
+          }
+        }
+      }
+      .new-products {
+        .my-container {
+          .main-content {
+            max-width: 960px;
+            margin: 0 auto;
+            .small-card {
+              .image {
+                display: block;
+                width: 150px;
+              }
+              .content {
+                .text {
+                  .title {
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 600;
+                    font-family: gilroy-medium;
+                    color: #000000;
+                    text-align: center;
+                  }
+                  .description {
+                    display: none;
+                  }
+                }
+              }
+              .links {
+                display: flex;
+              }
+              &:hover {
+                .details {
+                  align-items: center;
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: none;
+                  justify-content: center;
+                }
+              }
+            }
+          }
+        }
+      }
+      .about-brand {
+        .my-container {
+          max-width: initial !important;
+          .content {
+            .title {
+              font-size: 26px;
+            }
+            .subtitle {
+              line-height: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+  // --------
+  // about begin
+  body {
+    #app {
+      .heading-wrapper {
+        background: initial;
+        .header-top {
+          margin-bottom: 30px;
+          padding-top: 95px;
+          .my-container {
+            .main-content {
+              flex-direction: column;
+              .logo {
+                font-size: 55px;
+              }
+              .title {
+                font-size: 32px;
+                margin-bottom: 10px;
+              }
+              .bgtext {
+                display: none;
+              }
+              .text {
+                max-width: initial;
+              }
+            }
+          }
+        }
+        .short-info {
+          .my-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .items {
+              margin: 0 auto;
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+      .diplomas {
+        .heading {
+          .title {
+            white-space: nowrap;
+          }
+        }
+        .third-owl-carousel {
+          .item {
+            height: 250px;
+          }
+        }
+        .toggler-buttons {
+          .button {
+            top: 275px;
+          }
+        }
+      }
+      .partners {
+        .my-container {
+          .heading {
+            .title {
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+    }
+  }
+  // --------
 }
+// --------
 
 // --------------
 
@@ -648,6 +938,129 @@
               }
               button {
                 margin-left: 0 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // --------
+  // vacansies begin
+  body {
+    #app {
+      .work-in-our-company {
+        .my-container {
+          .work-in-our-company__title {
+            font-size: 36px;
+          }
+        }
+      }
+      .open__vacansies {
+        .my-container {
+          .cities {
+            .cities__title {
+              font-size: 32px;
+            }
+            .job__list {
+              .job {
+                padding: 14px 28px;
+              }
+            }
+          }
+          .right__section {
+            .job__details {
+              .content {
+                padding: 40px 50px;
+              }
+              .heading {
+                padding: 22px 21px 22px 50px !important;
+              }
+            }
+            .download {
+              margin-bottom: 10px;
+              .main__content {
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: center;
+                padding: 30px 15px;
+              }
+            }
+            .vacansies__form {
+              padding: 40px 50px;
+              .form__group {
+                width: 100%;
+              }
+              .footer__text {
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+      .vacansies__blog__wrapper {
+        padding-bottom: 80px;
+        margin-bottom: 80px;
+        .vacansies__blog {
+          .my-container {
+            .main__img {
+              img {
+                max-width: 420px;
+              }
+            }
+            .content {
+              .vacansies__blog__subtitle {
+                font-size: 14px;
+              }
+              .vacansies__blog__title {
+                font-size: 26px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // --------
+  // home begin
+  body {
+    #app {
+      .new-products {
+        .my-container {
+          max-width: 960px !important;
+          .heading {
+            hr {
+              width: 190px;
+            }
+          }
+        }
+      }
+      .about-brand {
+        .my-container {
+          flex-direction: column-reverse;
+          max-width: 770px !important;
+          img {
+            width: 100% !important;
+            max-width: initial;
+            height: auto;
+          }
+        }
+      }
+      .advantages {
+        .my-container {
+          .heading {
+            hr {
+              width: 100%;
+              max-width: 200px;
+            }
+          }
+          .main-wrapper {
+            background: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            .item {
+              &:hover {
+                background-color: $black;
               }
             }
           }
@@ -944,6 +1357,279 @@
     }
   }
   // ----------
+  // vacansies begin
+  body {
+    #app {
+      .work-in-our-company {
+        padding-top: 50px;
+        margin-bottom: 0px;
+        .my-container {
+          height: initial;
+          background: none;
+          .work-in-our-company__title,
+          .work-in-our-company__subtitle {
+            text-align: center;
+          }
+        }
+      }
+      .vacansies__blog__wrapper {
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+        .vacansies__blog {
+          margin-bottom: 40px;
+          .my-container {
+            .main__img {
+              max-width: 450px;
+            }
+            .content {
+              max-width: 550px;
+            }
+          }
+        }
+        .vacansies__blog__img__right {
+          .my-container {
+            flex-direction: column-reverse;
+          }
+        }
+        .vacansies__blog__img__left {
+          .my-container {
+            flex-direction: column;
+          }
+        }
+      }
+      .open__vacansies {
+        .my-container {
+          .right__section {
+            display: none;
+            .download {
+              .main__content {
+                justify-content: space-between;
+                padding: 8px 6px;
+              }
+            }
+            .vacansies__form {
+              .form__field {
+                max-width: initial;
+              }
+            }
+          }
+          .cities {
+            margin: 0 auto;
+            margin-bottom: 50px;
+          }
+        }
+      }
+    }
+  }
+  // -----------
+  // home begin
+  body {
+    #app {
+      .second-carousel {
+        .my-container {
+          .buttons {
+            display: none;
+          }
+        }
+      }
+      .carousel {
+        .status {
+          display: none;
+        }
+        .owl-first {
+          .owl-dots {
+            bottom: 30px;
+            left: 32%;
+          }
+        }
+      }
+      .home-carousel {
+        height: max-content;
+        .owl-carousel {
+          .item {
+            height: 650px;
+            .content {
+              justify-content: flex-end;
+              padding-bottom: 100px;
+              padding-left: 0;
+              .subtitle {
+                display: none;
+              }
+              .title {
+                margin: 0 auto;
+                margin-bottom: 15px;
+              }
+              .wrapper {
+                margin: 0 auto;
+              }
+            }
+          }
+        }
+      }
+      .new-products {
+        .my-container {
+          .heading {
+            hr {
+              display: none;
+            }
+            .text {
+              margin: 0 auto;
+            }
+          }
+          .main-content {
+            max-width: 630px;
+          }
+        }
+      }
+      .advantages {
+        .my-container {
+          .heading {
+            .title {
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+      .diplomas {
+        .heading {
+          hr {
+            display: none;
+          }
+          .title {
+            margin: 0 auto;
+          }
+        }
+        .third-owl-carousel {
+          .item {
+            margin-right: 10px;
+          }
+        }
+        .toggler-buttons {
+          #diplomasPrevButton {
+            left: 55px;
+          }
+          #diplomasNextButton {
+            right: 55px;
+          }
+        }
+      }
+      .new-products {
+        .my-container {
+          .main-content {
+            max-width: min-content;
+          }
+          .heading {
+            .text {
+              .title {
+                font-size: 30px;
+                line-height: 30px;
+              }
+              .subtitle {
+                font-size: 16px;
+                letter-spacing: initial;
+              }
+            }
+          }
+        }
+      }
+      .advantages {
+        .my-container {
+          .heading {
+            hr {
+              display: none;
+            }
+            .title {
+              margin: 0 auto;
+            }
+          }
+          .main-wrapper {
+            .item {
+              height: initial;
+              position: relative;
+              padding: 30px !important;
+              svg {
+                max-width: 50px;
+                height: auto;
+                margin-bottom: 25px;
+              }
+              .title {
+                max-width: initial;
+                margin-bottom: 4px;
+              }
+              .number {
+                position: absolute;
+                top: 15px;
+                right: 17px;
+              }
+            }
+          }
+        }
+      }
+      .carousel {
+        .owl-first {
+          .owl-dots {
+            left: 23%;
+          }
+        }
+      }
+      .home-carousel {
+        .owl-carousel {
+          .item {
+            .content {
+              .title {
+                font-size: 30px;
+                line-height: 30px;
+              }
+            }
+          }
+        }
+      }
+      .second-carousel {
+        padding-bottom: 0px;
+      }
+      .about-brand {
+        margin-bottom: 60px;
+        .my-container {
+          .content {
+            .title {
+              font-size: 24px;
+            }
+            .subtitle {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .advantages {
+        .my-container {
+          .heading {
+            margin-bottom: 20px;
+            .title {
+              font-size: 30px;
+              line-height: 30px;
+            }
+          }
+        }
+      }
+      .news {
+        margin-bottom: 50px;
+        margin-top: 50px;
+        .my-container {
+          .heading {
+            max-width: 400px;
+            margin: 0 auto;
+            .title {
+              font-size: 36px;
+            }
+          }
+          .main-wrapper {
+            margin-top: 18px;
+          }
+        }
+      }
+    }
+  }
+  // -----------
 }
 
 // ------------
@@ -1344,6 +2030,106 @@
     }
   }
   // --------
+  // vacansies begin
+  body {
+    #app {
+      .work-in-our-company {
+        .my-container {
+          .work-in-our-company__title {
+            font-size: 32px;
+            margin-bottom: 0;
+          }
+          .work-in-our-company__subtitle {
+            font-size: 15px;
+          }
+        }
+      }
+      .open__vacansies {
+        .my-container {
+          .right__section {
+            .job__details {
+              .heading {
+                padding: 22px !important;
+              }
+              .content {
+                padding: 40px !important  ;
+              }
+            }
+            .download {
+              .main__content {
+                padding: 22px 33px;
+                flex-direction: column;
+                align-items: center;
+              }
+            }
+            .vacansies__form {
+              margin-bottom: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+  // --------
+  // home begin
+  body {
+    #app {
+      .heading-wrapper {
+        .header-top {
+          .my-container {
+            .main-content {
+              .logo {
+                font-size: 50px;
+              }
+              .title {
+                font-size: 26px;
+              }
+            }
+          }
+        }
+      }
+      .short-info {
+        .my-container {
+          .items {
+            flex-direction: column;
+            .item {
+              margin: 0 !important;
+              min-width: 280px;
+              padding: 27px;
+              padding-top: 13px;
+              height: initial;
+              padding-bottom: 20px;
+              margin-bottom: 10px !important;
+              .amount {
+                margin-bottom: 0;
+              }
+              .title {
+                max-width: initial;
+              }
+            }
+          }
+        }
+      }
+      .working-process {
+        .my-container {
+          .right {
+            .text {
+              margin: 0;
+            }
+            img {
+              display: none;
+            }
+          }
+          .left {
+            img {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  // --------
 }
 
 // -----------
@@ -1368,6 +2154,24 @@
                 width: 135px !important;
                 margin: auto !important;
               }
+            }
+          }
+          .menu {
+            .my-wrapper {
+              .burger {
+                .container {
+                  .bar {
+                    margin-bottom: 5px;
+                    &:last-child {
+                      margin-bottom: 0px !important;
+                    }
+                  }
+                }
+              }
+            }
+            .search {
+              width: 22px;
+              height: auto;
             }
           }
         }
@@ -1598,6 +2402,213 @@
               button {
                 margin-bottom: 10px;
               }
+            }
+          }
+        }
+      }
+    }
+  }
+  // ----------
+  // vacansies begin
+  body {
+    #app {
+      .work-in-our-company {
+        padding-top: 80px;
+        .my-container {
+          padding: 0 !important;
+          .work-in-our-company__title {
+            max-width: 280px;
+            margin: 0 auto;
+            font-size: 26px;
+            margin-bottom: 0;
+            line-height: 31px;
+          }
+          .work-in-our-company__subtitle {
+            font-size: 14px;
+          }
+        }
+      }
+      .vacansies__blog__wrapper {
+        margin-top: 30px;
+        padding-bottom: 0px;
+        margin-bottom: 30px;
+        .vacansies__blog {
+          .my-container {
+            max-width: 100% !important;
+            .main__img {
+              width: 100%;
+              padding-left: 0px !important;
+              padding-right: 0px !important;
+              display: flex;
+              justify-content: center;
+              img {
+                border-radius: 10px;
+                max-width: 280px;
+                height: auto;
+              }
+            }
+            .content {
+              padding-top: 20px;
+              max-width: 280px;
+              .vacansies__blog__title {
+                font-size: 26px;
+                line-height: 140%;
+                margin-bottom: 19px;
+              }
+              .vacansies__blog__subtitle {
+                font-size: 14px;
+                line-height: 180%;
+              }
+              .black-hr {
+                margin-bottom: 14px;
+              }
+            }
+          }
+        }
+      }
+      .open__vacansies {
+        .my-container {
+          max-width: initial !important;
+          .right__section {
+            max-width: 100%;
+            .job__details {
+              margin-bottom: 0;
+              .heading {
+                padding: 25px;
+                flex-direction: column;
+                align-items: center;
+                .job__type {
+                  max-width: 270px;
+                  text-align: center;
+                  margin-bottom: 10px;
+                }
+              }
+              .content {
+                background-color: #fff !important;
+                .head {
+                  .text {
+                    white-space: normal;
+                    text-align: center;
+                    max-width: 210px;
+                  }
+                  .hr-line {
+                    display: none;
+                  }
+                }
+                ul {
+                  margin-bottom: 30px;
+                  padding-bottom: 20px;
+                  border-bottom: 1px solid #efefef;
+                  li {
+                    margin-bottom: 10px;
+                  }
+                  &:last-child {
+                    border-bottom: none;
+                    padding-bottom: 0 !important;
+                    margin-bottom: 0 !important;
+                  }
+                }
+              }
+            }
+            .download {
+              display: none;
+            }
+            .vacansies__form {
+              padding: 40px 20px;
+              box-shadow: none !important;
+              .footer {
+                flex-direction: column;
+                overflow: hidden;
+                .hidden-footer__text {
+                  display: block;
+                }
+              }
+              .footer__text {
+                display: none;
+              }
+              .title {
+                line-height: 31px;
+                font-size: 26px;
+                text-align: center;
+                margin-bottom: 25px;
+              }
+              .description {
+                display: block;
+              }
+              textarea {
+                height: 168px;
+              }
+            }
+          }
+          .cities {
+            .cities__title {
+              text-align: center;
+              font-size: 26px;
+            }
+            .region-dropdown {
+              max-width: 280px !important;
+              margin: 0 auto;
+              margin-bottom: 15px;
+              .hidden-list {
+                max-width: 280px;
+              }
+            }
+            .job__list {
+              .job {
+                padding: 15px 38px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // ----------
+  // home begin
+  body {
+    #app {
+      .carousel {
+        .owl-first {
+          .owl-dots {
+            left: 13%;
+          }
+        }
+      }
+      .home-carousel {
+        .owl-carousel {
+          .item {
+            height: 460px;
+          }
+        }
+      }
+      .new-products {
+        .my-container {
+          .heading {
+            margin-bottom: 23px;
+            .text {
+              .title {
+                font-size: 26px;
+              }
+              .subtitle {
+                margin-top: 0;
+                text-transform: initial;
+              }
+            }
+          }
+        }
+      }
+      .about-brand {
+        .my-container {
+          .content {
+            padding: 50px 20px !important;
+            .title {
+              font-size: 22px;
+              .logo {
+                font-size: 22px;
+              }
+            }
+            .subtitle {
+              font-size: 12px;
             }
           }
         }

@@ -33,9 +33,104 @@
   font-family: gilroy-extra-bold;
 }
 
+@media (max-width: 1868px) {
+  .about-brand .my-container .content {
+    width: 100%;
+    padding-right: initial !important;
+  }
+  .about-brand .my-container .content .title,
+  .about-brand .my-container .content .subtitle {
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1553px) {
+  .about-brand .my-container .content {
+    padding-left: 60px !important;
+  }
+  .about-brand .my-container .content .bgtext {
+    right: 0px !important;
+  }
+}
+
+@media (max-width: 1365px) {
+  body #app .carousel .owl-first .item .content {
+    padding-left: 80px;
+  }
+  body #app .carousel .owl-first .item img {
+    -o-object-position: right;
+       object-position: right;
+  }
+  body #app .carousel .owl-first .owl-dots {
+    left: 120px;
+    bottom: 60px;
+  }
+  body #app .carousel .status {
+    right: 120px !important;
+  }
+  body #app .second-carousel .my-container .buttons #owlSecondNext {
+    right: 25px;
+    background-color: #fff;
+  }
+  body #app .second-carousel .my-container .buttons #owlSecondPrev {
+    left: 25px;
+    background-color: #fff;
+  }
+  body #app .about-brand .my-container img {
+    max-width: 50%;
+  }
+  body #app .about-brand .my-container .content {
+    padding: 100px 315px 100px 141px;
+  }
+  body #app .about-brand .my-container .content .bgtext {
+    display: none;
+  }
+  body #app .about-brand .my-container .content .title {
+    margin-bottom: 24px;
+  }
+}
+
 @media (max-width: 1288px) {
   body #app .main-wrapper .my-container .wrapper .main-content .product__card:nth-child(3), body #app .main-wrapper .my-container .wrapper .main-content .product__card:nth-child(6), body #app .main-wrapper .my-container .wrapper .main-content .product__card:nth-child(9), body #app .main-wrapper .my-container .wrapper .main-content .product__card:nth-child(12), body #app .main-wrapper .my-container .wrapper .main-content .product__card:nth-child(15), body #app .main-wrapper .my-container .wrapper .main-content .product__card:nth-child(18), body #app .main-wrapper .my-container .wrapper .main-content .product__card:nth-child(21) {
     margin-right: 30px !important;
+  }
+  body #app .partners .my-container .main-content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 1265px) {
+  body #app .working-process {
+    margin-top: 50px;
+  }
+  body #app .working-process .my-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  body #app .working-process .my-container .text {
+    margin-bottom: 50px;
+  }
+  body #app .working-process .my-container .right {
+    margin-bottom: 30px;
+  }
+  body #app .working-process .my-container .left,
+  body #app .working-process .my-container .right {
+    max-width: 630px !important;
+    width: 100% !important;
+  }
+  body #app .working-process .my-container .left {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-right: 0;
+  }
+  body #app .working-process .my-container .left .img-right {
+    margin-right: 30px;
   }
 }
 
@@ -170,6 +265,114 @@
   }
   body #app .contact-form .my-container form .wrapper .questions-dropdown {
     max-width: 430px !important;
+  }
+  body #app .open__vacansies .my-container .cities {
+    margin-right: 30px;
+  }
+  body #app .carousel .status {
+    right: 80px !important;
+  }
+  body #app .carousel .owl-first .owl-dots {
+    left: 80px;
+  }
+  body #app .new-products .my-container .main-content {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  body #app .new-products .my-container .main-content .small-card .image {
+    display: block;
+    width: 150px;
+  }
+  body #app .new-products .my-container .main-content .small-card .content .text .title {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    font-family: gilroy-medium;
+    color: #000000;
+    text-align: center;
+  }
+  body #app .new-products .my-container .main-content .small-card .content .text .description {
+    display: none;
+  }
+  body #app .new-products .my-container .main-content .small-card .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body #app .new-products .my-container .main-content .small-card:hover .details {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body #app .about-brand .my-container {
+    max-width: initial !important;
+  }
+  body #app .about-brand .my-container .content .title {
+    font-size: 26px;
+  }
+  body #app .about-brand .my-container .content .subtitle {
+    line-height: 22px;
+  }
+  body #app .heading-wrapper {
+    background: initial;
+  }
+  body #app .heading-wrapper .header-top {
+    margin-bottom: 30px;
+    padding-top: 95px;
+  }
+  body #app .heading-wrapper .header-top .my-container .main-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body #app .heading-wrapper .header-top .my-container .main-content .logo {
+    font-size: 55px;
+  }
+  body #app .heading-wrapper .header-top .my-container .main-content .title {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  body #app .heading-wrapper .header-top .my-container .main-content .bgtext {
+    display: none;
+  }
+  body #app .heading-wrapper .header-top .my-container .main-content .text {
+    max-width: initial;
+  }
+  body #app .heading-wrapper .short-info .my-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body #app .heading-wrapper .short-info .my-container .items {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  body #app .diplomas .heading .title {
+    white-space: nowrap;
+  }
+  body #app .diplomas .third-owl-carousel .item {
+    height: 250px;
+  }
+  body #app .diplomas .toggler-buttons .button {
+    top: 275px;
+  }
+  body #app .partners .my-container .heading .title {
+    white-space: nowrap;
   }
 }
 
@@ -372,6 +575,90 @@
   }
   body #app .contact-form .my-container form .footer button {
     margin-left: 0 !important;
+  }
+  body #app .work-in-our-company .my-container .work-in-our-company__title {
+    font-size: 36px;
+  }
+  body #app .open__vacansies .my-container .cities .cities__title {
+    font-size: 32px;
+  }
+  body #app .open__vacansies .my-container .cities .job__list .job {
+    padding: 14px 28px;
+  }
+  body #app .open__vacansies .my-container .right__section .job__details .content {
+    padding: 40px 50px;
+  }
+  body #app .open__vacansies .my-container .right__section .job__details .heading {
+    padding: 22px 21px 22px 50px !important;
+  }
+  body #app .open__vacansies .my-container .right__section .download {
+    margin-bottom: 10px;
+  }
+  body #app .open__vacansies .my-container .right__section .download .main__content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 30px 15px;
+  }
+  body #app .open__vacansies .my-container .right__section .vacansies__form {
+    padding: 40px 50px;
+  }
+  body #app .open__vacansies .my-container .right__section .vacansies__form .form__group {
+    width: 100%;
+  }
+  body #app .open__vacansies .my-container .right__section .vacansies__form .footer__text {
+    text-align: center;
+  }
+  body #app .vacansies__blog__wrapper {
+    padding-bottom: 80px;
+    margin-bottom: 80px;
+  }
+  body #app .vacansies__blog__wrapper .vacansies__blog .my-container .main__img img {
+    max-width: 420px;
+  }
+  body #app .vacansies__blog__wrapper .vacansies__blog .my-container .content .vacansies__blog__subtitle {
+    font-size: 14px;
+  }
+  body #app .vacansies__blog__wrapper .vacansies__blog .my-container .content .vacansies__blog__title {
+    font-size: 26px;
+  }
+  body #app .new-products .my-container {
+    max-width: 960px !important;
+  }
+  body #app .new-products .my-container .heading hr {
+    width: 190px;
+  }
+  body #app .about-brand .my-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    max-width: 770px !important;
+  }
+  body #app .about-brand .my-container img {
+    width: 100% !important;
+    max-width: initial;
+    height: auto;
+  }
+  body #app .advantages .my-container .heading hr {
+    width: 100%;
+    max-width: 200px;
+  }
+  body #app .advantages .my-container .main-wrapper {
+    background: none;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body #app .advantages .my-container .main-wrapper .item:hover {
+    background-color: #000000;
   }
 }
 
@@ -590,6 +877,199 @@
   }
   body #app .services-header-top {
     padding-top: 70px;
+  }
+  body #app .work-in-our-company {
+    padding-top: 50px;
+    margin-bottom: 0px;
+  }
+  body #app .work-in-our-company .my-container {
+    height: initial;
+    background: none;
+  }
+  body #app .work-in-our-company .my-container .work-in-our-company__title,
+  body #app .work-in-our-company .my-container .work-in-our-company__subtitle {
+    text-align: center;
+  }
+  body #app .vacansies__blog__wrapper {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+  }
+  body #app .vacansies__blog__wrapper .vacansies__blog {
+    margin-bottom: 40px;
+  }
+  body #app .vacansies__blog__wrapper .vacansies__blog .my-container .main__img {
+    max-width: 450px;
+  }
+  body #app .vacansies__blog__wrapper .vacansies__blog .my-container .content {
+    max-width: 550px;
+  }
+  body #app .vacansies__blog__wrapper .vacansies__blog__img__right .my-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  body #app .vacansies__blog__wrapper .vacansies__blog__img__left .my-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body #app .open__vacansies .my-container .right__section {
+    display: none;
+  }
+  body #app .open__vacansies .my-container .right__section .download .main__content {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 8px 6px;
+  }
+  body #app .open__vacansies .my-container .right__section .vacansies__form .form__field {
+    max-width: initial;
+  }
+  body #app .open__vacansies .my-container .cities {
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  body #app .second-carousel .my-container .buttons {
+    display: none;
+  }
+  body #app .carousel .status {
+    display: none;
+  }
+  body #app .carousel .owl-first .owl-dots {
+    bottom: 30px;
+    left: 32%;
+  }
+  body #app .home-carousel {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  body #app .home-carousel .owl-carousel .item {
+    height: 650px;
+  }
+  body #app .home-carousel .owl-carousel .item .content {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-bottom: 100px;
+    padding-left: 0;
+  }
+  body #app .home-carousel .owl-carousel .item .content .subtitle {
+    display: none;
+  }
+  body #app .home-carousel .owl-carousel .item .content .title {
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  body #app .home-carousel .owl-carousel .item .content .wrapper {
+    margin: 0 auto;
+  }
+  body #app .new-products .my-container .heading hr {
+    display: none;
+  }
+  body #app .new-products .my-container .heading .text {
+    margin: 0 auto;
+  }
+  body #app .new-products .my-container .main-content {
+    max-width: 630px;
+  }
+  body #app .advantages .my-container .heading .title {
+    white-space: nowrap;
+  }
+  body #app .diplomas .heading hr {
+    display: none;
+  }
+  body #app .diplomas .heading .title {
+    margin: 0 auto;
+  }
+  body #app .diplomas .third-owl-carousel .item {
+    margin-right: 10px;
+  }
+  body #app .diplomas .toggler-buttons #diplomasPrevButton {
+    left: 55px;
+  }
+  body #app .diplomas .toggler-buttons #diplomasNextButton {
+    right: 55px;
+  }
+  body #app .new-products .my-container .main-content {
+    max-width: -webkit-min-content;
+    max-width: -moz-min-content;
+    max-width: min-content;
+  }
+  body #app .new-products .my-container .heading .text .title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  body #app .new-products .my-container .heading .text .subtitle {
+    font-size: 16px;
+    letter-spacing: initial;
+  }
+  body #app .advantages .my-container .heading hr {
+    display: none;
+  }
+  body #app .advantages .my-container .heading .title {
+    margin: 0 auto;
+  }
+  body #app .advantages .my-container .main-wrapper .item {
+    height: initial;
+    position: relative;
+    padding: 30px !important;
+  }
+  body #app .advantages .my-container .main-wrapper .item svg {
+    max-width: 50px;
+    height: auto;
+    margin-bottom: 25px;
+  }
+  body #app .advantages .my-container .main-wrapper .item .title {
+    max-width: initial;
+    margin-bottom: 4px;
+  }
+  body #app .advantages .my-container .main-wrapper .item .number {
+    position: absolute;
+    top: 15px;
+    right: 17px;
+  }
+  body #app .carousel .owl-first .owl-dots {
+    left: 23%;
+  }
+  body #app .home-carousel .owl-carousel .item .content .title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  body #app .second-carousel {
+    padding-bottom: 0px;
+  }
+  body #app .about-brand {
+    margin-bottom: 60px;
+  }
+  body #app .about-brand .my-container .content .title {
+    font-size: 24px;
+  }
+  body #app .about-brand .my-container .content .subtitle {
+    font-size: 14px;
+  }
+  body #app .advantages .my-container .heading {
+    margin-bottom: 20px;
+  }
+  body #app .advantages .my-container .heading .title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  body #app .news {
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+  body #app .news .my-container .heading {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  body #app .news .my-container .heading .title {
+    font-size: 36px;
+  }
+  body #app .news .my-container .main-wrapper {
+    margin-top: 18px;
   }
 }
 
@@ -922,6 +1402,68 @@
   body #app .requisites .my-container .full-info ul li {
     margin-bottom: 30px !important;
   }
+  body #app .work-in-our-company .my-container .work-in-our-company__title {
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+  body #app .work-in-our-company .my-container .work-in-our-company__subtitle {
+    font-size: 15px;
+  }
+  body #app .open__vacansies .my-container .right__section .job__details .heading {
+    padding: 22px !important;
+  }
+  body #app .open__vacansies .my-container .right__section .job__details .content {
+    padding: 40px !important;
+  }
+  body #app .open__vacansies .my-container .right__section .download .main__content {
+    padding: 22px 33px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #app .open__vacansies .my-container .right__section .vacansies__form {
+    margin-bottom: 50px;
+  }
+  body #app .heading-wrapper .header-top .my-container .main-content .logo {
+    font-size: 50px;
+  }
+  body #app .heading-wrapper .header-top .my-container .main-content .title {
+    font-size: 26px;
+  }
+  body #app .short-info .my-container .items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body #app .short-info .my-container .items .item {
+    margin: 0 !important;
+    min-width: 280px;
+    padding: 27px;
+    padding-top: 13px;
+    height: initial;
+    padding-bottom: 20px;
+    margin-bottom: 10px !important;
+  }
+  body #app .short-info .my-container .items .item .amount {
+    margin-bottom: 0;
+  }
+  body #app .short-info .my-container .items .item .title {
+    max-width: initial;
+  }
+  body #app .working-process .my-container .right .text {
+    margin: 0;
+  }
+  body #app .working-process .my-container .right img {
+    display: none;
+  }
+  body #app .working-process .my-container .left img {
+    display: none;
+  }
 }
 
 @media (max-width: 350px) {
@@ -936,6 +1478,16 @@
   body #app .washing-machines-header .my-first-container .center-item a img {
     width: 135px !important;
     margin: auto !important;
+  }
+  body #app .washing-machines-header .my-first-container .menu .my-wrapper .burger .container .bar {
+    margin-bottom: 5px;
+  }
+  body #app .washing-machines-header .my-first-container .menu .my-wrapper .burger .container .bar:last-child {
+    margin-bottom: 0px !important;
+  }
+  body #app .washing-machines-header .my-first-container .menu .search {
+    width: 22px;
+    height: auto;
   }
   body #app .machines-heading .my-container .title {
     font-size: 30px !important;
@@ -1072,6 +1624,186 @@
   }
   body #app .contact-form .my-container form .footer button {
     margin-bottom: 10px;
+  }
+  body #app .work-in-our-company {
+    padding-top: 80px;
+  }
+  body #app .work-in-our-company .my-container {
+    padding: 0 !important;
+  }
+  body #app .work-in-our-company .my-container .work-in-our-company__title {
+    max-width: 280px;
+    margin: 0 auto;
+    font-size: 26px;
+    margin-bottom: 0;
+    line-height: 31px;
+  }
+  body #app .work-in-our-company .my-container .work-in-our-company__subtitle {
+    font-size: 14px;
+  }
+  body #app .vacansies__blog__wrapper {
+    margin-top: 30px;
+    padding-bottom: 0px;
+    margin-bottom: 30px;
+  }
+  body #app .vacansies__blog__wrapper .vacansies__blog .my-container {
+    max-width: 100% !important;
+  }
+  body #app .vacansies__blog__wrapper .vacansies__blog .my-container .main__img {
+    width: 100%;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body #app .vacansies__blog__wrapper .vacansies__blog .my-container .main__img img {
+    border-radius: 10px;
+    max-width: 280px;
+    height: auto;
+  }
+  body #app .vacansies__blog__wrapper .vacansies__blog .my-container .content {
+    padding-top: 20px;
+    max-width: 280px;
+  }
+  body #app .vacansies__blog__wrapper .vacansies__blog .my-container .content .vacansies__blog__title {
+    font-size: 26px;
+    line-height: 140%;
+    margin-bottom: 19px;
+  }
+  body #app .vacansies__blog__wrapper .vacansies__blog .my-container .content .vacansies__blog__subtitle {
+    font-size: 14px;
+    line-height: 180%;
+  }
+  body #app .vacansies__blog__wrapper .vacansies__blog .my-container .content .black-hr {
+    margin-bottom: 14px;
+  }
+  body #app .open__vacansies .my-container {
+    max-width: initial !important;
+  }
+  body #app .open__vacansies .my-container .right__section {
+    max-width: 100%;
+  }
+  body #app .open__vacansies .my-container .right__section .job__details {
+    margin-bottom: 0;
+  }
+  body #app .open__vacansies .my-container .right__section .job__details .heading {
+    padding: 25px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #app .open__vacansies .my-container .right__section .job__details .heading .job__type {
+    max-width: 270px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  body #app .open__vacansies .my-container .right__section .job__details .content {
+    background-color: #fff !important;
+  }
+  body #app .open__vacansies .my-container .right__section .job__details .content .head .text {
+    white-space: normal;
+    text-align: center;
+    max-width: 210px;
+  }
+  body #app .open__vacansies .my-container .right__section .job__details .content .head .hr-line {
+    display: none;
+  }
+  body #app .open__vacansies .my-container .right__section .job__details .content ul {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #efefef;
+  }
+  body #app .open__vacansies .my-container .right__section .job__details .content ul li {
+    margin-bottom: 10px;
+  }
+  body #app .open__vacansies .my-container .right__section .job__details .content ul:last-child {
+    border-bottom: none;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  body #app .open__vacansies .my-container .right__section .download {
+    display: none;
+  }
+  body #app .open__vacansies .my-container .right__section .vacansies__form {
+    padding: 40px 20px;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+  }
+  body #app .open__vacansies .my-container .right__section .vacansies__form .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: hidden;
+  }
+  body #app .open__vacansies .my-container .right__section .vacansies__form .footer .hidden-footer__text {
+    display: block;
+  }
+  body #app .open__vacansies .my-container .right__section .vacansies__form .footer__text {
+    display: none;
+  }
+  body #app .open__vacansies .my-container .right__section .vacansies__form .title {
+    line-height: 31px;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  body #app .open__vacansies .my-container .right__section .vacansies__form .description {
+    display: block;
+  }
+  body #app .open__vacansies .my-container .right__section .vacansies__form textarea {
+    height: 168px;
+  }
+  body #app .open__vacansies .my-container .cities .cities__title {
+    text-align: center;
+    font-size: 26px;
+  }
+  body #app .open__vacansies .my-container .cities .region-dropdown {
+    max-width: 280px !important;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  body #app .open__vacansies .my-container .cities .region-dropdown .hidden-list {
+    max-width: 280px;
+  }
+  body #app .open__vacansies .my-container .cities .job__list .job {
+    padding: 15px 38px;
+  }
+  body #app .carousel .owl-first .owl-dots {
+    left: 13%;
+  }
+  body #app .home-carousel .owl-carousel .item {
+    height: 460px;
+  }
+  body #app .new-products .my-container .heading {
+    margin-bottom: 23px;
+  }
+  body #app .new-products .my-container .heading .text .title {
+    font-size: 26px;
+  }
+  body #app .new-products .my-container .heading .text .subtitle {
+    margin-top: 0;
+    text-transform: initial;
+  }
+  body #app .about-brand .my-container .content {
+    padding: 50px 20px !important;
+  }
+  body #app .about-brand .my-container .content .title {
+    font-size: 22px;
+  }
+  body #app .about-brand .my-container .content .title .logo {
+    font-size: 22px;
+  }
+  body #app .about-brand .my-container .content .subtitle {
+    font-size: 12px;
   }
 }
 
@@ -1670,10 +2402,13 @@ header .hidden-menu .my-container .main-wrapper .products a .item .img-wrapper {
 }
 
 header .hidden-menu .my-container .main-wrapper .products a .item img {
+  height: auto;
+  max-height: 30px;
+  max-width: 40px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  -webkit-filter: opacity(40%);
-          filter: opacity(40%);
+  -webkit-filter: brightness(0) invert(0.5);
+          filter: brightness(0) invert(0.5);
 }
 
 header .hidden-menu .my-container .main-wrapper .products a .item .name {
@@ -1686,8 +2421,8 @@ header .hidden-menu .my-container .main-wrapper .products a .item .name {
 }
 
 header .hidden-menu .my-container .main-wrapper .products a .item:hover img {
-  -webkit-filter: opacity(100%);
-          filter: opacity(100%);
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
 }
 
 header .hidden-menu .my-container .main-wrapper .products a .item:hover .name {
@@ -2352,7 +3087,7 @@ header .hidden-menu footer .my-own-container .links .social__links li:last-child
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  bottom: 20px;
+  bottom: 60px;
   left: 304px;
 }
 
@@ -2927,6 +3662,72 @@ header .hidden-menu footer .my-own-container .links .social__links li:last-child
   font-size: 10px;
 }
 
+.new-products .my-container .main-content .new-products__card .links {
+  width: 100%;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.new-products .my-container .main-content .new-products__card .links .map {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.new-products .my-container .main-content .new-products__card .links .map img {
+  margin-right: 14px;
+}
+
+.new-products .my-container .main-content .new-products__card .links .map .where {
+  font-size: 14px;
+  color: #5a5a5b;
+  font-family: gilroy-medium;
+}
+
+.new-products .my-container .main-content .new-products__card .links .details-link {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: #fff;
+  border: 5px solid #c8c8c8;
+  text-decoration: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.new-products .my-container .main-content .new-products__card .links .details-link i {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-size: 10px;
+  color: #000;
+}
+
+.new-products .my-container .main-content .new-products__card .links .details-link:hover {
+  background-color: #000000;
+}
+
+.new-products .my-container .main-content .new-products__card .links .details-link:hover i {
+  color: #c8c8c8;
+}
+
 .new-products .my-container .main-content .new-products__card .model-name {
   font-size: 16px;
   line-height: 24px;
@@ -3010,7 +3811,7 @@ header .hidden-menu footer .my-own-container .links .social__links li:last-child
 }
 
 .new-products .my-container .main-content .big-card .content .text .title {
-  font-family: gilroy-medium;
+  font-family: gilroy-bold;
   font-size: 18px;
   text-transform: uppercase;
   color: #000000;
@@ -3123,7 +3924,7 @@ header .hidden-menu footer .my-own-container .links .social__links li:last-child
           user-select: none;
   cursor: default;
   position: absolute;
-  bottom: -22px;
+  bottom: -25px;
   right: 126px;
   font-size: 45px;
   text-transform: uppercase;
@@ -3741,8 +4542,6 @@ header .hidden-menu footer .my-own-container .links .social__links li:last-child
   padding: 0 110px;
   border-radius: 10px;
   height: 300px;
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #f6f6f6), color-stop(80.08%, rgba(246, 246, 246, 0))), url(../img/qwer1.png);
-  background: linear-gradient(90deg, #f6f6f6 50%, rgba(246, 246, 246, 0) 80.08%), url(../img/qwer1.png);
   background-position: 100% 50%;
   background-repeat: no-repeat;
   display: -webkit-box;
@@ -3962,6 +4761,11 @@ header .hidden-menu footer .my-own-container .links .social__links li:last-child
           justify-content: center;
   width: 65px;
   height: 77px;
+}
+
+.main-wrapper .my-container .wrapper .products a .item .img-wrapper svg,
+.main-wrapper .my-container .wrapper .products a .item .img-wrapper img {
+  max-width: 40px;
 }
 
 .main-wrapper .my-container .wrapper .products a .item .name {
@@ -4391,6 +5195,13 @@ section.working-process {
 }
 
 section.working-process .my-container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
   max-width: 1290px;
   margin: 0 auto;
   display: -webkit-box;
@@ -4582,6 +5393,10 @@ section.diplomas .toggler-buttons .button i {
   transition: all 0.5s ease;
   font-size: 14px;
   color: #000000;
+}
+
+section.diplomas .third-owl-carousel .owl-stage-outer .owl-stage {
+  padding-left: 0 !important;
 }
 
 section.diplomas .third-owl-carousel .item {
@@ -5827,9 +6642,9 @@ section.news-product-cards .my-container .footer ul .numbers a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .news .my-container .main-wrapper .news__card {
@@ -6088,6 +6903,7 @@ section.services-content .my-container {
 }
 
 section.services-content .my-container .info-wrapper {
+  min-width: 410px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6326,6 +7142,7 @@ section.services-content .my-container .info-wrapper .dealers-region-dropdown .h
 }
 
 section.services-content .my-container .info-wrapper .info {
+  width: 100%;
   max-width: 410px;
   padding: 40px 45px;
   background: #ffffff;
@@ -6443,7 +7260,6 @@ section.services-content .my-container .dealers-info .adress:hover {
 }
 
 section.services-content .my-container #service-info {
-  display: none;
   max-width: 410px;
   padding: 40px 45px;
   background: #ffffff;
@@ -6976,7 +7792,7 @@ section.work-in-our-company .my-container .work-in-our-company__subtitle {
 
 .open__vacansies .my-container .cities .cities__title {
   margin-bottom: 25px;
-  font-family: gilroy-regular;
+  font-family: gilroy-bold;
   font-style: normal;
   font-weight: bold;
   font-size: 35px;
@@ -7244,6 +8060,10 @@ section.work-in-our-company .my-container .work-in-our-company__subtitle {
   margin-bottom: 60px;
 }
 
+.open__vacansies .my-container section.right__section .job__details .content ul:last-child {
+  margin-bottom: 0;
+}
+
 .open__vacansies .my-container section.right__section .job__details .content ul li {
   font-family: gilroy-regular;
   font-style: normal;
@@ -7346,6 +8166,18 @@ section.work-in-our-company .my-container .work-in-our-company__subtitle {
   color: #000000;
 }
 
+.open__vacansies .my-container section.right__section .vacansies__form .description {
+  margin-bottom: 40px;
+  display: none;
+  font-family: gilroy-regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #5a5a5b;
+}
+
 .open__vacansies .my-container section.right__section .vacansies__form .form__group {
   margin-bottom: 30px;
   position: relative;
@@ -7397,6 +8229,7 @@ section.work-in-our-company .my-container .work-in-our-company__subtitle {
 }
 
 .open__vacansies .my-container section.right__section .vacansies__form .form__label {
+  font-family: gilroy-regular;
   position: absolute;
   top: 0;
   display: block;
@@ -7519,6 +8352,23 @@ section.work-in-our-company .my-container .work-in-our-company__subtitle {
   color: #000000;
 }
 
+.open__vacansies .my-container section.right__section .vacansies__form .footer .hidden-footer__text {
+  margin-bottom: 28px;
+  display: none;
+  text-align: center;
+  margin-top: 30px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 160%;
+  color: #5a5a5b;
+}
+
+.open__vacansies .my-container section.right__section .vacansies__form .footer .hidden-footer__text a {
+  font-family: gilroy-bold;
+  color: #000000;
+}
+
 .open__vacansies .my-container section.right__section .vacansies__form .footer .send {
   background: #000000;
   padding: 10px 35px;
@@ -7622,6 +8472,7 @@ section.header__content .my-container .info__box .colors .wrapper .title {
 }
 
 section.header__content .my-container .info__box .colors .wrapper .color {
+  display: inline-block;
   margin-right: 5px;
   border-radius: 50%;
   border: 1px solid #c8c8c8;
@@ -7781,6 +8632,7 @@ section.header__content .my-container .header__top__content .wrapper .buy .text 
 }
 
 section.header__content .my-container .header__top__content .wrapper .buy .location__button {
+  text-decoration: none;
   width: 50px;
   height: 50px;
   display: -webkit-box;
@@ -7802,6 +8654,7 @@ section.header__content .my-container .header__top__content .wrapper .buy .locat
 }
 
 section.header__content .my-container .header__top__content .wrapper .buy .location__button i {
+  color: #000000;
   font-size: 19px;
 }
 
@@ -8018,42 +8871,42 @@ section.product__info__boxes .my-container .product__info__box:last-child {
   position: relative;
 }
 
-.characteristics .owl__wrapper .colors {
-  z-index: -1;
-  position: absolute;
-  -webkit-transform: translateY(-55px);
-          transform: translateY(-55px);
+.characteristics .owl__wrapper .owl-dot-colors {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  bottom: -60px;
+  z-index: 2;
+  position: absolute;
+  -webkit-transform: translateY(-55px);
+          transform: translateY(-55px);
+  display: flex;
+  align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
 
-.characteristics .owl__wrapper .colors .wrapper {
-  background: #ffffff;
-  -webkit-box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
-  border-radius: 10px 10px 0px 0px;
+.characteristics .owl__wrapper .owl-dot-colors .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 23px;
+  margin: 0 auto;
   padding-top: 16px;
   padding-bottom: 30px;
-  background: #ffffff;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
-  border-radius: 10px 10px 0px 0px;
 }
 
-.characteristics .owl__wrapper .colors .wrapper .title {
+.characteristics .owl__wrapper .owl-dot-colors .wrapper .title {
   font-family: gilroy-regular;
   margin-right: 20px;
   font-style: normal;
@@ -8063,7 +8916,17 @@ section.product__info__boxes .my-container .product__info__box:last-child {
   color: #5a5a5b;
 }
 
-.characteristics .owl__wrapper .colors .wrapper .color {
+.characteristics .owl__wrapper .owl-dot-colors .wrapper #carousel-custom-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.characteristics .owl__wrapper .owl-dot-colors .wrapper #carousel-custom-dots .color {
+  cursor: pointer;
   margin-right: 5px;
   border-radius: 50%;
   border: 1px solid #c8c8c8;
@@ -8080,7 +8943,7 @@ section.product__info__boxes .my-container .product__info__box:last-child {
   height: 30px;
 }
 
-.characteristics .owl__wrapper .colors .wrapper .color:last-child {
+.characteristics .owl__wrapper .owl-dot-colors .wrapper #carousel-custom-dots .color:last-child {
   margin-right: 0;
 }
 
@@ -8260,6 +9123,7 @@ section.product__description .my-container .secondary__text:last-child {
 }
 
 section.product__description .my-container .where__buy {
+  text-decoration: none;
   margin: 0 auto;
   max-width: 206px;
   display: -webkit-box;
@@ -8287,6 +9151,10 @@ section.product__description .my-container .where__buy .location {
   background: #ffffff;
   -webkit-box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+}
+
+section.product__description .my-container .where__buy .location i {
+  color: #000000;
 }
 
 section.product__description .my-container .where__buy .location__text {
